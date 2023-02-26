@@ -1,0 +1,153 @@
+@import "../../styles/mixins.scss";
+.bora {
+  &-header {
+    @include onMobile {
+      min-height: 137px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 40px;
+      padding-bottom: 20px;
+      gap: 7px;
+      align-items: flex-start;
+      box-shadow: none;
+    }
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 40px;
+    padding-bottom: 26px;
+    min-height: 189px;
+    background: linear-gradient(180deg, #e2e1e1 0%, #ffffff 100%);
+    box-shadow: 0px 40px 16px rgba(0, 0, 0, 0.01),
+      0px 23px 14px rgba(0, 0, 0, 0.04), 0px 10px 10px rgba(0, 0, 0, 0.07),
+      0px 3px 6px rgba(0, 0, 0, 0.08), 0px 0px 0px rgba(0, 0, 0, 0.08);
+    display: flex;
+    gap: 69px;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo {
+      mix-blend-mode: darken;
+      @include onMobile {
+        max-width: 121px;
+        margin-top: -10px;
+      }
+    }
+    &__contact-btn {
+      padding-left: 21px;
+      padding-right: 21px;
+      padding-top: 16px;
+      padding-bottom: 17px;
+      background: linear-gradient(180deg, #ffffff 0%, #e9e9e9 100%);
+      background: linear-gradient(180deg, #ffffff 0%, #e9e9e9 100%);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      border: 0px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      @media (max-width: 768px) {
+        max-width: 160px;
+        padding-left: 8px;
+        padding-right: 10px;
+        padding-top: 6px;
+        padding-bottom: 7px;
+        border-radius: 10px;
+        gap: 5px;
+      }
+      &__txt {
+        font-family: "Inter";
+        font-style: italic;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: 0.005em;
+        text-transform: uppercase;
+        color: #323232;
+        white-space: nowrap;
+        @media (max-width: 768px) {
+          font-family: "Inter";
+          font-style: italic;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 19px;
+          letter-spacing: 0.005em;
+          text-transform: uppercase;
+        }
+      }
+      &__icon {
+        @media (max-width: 768px) {
+          max-width: 24px;
+        }
+      }
+    }
+    &-burger {
+      display: none;
+      position: relative;
+      width: 35px;
+      &-wrapper {
+        position: absolute;
+        top: -5px;
+      }
+      @include onMobile {
+        display: block;
+      }
+    }
+  }
+}
+
+.navbar {
+  &-moblist {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    list-style: none;
+    position: absolute;
+    top: 125px;
+    left: 50%;
+    right: 50%;
+    @include onMobile {
+      display: flex;
+    }
+    &__item {
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #323232;
+      white-space: nowrap;
+      border: none;
+      background: none;
+    }
+  }
+  &-list {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 50px;
+    list-style: none;
+    @include onMobile {
+      display: none;
+    }
+    &__item {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #323232;
+      white-space: nowrap;
+      border: none;
+      &:hover {
+        color: #00406e;
+        letter-spacing: 0.045em;
+      }
+    }
+  }
+}

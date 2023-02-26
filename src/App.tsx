@@ -1,25 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import AboutUs from "./components/AboutUs";
+import Benefits from "./components/Benefits";
+import FAQ from "./components/FAQ";
+import GallerySection from "./components/GallerySection";
+import Header from "./components/Header";
+import Offers from "./components/Offers";
+import Process from "./components/Process";
+import QuotePopup from "./components/QuotePopup";
+import WelcomeBanner from "./components/WelcomeBanner";
+
+import { AppContextProvider } from "./context/AppContext";
+
+import "./styles/globals.scss";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContextProvider>
+      <Header />
+      <WelcomeBanner />
+      <QuotePopup />
+      <Benefits />
+      <AboutUs />
+      <Process />
+      <Offers />
+      <GallerySection />
+      <FAQ />
+    </AppContextProvider>
   );
 }
 

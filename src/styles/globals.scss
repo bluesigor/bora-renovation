@@ -1,0 +1,54 @@
+@import "./mixins.scss";
+@import "./fonts.scss";
+@import "./index.scss";
+
+html {
+  scroll-behavior: smooth;
+  --animate-duration: 1s;
+  --animate-delay: 1s;
+  --animate-repeat: 1;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+span {
+  margin: 0;
+}
+
+div {
+  display: block;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  line-height: 1;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.animated {
+  @include onTablet {
+    animation: none;
+  }
+}

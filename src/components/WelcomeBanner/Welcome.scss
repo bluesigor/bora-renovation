@@ -1,0 +1,126 @@
+@import "../../styles/mixins.scss";
+
+.welcome-banner {
+  padding-top: 22px;
+  padding-left: 70px;
+  padding-right: 70px;
+  @include onMobile {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  &-title {
+    &__txt {
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 64px;
+      line-height: 150.52%;
+      text-align: center;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      @include onMobile {
+        font-size: 28px;
+        line-height: 150.52%;
+        letter-spacing: 0.04em;
+      }
+    }
+  }
+  &-wrapper {
+    background-image: url("../../assets/images/welcome/welcome-banner.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 100%;
+    min-height: 592px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    @include onMobile {
+      background-image: url("../../assets/images/welcome/welcome-mob.svg");
+      background-size: cover;
+      min-height: 276px;
+    }
+    &-outer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 96px;
+      gap: 21px;
+      @include onMobile {
+        gap: 80px;
+      }
+      &__inner {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 150.52%;
+        text-align: center;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: #323232;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+        @include onMobile {
+          font-family: "Montserrat";
+          font-weight: 500;
+          font-size: 20px;
+          letter-spacing: 0.04em;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+      &__free-btn {
+        padding: 23px 49px;
+        background: linear-gradient(93.35deg, #ffdd66 3.71%, #ffb74a 98.84%);
+        border-radius: 20px;
+        max-width: 300px;
+        border: none;
+        box-shadow: 0px 0px 0px 0px #00000012;
+        box-shadow: 0px 3px 7px 0px #00000012;
+        box-shadow: 0px 12px 12px 0px #0000000f;
+        @include onMobile {
+          max-width: 233px;
+          padding: 22px 36px;
+        }
+        &:hover {
+          transition: 0.3s;
+          background: white;
+          box-shadow: 0px 0px 0px 0px #00000012;
+          box-shadow: 0px 3px 7px 0px #00000012;
+          box-shadow: 0px 12px 12px 0px #0000000f;
+          border: 2px solid #ffda55;
+          border-radius: 20px;
+          filter: drop-shadow(0px 12px 12px rgba(0, 0, 0, 0.06))
+            drop-shadow(0px 3px 7px rgba(0, 0, 0, 0.07))
+            drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.07));
+        }
+        &:active {
+          background: linear-gradient(93.35deg, #ffdd66 3.71%, #ffb74a 98.84%);
+          box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.06),
+            0px 3px 7px rgba(0, 0, 0, 0.07), 0px 0px 0px rgba(0, 0, 0, 0.07);
+          border-radius: 20px;
+          // max-width: 300px;
+        }
+        &-txt {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 24px;
+          text-align: center;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          color: #323232;
+          white-space: nowrap;
+          @include onMobile {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.04em;
+          }
+        }
+      }
+    }
+  }
+}

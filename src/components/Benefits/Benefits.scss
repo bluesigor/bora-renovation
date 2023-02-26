@@ -1,0 +1,103 @@
+@import "../../styles/mixins.scss";
+
+.benefits {
+  padding-top: 100px;
+  padding-bottom: 96px;
+  padding-left: 68px;
+  padding-right: 71px;
+  @include onMobile {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 59px;
+  }
+  &-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    @include onMobile {
+      margin-bottom: 57px;
+    }
+    &__title {
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 150.52%;
+      text-align: center;
+      letter-spacing: 0.105em;
+      text-transform: uppercase;
+      color: #323232;
+      @include onMobile {
+        font-size: 24px;
+      }
+    }
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    @include onMobile {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    &__item {
+      padding-top: 20px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 54px;
+      border: 2px solid #323232;
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      @include onMobile {
+        border: none;
+        padding-bottom: 6px;
+        padding-left: 16px;
+        padding-right: 21px;
+        padding-top: 0px;
+      }
+      &-icon {
+        margin-bottom: 15px;
+        @include onMobile {
+          margin-bottom: 10px;
+          width: 51px;
+        }
+      }
+      &-title {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 150.52%;
+        text-align: center;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #00406e;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+        @include onMobile {
+          margin-bottom: 7px;
+          font-size: 16px;
+          letter-spacing: 0.04em;
+        }
+      }
+      &-desc {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 142%;
+        text-align: center;
+        letter-spacing: 0.04em;
+        color: #323232;
+        @include onMobile {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

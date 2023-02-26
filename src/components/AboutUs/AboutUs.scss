@@ -1,0 +1,152 @@
+@import "../../styles/mixins.scss";
+
+.aboutus {
+  padding-left: 68px;
+  padding-right: 71;
+  margin-bottom: 200px;
+  @include onMobile {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 59px;
+    margin-bottom: 130px;
+  }
+  &-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    &__title {
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 150.52%;
+      letter-spacing: 0.105em;
+      text-transform: uppercase;
+      color: #323232;
+      @include onMobile {
+        font-size: 24px;
+      }
+    }
+  }
+  &-content {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    justify-content: space-between;
+    @include onMobile {
+      flex-direction: column-reverse;
+    }
+    &-desc {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      min-height: 444px;
+      max-height: 580px;
+      max-width: 715px;
+      &__txt {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 150.52%;
+        letter-spacing: 0.04em;
+        color: #323232;
+        & > a {
+          color: #323232;
+          border: none;
+          border-bottom: 1px solid #323232;
+        }
+        @include onMobile {
+          text-align: center;
+          font-size: 18px;
+        }
+      }
+      &-more {
+        display: flex;
+        justify-content: center;
+
+        &__btn {
+          border: none;
+          background: none;
+          border-bottom: 1px solid #717070;
+          &-txt {
+            margin-left: -5px;
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 150.52%;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.04em;
+            color: #717070;
+            @include onMobile {
+              font-weight: 300;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+    &-media {
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      &__mov {
+        z-index: 0;
+        width: 713px;
+        height: 443px;
+        object-fit: cover;
+        border-radius: 50px;
+        @include onMobile {
+          width: 345px;
+          height: 239px;
+          border-radius: 20px;
+        }
+
+        &-title {
+          position: absolute;
+          z-index: 1;
+          top: 40px;
+          left: 40px;
+          font-family: "Semi Montserrat";
+          font-style: normal;
+          font-size: 20px;
+          line-height: 150.52%;
+          text-align: center;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          color: #ffffff;
+          @include onMobile {
+            left: 12px;
+            top: 19px;
+            font-size: 15px;
+            white-space: nowrap;
+          }
+        }
+      }
+      &__play {
+        z-index: 2;
+        left: 0px;
+        background: none;
+        border: none;
+        position: absolute;
+        left: 30%;
+        top: 25%;
+        @include onMobile {
+          left: 35%;
+          top: 35%;
+        }
+        &-logo {
+          mix-blend-mode: darken;
+          @include onMobile {
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
+}
