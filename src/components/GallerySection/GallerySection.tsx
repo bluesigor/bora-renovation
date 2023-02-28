@@ -43,7 +43,7 @@ const GallerySection = () => {
             <img
               src={repair}
               alt="repair"
-              className="gallery-content-logos-second__logo"
+              className="gallery-content-logos-first__logo"
             />
           </div>
         </div>

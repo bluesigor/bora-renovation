@@ -1,7 +1,10 @@
 import { useState } from "react";
 
+import useMeasures from "../../core/hooks/useMeasures";
+
 const FAQ = () => {
   const [showMore, setShowMore] = useState(false);
+  const { innerWidth } = useMeasures();
 
   return (
     <section className="faq">
@@ -53,7 +56,95 @@ const FAQ = () => {
             inside the cabinets.
           </p>
         </div>
-
+        {innerWidth < 768 && (
+          <>
+            <div className="faq-questions-entity">
+              <p className="faq-questions-entity__title">
+                What finish do you use for cabinets?
+              </p>
+              <p className="faq-questions-entity__desc">
+                For kitchen cabinets, the best choice is the satin finish. The
+                sheen of this type of finish looks gorgeous on kitchen cabinets
+                and perfectly protect them.
+              </p>
+            </div>
+            <div className="faq-questions-entity">
+              <p className="faq-questions-entity__title">
+                Do you install new hardware and hinges?
+              </p>
+              <p className="faq-questions-entity__desc">
+                We can patch the old holes and make new ones for new knobs
+                and/or handles. We can install new hinges if they’re exactly the
+                same size as the old ones.
+              </p>
+            </div>
+            <div className="faq-questions-entity">
+              <p className="faq-questions-entity__title">
+                How long will the kitchen cabinet refinishing project take?
+              </p>
+              <p className="faq-questions-entity__desc">
+                Your cabinets will be dry and ready to use in 2-3 days. Duration
+                depends on kitchen size.
+              </p>
+            </div>
+            <div className="faq-questions-entity">
+              <p className="faq-questions-entity__title">
+                Where can I see pictures and videos of your previous projects?
+              </p>
+              <p className="faq-questions-entity__desc">
+                On Facebook and Instagram, you will find over 600 pictures and
+                videos of our work.
+              </p>
+            </div>
+            <div className="faq-questions-entity">
+              <p className="faq-questions-entity__title">
+                Are your products moisture-, heat-, and chemical-resistant?
+              </p>
+              <p className="faq-questions-entity__desc">
+                Yes. The products that we use are ideal for kitchen cabinets.
+              </p>
+            </div>
+            <div className="faq-questions-entity">
+              <p className="faq-questions-entity__title">
+                Can I use the kitchen while you refinish it?
+              </p>
+              <p className="faq-questions-entity__desc">
+                You will be able to use kitchen after we finish the project. We
+                will cover all cabinets inside, countertops, appliances, and any
+                other surfaces not to be painted.
+              </p>
+            </div>
+            <div className="faq-questions-entity">
+              <p className="faq-questions-entity__title">
+                Do you have any customer reviews?
+              </p>
+              <p className="faq-questions-entity__desc">
+                Yes, we have 50+ reviews left by our satisfied customers on
+                Google and Facebook.
+              </p>
+            </div>
+            <div className="faq-questions-entity">
+              <p className="faq-questions-entity__title">
+                Can you refinish island/bottom cabinets in a different color?
+              </p>
+              <p className="faq-questions-entity__desc">
+                Sure! Please visit our Facebook or Instagram page to get
+                inspired for your future project.
+              </p>
+            </div>
+            <div className="faq-questions-entity">
+              <p className="faq-questions-entity__title">
+                Where should I choose a color?
+              </p>
+              <p className="faq-questions-entity__desc">
+                You can go to Sherwin Williams or Benjamin Moore and choose any
+                color you like. They have samples which you can take home and
+                see how the color matches your backsplash, countertop, walls and
+                the interior of the house. Please contact us if you need help.
+              </p>
+            </div>
+          </>
+        )}
         {showMore && (
           <>
             <div className="faq-questions-entity">
@@ -143,14 +234,21 @@ const FAQ = () => {
             </div>
           </>
         )}
-        {!showMore && (
-          <div className="faq-wrapper">
-            <button className="faq-btn-more">
-              <span className="faq-btn-more__txt">See more</span>
-            </button>
-          </div>
-        )}
       </div>
+      {!showMore && (
+        <div onClick={() => setShowMore(true)} className="faq-wrapper">
+          <button className="faq-btn-more">
+            <span className="faq-btn-more__txt">See more</span>
+          </button>
+        </div>
+      )}
+      {showMore && (
+        <div onClick={() => setShowMore(false)} className="faq-wrapper">
+          <button className="faq-btn-more">
+            <span className="faq-btn-more__txt">Show less</span>
+          </button>
+        </div>
+      )}
     </section>
   );
 };

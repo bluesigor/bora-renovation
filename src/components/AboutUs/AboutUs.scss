@@ -1,4 +1,5 @@
 @import "../../styles/mixins.scss";
+@import "../../styles/vars.scss";
 
 .aboutus {
   padding-left: 68px;
@@ -22,7 +23,7 @@
       line-height: 150.52%;
       letter-spacing: 0.105em;
       text-transform: uppercase;
-      color: #323232;
+      color: $scrollbar-reviews;
       @include onMobile {
         font-size: 24px;
       }
@@ -32,7 +33,10 @@
     display: flex;
     flex-direction: row;
     gap: 32px;
-    justify-content: space-between;
+    justify-content: space-between !important;
+    @media (min-width: 1600px) {
+      gap: 200px;
+    }
     @include onMobile {
       flex-direction: column-reverse;
     }
@@ -51,11 +55,11 @@
         font-size: 24px;
         line-height: 150.52%;
         letter-spacing: 0.04em;
-        color: #323232;
+        color: $scrollbar-reviews;
         & > a {
-          color: #323232;
+          color: $scrollbar-reviews;
           border: none;
-          border-bottom: 1px solid #323232;
+          border-bottom: 1px solid $scrollbar-reviews;
         }
         @include onMobile {
           text-align: center;
@@ -69,7 +73,7 @@
         &__btn {
           border: none;
           background: none;
-          border-bottom: 1px solid #717070;
+          border-bottom: 1px solid $faq-accent;
           &-txt {
             margin-left: -5px;
             font-family: "Montserrat";
@@ -80,7 +84,7 @@
             display: flex;
             align-items: center;
             letter-spacing: 0.04em;
-            color: #717070;
+            color: $faq-accent;
             @include onMobile {
               font-weight: 300;
               font-size: 15px;
@@ -119,7 +123,7 @@
           text-align: center;
           letter-spacing: 0.04em;
           text-transform: uppercase;
-          color: #ffffff;
+          color: $primary;
           @include onMobile {
             left: 12px;
             top: 19px;

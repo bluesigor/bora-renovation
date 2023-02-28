@@ -1,7 +1,7 @@
 import { useAppContext } from "../../context/AppContext";
 
 const Offers = () => {
-  const { openModal } = useAppContext();
+  const { openModalQuote } = useAppContext();
 
   return (
     <section className="offers">
@@ -21,12 +21,16 @@ const Offers = () => {
           </li>
         </ul>
         <div className="offers-main-contact">
-          <button onClick={openModal} className="offers-main-contact-prime">
+          <button
+            onClick={openModalQuote}
+            className="offers-main-contact-prime">
             <span className="offers-main-contact-prime__txt">
               Contact us today to get more information
             </span>
           </button>
-          <button onClick={openModal} className="offers-main-contact-quote">
+          <button
+            onClick={openModalQuote}
+            className="offers-main-contact-quote">
             <span className="offers-main-contact-quote__txt">
               GET a FREE quote
             </span>

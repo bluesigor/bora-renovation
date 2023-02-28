@@ -1,4 +1,5 @@
 @import "../../styles/mixins.scss";
+@import "../../styles/vars.scss";
 
 .process {
   padding-top: 100px;
@@ -23,7 +24,7 @@
       line-height: 150.52%;
       letter-spacing: 0.105em;
       text-transform: uppercase;
-      color: #323232;
+      color: $scrollbar-reviews;
       @include onMobile {
         font-size: 24px;
       }
@@ -45,7 +46,7 @@
     }
     &::-webkit-scrollbar-thumb {
       width: 65px;
-      background: #767676;
+      background: $quote-accent;
       border-radius: 100px;
     }
     &-wrapper {
@@ -60,7 +61,7 @@
 
     &__outer {
       padding: 31px 40px;
-      background: linear-gradient(180deg, #e2e1e1 0%, #ffffff 100%);
+      background: linear-gradient(180deg, #e2e1e1 0%, $primary 100%);
       border-radius: 0px 0px 50px 0px;
       &-desc1,
       &-desc2,
@@ -69,15 +70,9 @@
       &-desc5,
       &-desc6 {
         display: none;
-        @include onMobile {
-          display: block;
-          font-family: "Inter";
-          font-weight: 400;
-          font-size: 15px;
-        }
       }
       &:hover {
-        background: #323232;
+        background: $scrollbar-reviews;
         height: 256px;
         transition: 2.2s;
         text-align: center;
@@ -103,7 +98,12 @@
           font-size: 20px;
           line-height: 140.02%;
           letter-spacing: 0.04em;
-          color: #ffffff;
+          color: $primary;
+          @include onMobile {
+            font-family: "Inter";
+            font-weight: 400;
+            font-size: 15px;
+          }
         }
       }
       & > p {
@@ -115,7 +115,7 @@
         text-align: center;
         letter-spacing: 0.04em;
         text-transform: uppercase;
-        color: #323232;
+        color: $scrollbar-reviews;
         margin-bottom: 14px;
         @include onMobile {
           background: linear-gradient(180deg, #065a97 0%, #012f50 100%);

@@ -2,8 +2,11 @@ import { createContext, useContext, useState } from "react";
 
 const defaultState = {
   isModalOpen: false,
-  openModal: () => {},
-  closeModal: () => {},
+  isReviewModalOpen: false,
+  openModalQuote: () => {},
+  closeModalQuote: () => {},
+  openReviewModal: () => {},
+  closeReviewModal: () => {},
 };
 
 const AppContext = createContext(defaultState);
@@ -14,6 +17,8 @@ export const AppContextProvider = ({
   children: React.ReactNode;
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isReviewModalOpen, setReviewModalOpen] = useState(false);
+
   if (isModalOpen) {
     document.body.style.overflow = "hidden";
   } else {
@@ -22,11 +27,21 @@ export const AppContextProvider = ({
 
   const contextValue = {
     isModalOpen,
-    openModal: () => {
+    openModalQuote: () => {
       setIsModalOpen(true);
     },
-    closeModal: () => {
+
+    closeModalQuote: () => {
       setIsModalOpen(false);
+    },
+
+    isReviewModalOpen,
+    openReviewModal: () => {
+      setReviewModalOpen(true);
+    },
+
+    closeReviewModal: () => {
+      setReviewModalOpen(false);
     },
   };
 

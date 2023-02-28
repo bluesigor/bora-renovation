@@ -1,15 +1,41 @@
 @font-face {
+  font-family: "Inter ExtraLight";
+  src: local("Inter Regular"), url("../assets/fonts/Inter-ExtraLight.ttf");
+}
+@font-face {
+  font-family: "Inter Light";
+  src: local("Inter Light"), url("../assets/fonts/Inter-Light.ttf");
+}
+
+@font-face {
   font-family: "Inter";
   src: local("Inter Regular"), url("../assets/fonts/Inter-Regular.woff");
 }
+
 @font-face {
-  font-family: "Inter ExtraLight";
-  src: local("Inter Regular"), url("../assets/fonts/Inter-ExtraLight.ttf");
+  font-family: "Medium Inter";
+  src: local("Medium Regular"), url("../assets/fonts/Inter-Medium.ttf");
 }
 
 @font-face {
   font-family: "Raleway";
   src: local("Raleway Regular"), url("../assets/fonts/Raleway-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Medium Raleway";
+  src: local("Medium Raleway"), url("../assets/fonts/Raleway-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Semi Raleway";
+  src: local("Semi Raleway"), url("../assets/fonts/Raleway-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Light Montserrat";
+  src: local("Montserrat Regular"),
+    url("../assets/fonts/Montserrat-Regular.ttf");
 }
 
 @font-face {
@@ -25,6 +51,11 @@
 }
 
 @font-face {
+  font-family: "Bold Montserrat";
+  src: local("Montserrat Bold"), url("../assets/fonts/Montserrat-Bold.ttf");
+}
+
+@font-face {
   font-family: "Semi Inter";
   src: local("Inter SemiBold"), url("../assets/fonts/Inter-SemiBold.ttf");
 }
@@ -36,4 +67,9 @@
 @font-face {
   font-family: "Light Montserrat";
   src: local("Montserrat Light"), url("../assets/fonts/Montserrat-Light.ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans"), url("../assets/fonts/OpenSans-Regular.ttf");
 }

@@ -1,5 +1,5 @@
 @import "../../styles/mixins.scss";
-
+@import "../../styles/vars.scss";
 .welcome-banner {
   padding-top: 22px;
   padding-left: 70px;
@@ -59,7 +59,7 @@
         text-align: center;
         letter-spacing: 0.09em;
         text-transform: uppercase;
-        color: #323232;
+        color: $scrollbar-reviews;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
         @include onMobile {
           font-family: "Montserrat";
@@ -72,7 +72,11 @@
       }
       &__free-btn {
         padding: 23px 49px;
-        background: linear-gradient(93.35deg, #ffdd66 3.71%, #ffb74a 98.84%);
+        background: linear-gradient(
+          93.35deg,
+          $linears-first 3.71%,
+          $linears-second 98.84%
+        );
         border-radius: 20px;
         max-width: 300px;
         border: none;
@@ -96,11 +100,14 @@
             drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.07));
         }
         &:active {
-          background: linear-gradient(93.35deg, #ffdd66 3.71%, #ffb74a 98.84%);
+          background: linear-gradient(
+            93.35deg,
+            $linears-first 3.71%,
+            #ffb74a 98.84%
+          );
           box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.06),
             0px 3px 7px rgba(0, 0, 0, 0.07), 0px 0px 0px rgba(0, 0, 0, 0.07);
           border-radius: 20px;
-          // max-width: 300px;
         }
         &-txt {
           font-family: "Inter";
@@ -111,7 +118,7 @@
           text-align: center;
           letter-spacing: 0.04em;
           text-transform: uppercase;
-          color: #323232;
+          color: $scrollbar-reviews;
           white-space: nowrap;
           @include onMobile {
             font-weight: 600;

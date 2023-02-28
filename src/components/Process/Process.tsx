@@ -29,7 +29,7 @@ const Process = () => {
           onMouseLeave={offHover}
           className="process-list-wrapper">
           <div className="process-list-logo">
-            <img width={"100%"} src={taking} alt={taking} />
+            <img src={taking} alt={taking} width={"100%"} />
           </div>
           <div className="process-list__outer">
             <p className="process-list__title">
@@ -48,7 +48,7 @@ const Process = () => {
           onMouseLeave={offHover}
           className="process-list-wrapper">
           <div className="process-list-logo">
-            <img width={"100%"} src={cleaning} alt={cleaning} />
+            <img src={cleaning} alt={cleaning} width={"100%"} />
           </div>
           <div className="process-list__outer">
             <p className="process-list__title">
@@ -68,7 +68,7 @@ const Process = () => {
           onMouseLeave={offHover}
           className="process-list-wrapper">
           <div className="process-list-logo">
-            <img width={"100%"} src={sand} alt={sand} />
+            <img src={sand} alt={sand} width={"100%"} />
           </div>
           <div className="process-list__outer">
             <p className="process-list__title">
@@ -87,7 +87,7 @@ const Process = () => {
           onMouseLeave={offHover}
           className="process-list-wrapper">
           <div className="process-list-logo">
-            <img width={"100%"} src={protect} alt={protect} />
+            <img src={protect} alt={protect} width={"100%"} />
           </div>
           <div className="process-list__outer">
             <p className="process-list__title">Protecting and covering</p>
@@ -105,7 +105,7 @@ const Process = () => {
           onMouseLeave={offHover}
           className="process-list-wrapper">
           <div className="process-list-logo">
-            <img width={"100%"} src={materials_pro} alt={materials_pro} />
+            <img src={materials_pro} alt={materials_pro} width={"100%"} />
           </div>
           <div className="process-list__outer">
             <p className="process-list__title">
@@ -125,7 +125,7 @@ const Process = () => {
           onMouseLeave={offHover}
           className="process-list-wrapper">
           <div className="process-list-logo">
-            <img width={"100%"} src={install} alt={install} />
+            <img src={install} alt={install} width={"100%"} />
           </div>
           <div className="process-list__outer">
             <p className="process-list__title">
