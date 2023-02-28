@@ -1,5 +1,6 @@
 import Hamburger from "hamburger-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import bora_logo from "../../assets/images/header/bora-logo.svg";
 import phone_icon from "../../assets/images/header/phone-icon.svg";
@@ -13,13 +14,17 @@ const Header = () => {
         height: isOpen ? "361px" : "137px",
       }}
       className="bora-header">
-      <img src={bora_logo} alt="bora-logo" className="bora-header__logo" />
+      <Link to="/">
+        <img src={bora_logo} alt="bora-logo" className="bora-header__logo" />
+      </Link>
       <nav className="bora-header__navbar navbar">
         <ul className="navbar-list">
           <li className="navbar-list__item">Home</li>
           <li className="navbar-list__item">About us</li>
           <li className="navbar-list__item">our process</li>
-          <li className="navbar-list__item">gallery</li>
+          <Link to="gallery">
+            <li className="navbar-list__item">gallery</li>
+          </Link>
           <li className="navbar-list__item">FAQ’s</li>
           <li className="navbar-list__item">Contacts</li>
         </ul>

@@ -1,5 +1,5 @@
 @import "../../styles/mixins.scss";
-
+@import "../../styles/vars.scss";
 .benefits {
   padding-top: 100px;
   padding-bottom: 96px;
@@ -26,7 +26,7 @@
       text-align: center;
       letter-spacing: 0.105em;
       text-transform: uppercase;
-      color: #323232;
+      color: $scrollbar-reviews;
       @include onMobile {
         font-size: 24px;
       }
@@ -46,7 +46,7 @@
       padding-left: 15px;
       padding-right: 15px;
       padding-bottom: 54px;
-      border: 2px solid #323232;
+      border: 2px solid $scrollbar-reviews;
       border-radius: 50px;
       display: flex;
       justify-content: center;
@@ -75,7 +75,7 @@
         text-align: center;
         letter-spacing: 0.04em;
         text-transform: uppercase;
-        color: #00406e;
+        color: $blue-accent;
         text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
         margin-bottom: 20px;
         text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
@@ -93,7 +93,7 @@
         line-height: 142%;
         text-align: center;
         letter-spacing: 0.04em;
-        color: #323232;
+        color: $scrollbar-reviews;
         @include onMobile {
           font-size: 15px;
         }

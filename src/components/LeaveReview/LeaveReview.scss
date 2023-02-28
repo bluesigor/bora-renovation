@@ -1,0 +1,137 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/vars.scss";
+.leave-review {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  &-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 40px;
+    border: 1px solid #888;
+    border-radius: 20px;
+    width: 600px;
+    @include onMobile {
+      width: 345px;
+      margin: 50% auto;
+      padding: 15px;
+      padding-bottom: 50px;
+    }
+    &-top {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 46px;
+      @include onMobile {
+        margin-bottom: 28px;
+      }
+      &__btn-close {
+        border: none;
+        background: none;
+        & > img {
+          @include onMobile {
+            width: 27px;
+          }
+        }
+      }
+    }
+
+    &-header {
+      margin-bottom: 28px;
+      @include onMobile {
+        margin-bottom: 46px;
+      }
+      &__main {
+        font-family: "Raleway";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 160.52%;
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        font-feature-settings: "pnum" on, "lnum" on, "ss09" on;
+        background: linear-gradient(93.35deg, #ffda55 3.71%, #ffaa2c 98.84%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+        @include onMobile {
+          font-family: "Semi Montserrat";
+          font-style: normal;
+          font-size: 16px;
+          line-height: 150.52%;
+          text-align: center;
+          letter-spacing: 0.04em;
+          font-size: 16px;
+          background: linear-gradient(93.35deg, #ffda55 3.71%, #ffaa2c 98.84%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+          text-shadow: none;
+        }
+      }
+      &__sub {
+        font-family: "Medium Raleway";
+        font-style: normal;
+        font-size: 24px;
+        line-height: 160.52%;
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        font-feature-settings: "pnum" on, "lnum" on, "ss09" on;
+        color: $scrollbar-reviews;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+        @include onMobile {
+          font-family: "Montserrat";
+          font-style: normal;
+          font-size: 16px;
+          line-height: 150.52%;
+          text-align: center;
+          letter-spacing: 0.04em;
+          color: $darken;
+          text-transform: lowercase;
+          text-shadow: none;
+        }
+      }
+    }
+    &-desc {
+      &__text {
+        font-family: "Inter Light";
+        font-style: normal;
+        font-size: 24px;
+        line-height: 150.52%;
+        text-align: center;
+        letter-spacing: 0.08em;
+        color: $quote-accent;
+        @include onMobile {
+          font-size: 16px;
+          letter-spacing: 0.04em;
+        }
+      }
+      margin-bottom: 65px;
+      @include onMobile {
+        margin-bottom: 45px;
+      }
+    }
+    &-social {
+      width: 100%;
+      justify-content: center;
+      display: flex;
+      flex-direction: row;
+      gap: 50px;
+      a > img {
+        @include onMobile {
+          width: 35px;
+        }
+      }
+    }
+  }
+}

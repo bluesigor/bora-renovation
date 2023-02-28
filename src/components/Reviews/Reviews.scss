@@ -1,0 +1,207 @@
+@import "../../styles/mixins.scss";
+@import url("https://fonts.googleapis.com/css2?family=Anek+Latin:wght@300;400;700;800&family=Open+Sans:wght@600&display=swap");
+@import "../../styles/vars.scss";
+
+.reviews {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("../../assets/images/reviews/reviews-bckg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom: 153px;
+  padding-top: 98px;
+  padding-left: 194px;
+  padding-right: 194px;
+  min-height: 100vh;
+  @include onMobile {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 66px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.38)),
+      url("../../assets/images/reviews/reviews-bckg-mob.svg");
+    background-repeat: no-repeat;
+    min-height: 100%;
+  }
+  &-list {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    @include onMobile {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      max-width: 345px;
+      &::-webkit-scrollbar {
+        background: $scrollbar-reviews;
+        border-radius: 100px;
+      }
+      &::-webkit-scrollbar-thumb {
+        max-width: 65px;
+        background: linear-gradient(180deg, #e2e1e1 0%, $primary 100%);
+        border-radius: 100px;
+      }
+    }
+    &__active {
+      width: 466px;
+      padding-left: 41px;
+      padding-right: 50px;
+      padding-top: 35px;
+      background: $primary;
+      box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      height: 419px;
+      @include onMobile {
+        width: 345px;
+        height: 290px;
+      }
+      .reviews-list__item-top-content-name {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 140.68%;
+        text-align: center;
+        letter-spacing: 0.04em;
+        background: linear-gradient(180deg, #065a97 0%, #012f50 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .reviews-list__item-text {
+        font-family: "Medium Montserrat";
+        font-style: normal;
+        font-size: 20px;
+        line-height: 150.18%;
+        letter-spacing: 0.02em;
+        color: $reviews-accent;
+      }
+    }
+    &__item {
+      height: 310px;
+      padding: 33px 25px;
+      background: $primary;
+      box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      width: 343px;
+      @include onMobile {
+        padding: 20px 11px;
+        padding-left: 56px;
+        min-width: 345px;
+        height: 290px;
+        margin-bottom: 83px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+      &-top {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 28px;
+        @include onMobile {
+          margin-bottom: 20px;
+        }
+        &-avatar {
+          width: 85px;
+        }
+        &-content {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          &-name {
+            font-family: "Open Sans";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 135.68%;
+            text-align: center;
+            letter-spacing: 0.065em;
+            color: $reviews-accent;
+            @include onMobile {
+              font-family: "Open Sans";
+              font-style: normal;
+              font-size: 16px;
+              line-height: 140.68%;
+              text-align: center;
+              letter-spacing: 0.04em;
+              background: linear-gradient(180deg, #065a97 0%, #012f50 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
+            }
+          }
+        }
+      }
+      &-text {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150.18%;
+        letter-spacing: 0.02em;
+        color: $reviews-accent;
+        @include onMobile {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150.52%;
+          letter-spacing: 0.04em;
+        }
+      }
+    }
+  }
+  &-arrows {
+    display: flex;
+    flex-direction: row;
+    gap: 580px;
+    @include onMobile {
+      display: none;
+    }
+    &-btn {
+      background: none;
+      border: none;
+    }
+  }
+  &-feedback-block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    &-btn {
+      padding-top: 24px;
+      padding-right: 33px;
+      padding-bottom: 25px;
+      padding-left: 32px;
+      width: 327px;
+      background: linear-gradient(93.35deg, #ffda55 3.71%, #ffaa2c 98.84%);
+      box-shadow: 6px 7px 10px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      border: none;
+      @include onMobile {
+        width: 327px;
+      }
+      &__txt {
+        font-family: "Semi Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 135.68%;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: $reviews-accent;
+      }
+    }
+  }
+}
+
+.wrapper-reviews {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 84px;
+  @include onMobile {
+    margin-bottom: 64px;
+  }
+}

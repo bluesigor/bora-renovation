@@ -1,0 +1,288 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/vars.scss";
+
+.quest {
+  height: 95vh;
+  position: relative;
+  background-color: $primary;
+  display: flex;
+  justify-content: center;
+  @include onMobile {
+    align-items: flex-end;
+    height: 100vh;
+    margin-top: 400px;
+  }
+  &-banner {
+    position: absolute;
+    width: 1457px;
+    height: 1142px;
+    top: -65px;
+    border-radius: 50px;
+    background: $primary;
+    @include onMobile {
+      margin-top: 50px;
+      top: 0px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100%;
+      border: none;
+      border-radius: 0px;
+      padding-top: 0px;
+      background: none;
+    }
+    &-top {
+      padding-top: 111px;
+      padding-right: 120px;
+      padding-left: 129px;
+      padding-bottom: 116px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 148px;
+      @include onMobile {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+        margin-bottom: 56px;
+      }
+      &__card {
+        &-title {
+          font-family: "Semi Montserrat";
+          font-style: normal;
+          font-size: 120px;
+          line-height: 146px;
+          text-align: center;
+          text-transform: uppercase;
+          background: linear-gradient(93.35deg, #ffda55 3.71%, #ffaa2c 98.84%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+          @include onMobile {
+            font-size: 48px;
+            line-height: 59px;
+          }
+        }
+        &-desc {
+          font-family: "Medium Inter";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 32px;
+          line-height: 140.52%;
+          text-align: center;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          color: $scrollbar-reviews;
+          @include onMobile {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    &-bottom {
+      height: 743px;
+      background-image: url("../../assets/images/questions/contact-bckg.svg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 0px 0px 50px 50px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding-top: 94px;
+      @include onMobile {
+        background-image: url("../../assets/images/questions/house-bckg-mob.svg");
+        background-size: cover;
+        width: 100%;
+        min-height: 734px;
+        padding-top: 60px;
+        border-radius: 0px 0px 20px 20px;
+      }
+      &-header {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+        max-width: 706px;
+        margin-bottom: 69px;
+        @include onMobile {
+          margin-bottom: 37px;
+        }
+        &__title {
+          font-family: "Bold Montserrat";
+          font-style: normal;
+          font-size: 36px;
+          line-height: 130.4%;
+          text-align: center;
+          letter-spacing: 0.075em;
+          text-transform: uppercase;
+          font-feature-settings: "pnum" on, "lnum" on;
+          color: $primary;
+          @include onMobile {
+            font-size: "Medium Raleway";
+            font-style: normal;
+            font-size: 24px;
+            line-height: 150.52%;
+            text-align: center;
+            letter-spacing: 0.105em;
+            text-transform: uppercase;
+            color: $primary;
+          }
+        }
+        &__desc {
+          font-family: "Montserrat";
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 150.52%;
+          text-align: center;
+          letter-spacing: 0.04em;
+          color: $primary;
+          @include onMobile {
+            display: none;
+          }
+        }
+      }
+      &-wrapper {
+        max-width: 670px;
+        @include onMobile {
+          padding-left: 16px;
+          padding-right: 14px;
+        }
+      }
+      &-form {
+        display: flex;
+        flex-direction: row;
+        gap: 64px;
+        @include onMobile {
+          flex-direction: column-reverse;
+          align-items: center;
+          gap: 30px;
+        }
+        &-inputs {
+          display: flex;
+          flex-direction: column;
+          gap: 33px;
+          color: $scrollbar-reviews;
+          min-width: 463px;
+          @include onMobile {
+            min-width: 300px;
+            gap: 15px;
+          }
+          & > input {
+            padding: 12px 31px;
+            border-radius: 20px;
+            border: none;
+            height: 60px;
+            @include onMobile {
+              font-family: "Montserrat";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 150.52%;
+              letter-spacing: 0.04em;
+              color: $scrollbar-reviews;
+            }
+            &::-webkit-input-placeholder {
+              font-family: "Light Montserrat";
+              font-style: normal;
+              font-size: 24px;
+              line-height: 150.52%;
+              letter-spacing: 0.04em;
+              color: #807f7f;
+              @include onMobile {
+                font-family: "Montserrat";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150.52%;
+                letter-spacing: 0.04em;
+              }
+            }
+          }
+          &__submit-mob {
+            display: none;
+            margin-top: 45px;
+            background: linear-gradient(
+              93.35deg,
+              #ffda55 3.71%,
+              #ffaa2c 98.84%
+            );
+            box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.07),
+              0px 0px 0px rgba(0, 0, 0, 0.07);
+            border-radius: 20px;
+            padding: 23px 109px;
+            & > span {
+            }
+            @include onMobile {
+              display: block;
+            }
+          }
+        }
+        &-control {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 5px;
+          &__submit {
+            width: 300px;
+            padding: 23px 109px;
+            background: linear-gradient(
+              93.35deg,
+              #ffda55 3.71%,
+              #ffaa2c 98.84%
+            );
+            box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.07),
+              0px 0px 0px rgba(0, 0, 0, 0.07);
+            border-radius: 20px;
+            border: none;
+            @include onMobile {
+              display: none;
+            }
+            & > span {
+              font-family: "Semi Inter";
+              font-style: normal;
+              font-size: 20px;
+              line-height: 24px;
+              text-align: center;
+              letter-spacing: 0.04em;
+              text-transform: uppercase;
+              color: $scrollbar-reviews;
+            }
+          }
+          &-logo {
+            @include onMobile {
+              display: none;
+            }
+          }
+          &-moblogo {
+            display: none;
+            @include onMobile {
+              display: block;
+            }
+          }
+        }
+        &-wrapper {
+          display: flex;
+          @include onMobile {
+            flex-direction: row;
+          }
+          &-txt {
+            display: none;
+            font-family: "Montserrat";
+            font-style: normal;
+            font-size: 16px;
+            line-height: 150.52%;
+            letter-spacing: 0.04em;
+            color: $primary;
+            @include onMobile {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,29 +1,25 @@
-import AboutUs from "./components/AboutUs";
-import Benefits from "./components/Benefits";
-import FAQ from "./components/FAQ";
-import GallerySection from "./components/GallerySection";
-import Header from "./components/Header";
-import Offers from "./components/Offers";
-import Process from "./components/Process";
-import QuotePopup from "./components/QuotePopup";
-import WelcomeBanner from "./components/WelcomeBanner";
-
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AppContextProvider } from "./context/AppContext";
 
 import "./styles/globals.scss";
 
+import HomePage from "./pages/HomePage";
+import GalleryPage from "./pages/GalleryPage";
+import Fallback from "./components/Fallback";
+import Layout from "./components/Outlet/Layout";
+
 function App() {
   return (
     <AppContextProvider>
-      <Header />
-      <WelcomeBanner />
-      <QuotePopup />
-      <Benefits />
-      <AboutUs />
-      <Process />
-      <Offers />
-      <GallerySection />
-      <FAQ />
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="gallery" element={<GalleryPage />} />
+          </Route>
+          <Route path="*" element={<Fallback />} />
+        </Routes>
+      </BrowserRouter>
     </AppContextProvider>
   );
 }

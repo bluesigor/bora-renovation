@@ -1,0 +1,176 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/vars.scss";
+
+.contact {
+  background-image: url("../../assets/images/contact/map.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px;
+  @include onMobile {
+    padding-top: 100px;
+    height: 75vh;
+  }
+  &-wrapper {
+    position: relative;
+    &-form {
+      width: 600px;
+      padding: 70px 103px 41px 102px;
+      background: $primary;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25),
+        0px 47px 19px rgba(0, 0, 0, 0.01), 0px 27px 16px rgba(0, 0, 0, 0.04),
+        0px 12px 12px rgba(0, 0, 0, 0.06), 0px 3px 7px rgba(0, 0, 0, 0.07),
+        0px 0px 0px rgba(0, 0, 0, 0.07);
+      border-radius: 50px;
+      @include onMobile {
+        width: 320px;
+        padding: 40px 24px 27px 24px;
+        border-radius: 20px;
+      }
+      &-header {
+        margin-bottom: 31px;
+        max-width: 327px;
+        @include onMobile {
+          max-width: 213px;
+        }
+        &__txt {
+          font-family: "Medium Raleway";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 40px;
+          line-height: 150.52%;
+          text-align: center;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          color: $scrollbar-reviews;
+          white-space: nowrap;
+          @include onMobile {
+            font-size: 24px;
+            text-align: center;
+            letter-spacing: 0.105em;
+          }
+        }
+      }
+      &-main {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 73px;
+        @include onMobile {
+          gap: 15px;
+          margin-bottom: 40px;
+        }
+        &__item {
+          display: flex;
+          flex-direction: row;
+          gap: 15px;
+          align-items: center;
+        }
+        &__item:first-child {
+          & > a {
+            text-decoration: none;
+            font-family: "Inter";
+            font-style: normal;
+            font-size: 20px;
+            line-height: 151.9%;
+            letter-spacing: 0.06em;
+            font-feature-settings: "pnum" on, "lnum" on;
+            color: $scrollbar-reviews;
+            @include onMobile {
+              font-size: 16px;
+            }
+          }
+          & > img {
+            @include onMobile {
+              max-width: 29px;
+            }
+          }
+        }
+        &__item:nth-child(2) {
+          & > a {
+            text-decoration: none;
+            font-family: "Inter";
+            font-style: italic;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+            letter-spacing: 0.06em;
+            text-transform: lowercase;
+            color: $scrollbar-reviews;
+            @include onMobile {
+              font-size: 16px;
+              line-height: 19px;
+            }
+          }
+          & > img {
+            @include onMobile {
+              max-width: 29px;
+            }
+          }
+        }
+        &__item:last-child {
+          & > a {
+            text-decoration: none;
+            font-family: "Medium Inter";
+            font-style: normal;
+            font-size: 28px;
+            line-height: 34px;
+            text-align: center;
+            letter-spacing: 0.055em;
+            text-transform: uppercase;
+            color: $scrollbar-reviews;
+            @include onMobile {
+              font-size: 20px;
+              line-height: 24px;
+            }
+          }
+          & > img {
+            @include onMobile {
+              max-width: 29px;
+            }
+          }
+        }
+      }
+      &__footer {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        &-title {
+          font-family: "Medium Inter";
+          font-style: italic;
+          font-size: 32px;
+          line-height: 39px;
+          text-align: center;
+          letter-spacing: 0.055em;
+          text-transform: uppercase;
+          background: linear-gradient(180deg, #065a97 0%, #012f50 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+          @include onMobile {
+            font-size: 16px;
+            line-height: 19px;
+          }
+        }
+        &-social {
+          display: flex;
+          flex-direction: row;
+          gap: 30px;
+          @include onMobile {
+            gap: 20px;
+          }
+        }
+      }
+    }
+  }
+}
