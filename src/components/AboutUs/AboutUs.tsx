@@ -34,7 +34,10 @@ const AboutUs = () => {
         <h1 className="aboutus-header__title">About us</h1>
       </div>
       <div className="aboutus-content">
-        <div className="aboutus-content-desc">
+        <div
+          className={
+            isMore ? "aboutus-content-moredesc" : "aboutus-content-desc"
+          }>
           <p className="aboutus-content-desc__txt">
             Bora Renovation is a professional licensed and insured family-owned
             and operated kitchen cabinet refinishing company located in

@@ -1,24 +1,91 @@
-import { reviews } from "../../core/constants/reviews";
+import { useEffect, useState } from "react";
+
+import ReviewCard from "../ReviewCard";
 import { General } from "../../models";
 
-import stars from "../../assets/images/reviews/stars.svg";
+import { reviews } from "../../core/constants/reviews";
+
 import arrow_left from "../../assets/images/reviews/arrow-left.svg";
 import arrow_right from "../../assets/images/reviews/arrow-right.svg";
-import { useState } from "react";
-import useMeasures from "../../core/hooks/useMeasures";
 import { useAppContext } from "../../context/AppContext";
 
 const Reviews = () => {
-  const [currentIndex, setCurrentIndex] = useState(2);
-  const { innerWidth } = useMeasures();
-  const { openReviewModal } = useAppContext();
+  const [itemInfo, setItemInfo] = useState<any>({});
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [switcher, setSwitcher] = useState(true);
 
-  const next = () => {
-    setCurrentIndex((currentIndex + 1) % reviews.length);
+  const updateIndex = () => {
+    currentIndex === 3 ? setCurrentIndex(1) : setCurrentIndex(currentIndex + 1);
   };
 
-  const prev = () => {
-    setCurrentIndex((currentIndex - 1 + reviews.length) % reviews.length);
+  console.log(currentIndex);
+
+  useEffect(() => {
+    setItemInfo(reviews[0]);
+  }, []);
+
+  const { openReviewModal } = useAppContext();
+
+  const buttonDown = () => {
+    switch (currentIndex) {
+      case 0:
+        setCurrentIndex(2);
+        setSwitcher(false);
+        setItemInfo(reviews[3]);
+        break;
+
+      case 1:
+        setCurrentIndex(3);
+        setSwitcher(false);
+        setItemInfo(reviews[2]);
+        break;
+
+      case 2:
+        setCurrentIndex(1);
+        setSwitcher(false);
+        setItemInfo(reviews[1]);
+        break;
+
+      case 3:
+        setCurrentIndex(2);
+        setSwitcher(false);
+        setItemInfo(reviews[3]);
+        break;
+
+      default:
+        return;
+    }
+  };
+
+  const buttonUp = () => {
+    switch (currentIndex) {
+      case 0:
+        setCurrentIndex(1);
+        setSwitcher(false);
+        setItemInfo(reviews[0]);
+        break;
+
+      case 1:
+        setCurrentIndex(2);
+        setSwitcher(false);
+        setItemInfo(reviews[1]);
+        break;
+
+      case 2:
+        setCurrentIndex(3);
+        setSwitcher(false);
+        setItemInfo(reviews[2]);
+        break;
+
+      case 3:
+        setCurrentIndex(1);
+        setSwitcher(false);
+        setItemInfo(reviews[0]);
+        break;
+
+      default:
+        return;
+    }
   };
 
   return (
@@ -29,43 +96,26 @@ const Reviews = () => {
             const { avatar, id, desc, name } = review;
 
             return (
-              <div
+              <ReviewCard
                 key={id}
-                className={
-                  innerWidth < 768
-                    ? "reviews-list__item"
-                    : index === currentIndex
-                    ? "reviews-list__active"
-                    : "reviews-list__item"
-                }>
-                <div className="reviews-list__item-top">
-                  <img
-                    src={avatar}
-                    alt={`${avatar}`}
-                    className="reviews-list__item-top-avatar"
-                  />
-                  <div className="reviews-list__item-top-content">
-                    <span className="reviews-list__item-top-content-name">
-                      {name}
-                    </span>
-                    <img src={stars} alt="stars" />
-                  </div>
-                </div>
-                <p className="reviews-list__item-text">{desc}</p>
-              </div>
+                avatar={avatar}
+                currentIndex={currentIndex}
+                id={id}
+                name={name}
+                desc={desc}
+              />
             );
           })}
         </div>
-
         <div className="reviews-arrows">
-          <button onClick={prev} className="reviews-arrows-btn">
+          <button onClick={buttonDown} className="reviews-arrows-btn">
             <img
               className="reviews-arrows-btn__icon"
               src={arrow_left}
               alt="arrow-left"
             />
           </button>
-          <button onClick={next} className="reviews-arrows-btn">
+          <button onClick={buttonUp} className="reviews-arrows-btn">
             <img
               className="reviews-arrows-btn__icon"
               src={arrow_right}

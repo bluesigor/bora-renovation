@@ -24,6 +24,8 @@
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.38)),
       url("../../assets/images/reviews/reviews-bckg-mob.svg");
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     min-height: 100%;
   }
   &-list {
@@ -168,27 +170,24 @@
     display: flex;
     justify-content: center;
     &-btn {
-      padding-top: 24px;
-      padding-right: 33px;
-      padding-bottom: 25px;
-      padding-left: 32px;
+      padding: 24px 33px 25px 32px;
       width: 327px;
       background: linear-gradient(93.35deg, #ffda55 3.71%, #ffaa2c 98.84%);
       box-shadow: 6px 7px 10px rgba(0, 0, 0, 0.25);
       border-radius: 20px;
       border: none;
-      @include onMobile {
-        width: 327px;
-      }
       &__txt {
         font-family: "Semi Inter";
         font-style: normal;
-        font-weight: 600;
         font-size: 24px;
         line-height: 135.68%;
         letter-spacing: 0.08em;
         text-transform: uppercase;
         color: $reviews-accent;
+        white-space: nowrap;
+        @include onMobile {
+          white-space: nowrap;
+        }
       }
     }
   }
