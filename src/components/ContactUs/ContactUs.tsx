@@ -10,7 +10,7 @@ const ContactUs = () => {
       <div className="contact-wrapper">
         <div className="contact-wrapper-form">
           <div className="contact-wrapper-form-header">
-            <h5 className="contact-wrapper-form-header__txt">OUR contacts</h5>
+            <h5 className="contact-wrapper-form-header__txt">Contact us</h5>
           </div>
           <div className="contact-wrapper-form-main">
             <div className="contact-wrapper-form-main__item">
