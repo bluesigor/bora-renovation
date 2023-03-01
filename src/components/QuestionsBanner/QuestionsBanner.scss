@@ -9,25 +9,21 @@
   justify-content: center;
   @include onMobile {
     align-items: flex-end;
-    height: 100vh;
-    margin-top: 400px;
+    height: 105vh;
   }
   &-banner {
     position: absolute;
     width: 1457px;
-    height: 1142px;
     top: -65px;
     border-radius: 50px;
     background: $primary;
     @include onMobile {
-      margin-top: 50px;
       top: 0px;
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      height: 100%;
       border: none;
       border-radius: 0px;
       padding-top: 0px;
@@ -45,8 +41,7 @@
       @include onMobile {
         flex-direction: column;
         gap: 20px;
-        padding: 0;
-        margin-bottom: 56px;
+        padding: 35px 14px 56px 16px;
       }
       &__card {
         &-title {
@@ -213,8 +208,18 @@
             box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.07),
               0px 0px 0px rgba(0, 0, 0, 0.07);
             border-radius: 20px;
+            border: none;
             padding: 23px 109px;
             & > span {
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 600;
+              font-size: 20px;
+              line-height: 24px;
+              text-align: center;
+              letter-spacing: 0.04em;
+              text-transform: uppercase;
+              color: $scrollbar-reviews;
             }
             @include onMobile {
               display: block;

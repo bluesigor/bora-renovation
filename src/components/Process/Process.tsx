@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, memo } from "react";
+import { ReactSVG } from "react-svg";
 
 import taking from "../../assets/images/process/taking.svg";
 import install from "../../assets/images/process/install.svg";
@@ -7,7 +8,7 @@ import sand from "../../assets/images/process/sand.svg";
 import materials_pro from "../../assets/images/process/materials.svg";
 import cleaning from "../../assets/images/process/cleaning.svg";
 
-const Process = () => {
+function Process() {
   const [isHovered, setIsHovered] = useState(false);
 
   const onHover = () => {
@@ -29,7 +30,7 @@ const Process = () => {
           onMouseLeave={offHover}
           className="process-list-wrapper">
           <div className="process-list-logo">
-            <img src={taking} alt={taking} width={"100%"} />
+            <ReactSVG src={taking} />
           </div>
           <div className="process-list__outer">
             <p className="process-list__title">
@@ -48,7 +49,7 @@ const Process = () => {
           onMouseLeave={offHover}
           className="process-list-wrapper">
           <div className="process-list-logo">
-            <img src={cleaning} alt={cleaning} width={"100%"} />
+            <ReactSVG src={cleaning} />
           </div>
           <div className="process-list__outer">
             <p className="process-list__title">
@@ -68,7 +69,7 @@ const Process = () => {
           onMouseLeave={offHover}
           className="process-list-wrapper">
           <div className="process-list-logo">
-            <img src={sand} alt={sand} width={"100%"} />
+            <ReactSVG src={sand} />
           </div>
           <div className="process-list__outer">
             <p className="process-list__title">
@@ -87,7 +88,7 @@ const Process = () => {
           onMouseLeave={offHover}
           className="process-list-wrapper">
           <div className="process-list-logo">
-            <img src={protect} alt={protect} width={"100%"} />
+            <ReactSVG src={protect} />
           </div>
           <div className="process-list__outer">
             <p className="process-list__title">Protecting and covering</p>
@@ -105,7 +106,7 @@ const Process = () => {
           onMouseLeave={offHover}
           className="process-list-wrapper">
           <div className="process-list-logo">
-            <img src={materials_pro} alt={materials_pro} width={"100%"} />
+            <ReactSVG src={materials_pro} />
           </div>
           <div className="process-list__outer">
             <p className="process-list__title">
@@ -125,7 +126,7 @@ const Process = () => {
           onMouseLeave={offHover}
           className="process-list-wrapper">
           <div className="process-list-logo">
-            <img src={install} alt={install} width={"100%"} />
+            <ReactSVG src={install} />
           </div>
           <div className="process-list__outer">
             <p className="process-list__title">
@@ -143,6 +144,6 @@ const Process = () => {
       </ul>
     </section>
   );
-};
+}
 
-export default Process;
+export default memo(Process);

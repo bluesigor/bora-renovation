@@ -1,7 +1,12 @@
+import { ReactSVG } from "react-svg";
+
 import kitchen_first from "../../assets/images/gallery/kitchen.svg";
 import kitchen_second from "../../assets/images/gallery/bg-kitchen.svg";
 import repair from "../../assets/images/gallery/repair.svg";
 import gallery_mob from "../../assets/images/gallery/gallery-mob.svg";
+
+import { memo } from "react";
+import { Link } from "react-router-dom";
 
 const GallerySection = () => {
   return (
@@ -16,8 +21,8 @@ const GallerySection = () => {
             house painting companies have. It’s more than just applying paint
             with a brush or painting walls with a roller.
             <br /> <br />
-            Bora Renovation uses only factory-grade products and specialized
-            equipment which allows us to finish the project fast and
+            <span>Bora Renovation</span> uses only factory-grade products and
+            specialized equipment which allows us to finish the project fast and
             effectively. You’ll be amazed at how simple it is to update your
             kitchen cabinets and give it that amazing luxurious feel without a
             complete remodeling.
@@ -28,22 +33,19 @@ const GallerySection = () => {
         </div>
         <div className="gallery-content-logos">
           <div className="gallery-content-logos-first">
-            <img
+            <ReactSVG
               src={kitchen_first}
-              alt="kitchen_first"
-              className="gallery-content-logos-first__logo"
+              className="gallery-content-logos-firstlogo"
             />
-            <img
+            <ReactSVG
               src={kitchen_second}
-              alt="kitchen_second"
-              className="gallery-content-logos-first__logo"
+              className="gallery-content-logos-secondlogo"
             />
           </div>
           <div className="gallery-content-logos-second">
-            <img
+            <ReactSVG
               src={repair}
-              alt="repair"
-              className="gallery-content-logos-first__logo"
+              className="gallery-content-logos-thirdlogo"
             />
           </div>
         </div>
@@ -66,12 +68,12 @@ const GallerySection = () => {
         </div>
       </div>
       <div className="gallery-view">
-        <button className="gallery-view-btn">
+        <Link to="gallery" className="gallery-view-btn">
           <span className="gallery-view-btn__txt">View full gallery</span>
-        </button>
+        </Link>
       </div>
     </section>
   );
 };
 
-export default GallerySection;
+export default memo(GallerySection);

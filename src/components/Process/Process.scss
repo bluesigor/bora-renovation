@@ -7,7 +7,7 @@
   padding-right: 69px;
   margin-bottom: 122px;
   @include onMobile {
-    padding-top: 180px;
+    padding-top: 0px;
     margin-top: -100px;
     padding-left: 15px;
     padding-right: 15px;
@@ -50,6 +50,7 @@
       border-radius: 100px;
     }
     &-wrapper {
+      min-width: 487px;
       @include onMobile {
         min-width: 345px;
         margin-bottom: 60px;
@@ -57,12 +58,19 @@
     }
     &-logo {
       margin-bottom: -4px;
+      & > div svg {
+        @include onMobile {
+          height: 100%;
+          max-width: 345px;
+        }
+      }
     }
 
     &__outer {
       padding: 31px 40px;
       background: linear-gradient(180deg, #e2e1e1 0%, $primary 100%);
       border-radius: 0px 0px 50px 0px;
+      width: 468px;
       &-desc1,
       &-desc2,
       &-desc3,
@@ -71,11 +79,16 @@
       &-desc6 {
         display: none;
       }
+      @include onMobile {
+        width: 345px;
+      }
       &:hover {
         background: $scrollbar-reviews;
         height: 256px;
         transition: 2.2s;
         text-align: center;
+        padding-bottom: 65px;
+
         & > p {
           background: linear-gradient(93.35deg, #ffda55 3.71%, #ffaa2c 98.84%);
           -webkit-background-clip: text;

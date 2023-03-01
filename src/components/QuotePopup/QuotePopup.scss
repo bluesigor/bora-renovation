@@ -162,6 +162,12 @@
         &:hover {
           border: 2px solid $blue-accent;
         }
+        &:active {
+          background: $blue-accent;
+          .modal-form__submit-block-btn-txt {
+            color: $quote-active-btn;
+          }
+        }
         &-txt {
           font-family: "Inter";
           font-style: normal;

@@ -6,6 +6,7 @@ import facebook from "../../assets/images/reviews/facebook.svg";
 
 const LeaveReview = () => {
   const { isReviewModalOpen, closeReviewModal } = useAppContext();
+
   return (
     <>
       {isReviewModalOpen && (
