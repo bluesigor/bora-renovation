@@ -14,11 +14,11 @@ const Reviews = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [switcher, setSwitcher] = useState(true);
 
-  const updateIndex = () => {
-    currentIndex === 3 ? setCurrentIndex(1) : setCurrentIndex(currentIndex + 1);
-  };
+  // const updateIndex = () => {
+  //   currentIndex === 3 ? setCurrentIndex(1) : setCurrentIndex(currentIndex + 1);
+  // };
 
-  console.log(currentIndex);
+  console.log(currentIndex, itemInfo, switcher);
 
   useEffect(() => {
     setItemInfo(reviews[0]);
