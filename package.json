@@ -4,7 +4,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@brainhubeu/react-carousel": "^2.0.4",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@formspree/react": "^2.4.1",
@@ -26,7 +25,6 @@
     "react-progressive-loader": "^0.4.3",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
-    "react-slick": "^0.29.0",
     "react-svg": "^16.1.4",
     "react-swipeable-views": "^0.14.0",
     "react-swipeable-views-utils": "^0.14.0",
