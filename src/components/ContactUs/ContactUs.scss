@@ -12,7 +12,9 @@
   align-items: center;
   padding-top: 150px;
   @include onMobile {
-    max-height: 105vh;
+    padding-bottom: 10vh;
+    height: 140vh;
+    align-items: flex-end;
   }
   &-wrapper {
     position: relative;

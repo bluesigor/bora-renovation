@@ -3,7 +3,9 @@ import { useEffect, useState } from "react";
 import { getWindowSize } from "../constants/constants";
 
 const useMeasures = () => {
-  const [{ innerWidth }, setWindowSize] = useState(getWindowSize());
+  const [{ innerWidth, innerHeight }, setWindowSize] = useState(
+    getWindowSize()
+  );
 
   useEffect(() => {
     function handleWindowResize() {
@@ -17,7 +19,7 @@ const useMeasures = () => {
     };
   });
 
-  return { innerWidth };
+  return { innerWidth, innerHeight };
 };
 
 export default useMeasures;

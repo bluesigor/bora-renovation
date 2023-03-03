@@ -10,6 +10,7 @@ import QuotePopup from "../../components/QuotePopup";
 import Reviews from "../../components/Reviews";
 import WelcomeBanner from "../../components/WelcomeBanner";
 import ContactUs from "../../components/ContactUs/ContactUs";
+import GetQuote from "../../components/GetQuote";
 
 const HomePage = () => {
   return (
@@ -26,6 +27,7 @@ const HomePage = () => {
       <Reviews />
       <QuestionsBanner />
       <ContactUs />
+      <GetQuote />
     </>
   );
 };

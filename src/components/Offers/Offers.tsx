@@ -14,10 +14,10 @@ const Offers = () => {
       <div className="offers-main">
         <ul className="offers-main-list">
           <li className="offers-main-list__item">
-            cabinet doors, drawer fronts, hardware <br /> replacement
+            cabinet doors, drawer fronts, hardware replacement
           </li>
           <li className="offers-main-list__item">
-            crown molding, accent pieces and trims <br /> installation
+            crown molding, accent pieces and trims installation
           </li>
         </ul>
         <div className="offers-main-contact">

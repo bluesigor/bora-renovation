@@ -1,29 +1,17 @@
-import { useEffect, useState } from "react";
-
-import ReviewCard from "../ReviewCard";
-import { General } from "../../models";
-
-import { reviews } from "../../core/constants/reviews";
+import { useState } from "react";
+import { useAppContext } from "../../context/AppContext";
 
 import arrow_left from "../../assets/images/reviews/arrow-left.svg";
 import arrow_right from "../../assets/images/reviews/arrow-right.svg";
-import { useAppContext } from "../../context/AppContext";
+import { reviews } from "../../core/constants/reviews";
+
+import ReviewCard from "../ReviewCard";
+import { General } from "../../models";
 
 const Reviews = () => {
   const [itemInfo, setItemInfo] = useState<any>({});
   const [currentIndex, setCurrentIndex] = useState(0);
   const [switcher, setSwitcher] = useState(true);
-
-  // const updateIndex = () => {
-  //   currentIndex === 3 ? setCurrentIndex(1) : setCurrentIndex(currentIndex + 1);
-  // };
-
-  console.log(currentIndex, itemInfo, switcher);
-
-  useEffect(() => {
-    setItemInfo(reviews[0]);
-  }, []);
-
   const { openReviewModal } = useAppContext();
 
   const buttonDown = () => {

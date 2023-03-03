@@ -1,8 +1,9 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const defaultState = {
   isModalOpen: false,
   isReviewModalOpen: false,
+  isVisisble: false,
   openModalQuote: () => {},
   closeModalQuote: () => {},
   openReviewModal: () => {},
@@ -18,6 +19,31 @@ export const AppContextProvider = ({
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isReviewModalOpen, setReviewModalOpen] = useState(false);
+  const [isVisisble, setIsVisisble] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      const footer = document.querySelector("footer");
+      const header = document.querySelector("header");
+
+      if (footer && header) {
+        const footerTop = footer.getBoundingClientRect().top;
+        const headerBottom = header.getBoundingClientRect().top;
+
+        const windowHeight = window.innerHeight;
+        const isScrolledToFooter =
+          footerTop <= windowHeight || headerBottom === 0;
+
+        setIsVisisble(!isScrolledToFooter);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   if (isModalOpen) {
     document.body.style.overflow = "hidden";
@@ -43,6 +69,8 @@ export const AppContextProvider = ({
     closeReviewModal: () => {
       setReviewModalOpen(false);
     },
+
+    isVisisble,
   };
 
   return (

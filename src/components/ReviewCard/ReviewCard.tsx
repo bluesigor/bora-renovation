@@ -1,4 +1,5 @@
 import { Img } from "react-progressive-loader";
+import { SwiperSlide } from "swiper/react";
 
 import stars from "../../assets/images/reviews/stars.svg";
 import useMeasures from "../../core/hooks/useMeasures";
@@ -22,7 +23,6 @@ const ReviewCard = ({
 
   return (
     <div
-      key={id}
       className={
         innerWidth < 768
           ? "reviews-list__item"

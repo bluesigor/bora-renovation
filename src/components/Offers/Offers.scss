@@ -84,6 +84,7 @@
         line-height: 150.52%;
         letter-spacing: 0.04em;
         color: $scrollbar-reviews;
+        max-width: 717px;
         &::marker {
           color: #ffc435;
           @include onMobile {

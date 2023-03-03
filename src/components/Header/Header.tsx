@@ -19,7 +19,9 @@ const Header = () => {
       </Link>
       <nav className="bora-header__navbar navbar">
         <ul className="navbar-list">
-          <li className="navbar-list__item">Home</li>
+          <Link to="/">
+            <li className="navbar-list__item">Home</li>
+          </Link>
           <li className="navbar-list__item">About us</li>
           <li className="navbar-list__item">our process</li>
           <Link to="gallery">
