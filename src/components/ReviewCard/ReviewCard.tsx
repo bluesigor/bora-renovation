@@ -1,24 +1,16 @@
 import { Img } from "react-progressive-loader";
-import { SwiperSlide } from "swiper/react";
 
 import stars from "../../assets/images/reviews/stars.svg";
 import useMeasures from "../../core/hooks/useMeasures";
 
 type ReviewCardProps = {
-  id: number;
-  currentIndex: number;
   avatar: string;
   name: string;
   desc: string;
+  currentIndex: number;
 };
 
-const ReviewCard = ({
-  id,
-  currentIndex,
-  avatar,
-  name,
-  desc,
-}: ReviewCardProps) => {
+const ReviewCard = ({ avatar, name, desc, currentIndex }: ReviewCardProps) => {
   const { innerWidth } = useMeasures();
 
   return (
@@ -26,7 +18,7 @@ const ReviewCard = ({
       className={
         innerWidth < 768
           ? "reviews-list__item"
-          : id === currentIndex
+          : currentIndex === 1
           ? "reviews-list__active"
           : "reviews-list__item"
       }>

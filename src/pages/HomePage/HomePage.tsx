@@ -18,10 +18,10 @@ const HomePage = () => {
       <WelcomeBanner />
       <QuotePopup />
       <Benefits />
-      <AboutUs />
-      <Process />
-      <Offers />
-      <GallerySection />
+      {/* <AboutUs /> */}
+      {/* <Process /> */}
+      {/* <Offers /> */}
+      {/* <GallerySection /> */}
       <FAQ />
       <LeaveReview />
       <Reviews />

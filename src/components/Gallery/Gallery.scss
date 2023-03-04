@@ -38,6 +38,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 63px;
     &-content {
       display: flex;
       flex-direction: column;
@@ -67,5 +68,76 @@
         text-fill-color: transparent;
       }
     }
+  }
+}
+.carousel {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  gap: 105px;
+  &-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    &-slides {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+    }
+    &-list {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      &__item {
+        border: 1px solid $scrollbar-reviews;
+        &-active {
+          border: 3px solid red;
+        }
+        & > img {
+          width: 218px;
+          height: 216px;
+        }
+      }
+    }
+  }
+  &-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 637px;
+    &__btn {
+      background: none;
+      border: none;
+    }
+  }
+}
+.carousel-img {
+  width: 343px;
+  height: 349px;
+  border: 1px solid $scrollbar-reviews;
+  object-fit: cover;
+  animation: fade-in-keyframes 1s;
+  &-active {
+    width: 714px;
+    height: 554px;
+    border: 2px solid $scrollbar-reviews;
+    object-fit: fill;
+  }
+}
+
+@keyframes fade-in-keyframes {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

@@ -1,3 +1,5 @@
+import Carousel from "./Carousel";
+
 const Gallery = () => {
   return (
     <section className="page-gallery">
@@ -13,6 +15,9 @@ const Gallery = () => {
             WHAT WE DO, WE CAN BE PROUD OF!
           </h5>
         </div>
+      </div>
+      <div className="page-gallery__carousel-main carousel-main">
+        <Carousel />
       </div>
     </section>
   );

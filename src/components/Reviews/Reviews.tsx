@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useAppContext } from "../../context/AppContext";
 
 import arrow_left from "../../assets/images/reviews/arrow-left.svg";
@@ -9,68 +9,43 @@ import ReviewCard from "../ReviewCard";
 import { General } from "../../models";
 
 const Reviews = () => {
-  const [itemInfo, setItemInfo] = useState<any>({});
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [switcher, setSwitcher] = useState(true);
+  const [itemInfo, setItemInfo] = useState<General.Review[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(1);
   const { openReviewModal } = useAppContext();
 
-  const buttonDown = () => {
-    switch (currentIndex) {
-      case 0:
-        setCurrentIndex(2);
-        setSwitcher(false);
-        setItemInfo(reviews[3]);
-        break;
-
-      case 1:
-        setCurrentIndex(3);
-        setSwitcher(false);
-        setItemInfo(reviews[2]);
-        break;
-
-      case 2:
-        setCurrentIndex(1);
-        setSwitcher(false);
-        setItemInfo(reviews[1]);
-        break;
-
-      case 3:
-        setCurrentIndex(2);
-        setSwitcher(false);
-        setItemInfo(reviews[3]);
-        break;
-
-      default:
-        return;
-    }
-  };
+  useEffect(() => {
+    setItemInfo(reviews.slice(0, 3));
+  }, []);
 
   const buttonUp = () => {
     switch (currentIndex) {
       case 0:
         setCurrentIndex(1);
-        setSwitcher(false);
-        setItemInfo(reviews[0]);
+        setItemInfo(reviews.slice(1, 4));
         break;
-
       case 1:
         setCurrentIndex(2);
-        setSwitcher(false);
-        setItemInfo(reviews[1]);
+        setItemInfo(reviews.slice(2, 5));
         break;
-
       case 2:
-        setCurrentIndex(3);
-        setSwitcher(false);
-        setItemInfo(reviews[2]);
+        setCurrentIndex(0);
+        setItemInfo(reviews.slice(0, 3));
         break;
+      default:
+        return;
+    }
+  };
 
-      case 3:
+  const buttonDown = () => {
+    switch (currentIndex) {
+      case 1:
+        setCurrentIndex(0);
+        setItemInfo(reviews.slice(0, 3));
+        break;
+      case 2:
         setCurrentIndex(1);
-        setSwitcher(false);
-        setItemInfo(reviews[0]);
+        setItemInfo(reviews.slice(1, 4));
         break;
-
       default:
         return;
     }
@@ -80,15 +55,14 @@ const Reviews = () => {
     <section className="reviews">
       <div className="wrapper-reviews">
         <div className="reviews-list">
-          {reviews.map((review: General.Review, index: number) => {
+          {itemInfo.slice(0, 3).map((review: General.Review, index: number) => {
             const { avatar, id, desc, name } = review;
 
             return (
               <ReviewCard
                 key={id}
+                currentIndex={index}
                 avatar={avatar}
-                currentIndex={currentIndex}
-                id={id}
                 name={name}
                 desc={desc}
               />

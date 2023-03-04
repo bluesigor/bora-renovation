@@ -23,4 +23,8 @@ export declare namespace General {
     avatar: string;
     desc: string;
   }
+  interface Image {
+    id: number;
+    src: string;
+  }
 }
