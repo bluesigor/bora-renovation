@@ -8,7 +8,7 @@ import { General } from "../../models";
 
 const Carousel = () => {
   const [loansInfo, setLoansInfo] = useState<any>([]);
-  const [currentIndex, setCurrentIndex] = useState(105);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     setLoansInfo(collection.slice(currentIndex, currentIndex + 3));

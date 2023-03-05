@@ -103,6 +103,9 @@
       flex-direction: column;
       gap: 39px;
       flex: 1;
+      @include onMobile {
+        align-items: center;
+      }
       &-prime {
         padding-left: 15px;
         padding-top: 9px;
@@ -115,6 +118,10 @@
         width: 377px;
         @include onMobile {
           padding: 13px 47px;
+          max-width: 300px;
+          text-align: center;
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 20px;
         }
         &__txt {
           font-family: "Semi Inter";
@@ -124,8 +131,7 @@
           letter-spacing: 0.07em;
           color: $blue-accent;
           @include onMobile {
-            font-weight: 500;
-            font-size: "Inter";
+            font-family: "Medium Inter";
             font-size: 16px;
             line-height: 135.68%;
           }

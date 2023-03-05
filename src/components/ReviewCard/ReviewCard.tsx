@@ -23,19 +23,14 @@ const ReviewCard = ({ avatar, name, desc, currentIndex }: ReviewCardProps) => {
           : "reviews-list__item"
       }>
       <div className="reviews-list__item-top">
-        <Img
-          placeholderSrc={require("../../assets/images/default.jpg")}
+        <img
           src={avatar}
           alt={`${avatar}`}
           className="reviews-list__item-top-avatar"
         />
         <div className="reviews-list__item-top-content">
           <span className="reviews-list__item-top-content-name">{name}</span>
-          <Img
-            placeholderSrc={require("../../assets/images/default.jpg")}
-            src={stars}
-            alt="stars"
-          />
+          <img src={stars} alt="stars" />
         </div>
       </div>
       <p className="reviews-list__item-text">{desc}</p>

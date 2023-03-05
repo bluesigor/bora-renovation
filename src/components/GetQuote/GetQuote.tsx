@@ -1,12 +1,12 @@
 import { useAppContext } from "../../context/AppContext";
 
 const GetQuote = () => {
-  const { isVisisble } = useAppContext();
+  const { isVisisble, openModalQuote } = useAppContext();
 
   if (isVisisble) {
     return (
       <div className="quote-container">
-        <button className="quote-container-btn">
+        <button onClick={openModalQuote} className="quote-container-btn">
           <span className="quote-container-btn__txt">get a quote</span>
         </button>
       </div>

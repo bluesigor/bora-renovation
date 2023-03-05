@@ -3,7 +3,7 @@
 
 .quote-container {
   position: sticky;
-  bottom: 70px;
+  bottom: 40px;
   display: none;
   @include onMobile {
     display: flex;

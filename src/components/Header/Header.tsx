@@ -1,12 +1,24 @@
-import Hamburger from "hamburger-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Hamburger from "hamburger-react";
 
 import bora_logo from "../../assets/images/header/bora-logo.svg";
 import phone_icon from "../../assets/images/header/phone-icon.svg";
+import useMeasures from "../../core/hooks/useMeasures";
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
+  const { innerWidth } = useMeasures();
+
+  function handleScroll(height: number) {
+    window.scrollTo(0, height);
+  }
+
+  useEffect(() => {
+    if (innerWidth > 768) {
+      setOpen(false);
+    }
+  }, [innerWidth]);
 
   return (
     <header
@@ -22,13 +34,21 @@ const Header = () => {
           <Link to="/">
             <li className="navbar-list__item">Home</li>
           </Link>
-          <li className="navbar-list__item">About us</li>
-          <li className="navbar-list__item">our process</li>
-          <Link to="gallery">
-            <li className="navbar-list__item">gallery</li>
-          </Link>
-          <li className="navbar-list__item">FAQ’s</li>
-          <li className="navbar-list__item">Contacts</li>
+          <li onClick={() => handleScroll(1800)} className="navbar-list__item">
+            About us
+          </li>
+          <li onClick={() => handleScroll(2700)} className="navbar-list__item">
+            our process
+          </li>
+          <li onClick={() => handleScroll(4500)} className="navbar-list__item">
+            gallery
+          </li>
+          <li onClick={() => handleScroll(5700)} className="navbar-list__item">
+            FAQ’s
+          </li>
+          <li onClick={() => handleScroll(8400)} className="navbar-list__item">
+            Contacts
+          </li>
         </ul>
       </nav>
       <button type="button" className="bora-header__contact-btn">
@@ -54,22 +74,44 @@ const Header = () => {
       {isOpen && (
         <ul className="navbar-moblist">
           <li>
-            <button className="navbar-moblist__item">Home</button>
+            <Link to="/" className="navbar-moblist__item">
+              Home
+            </Link>
           </li>
           <li>
-            <button className="navbar-moblist__item">About us</button>
+            <button
+              onClick={() => handleScroll(2000)}
+              className="navbar-moblist__item">
+              About us
+            </button>
           </li>
           <li>
-            <button className="navbar-moblist__item">our process</button>
+            <button
+              onClick={() => handleScroll(2700)}
+              className="navbar-moblist__item">
+              our process
+            </button>
           </li>
           <li>
-            <button className="navbar-moblist__item">gallery</button>
+            <button
+              onClick={() => handleScroll(4100)}
+              className="navbar-moblist__item">
+              gallery
+            </button>
           </li>
           <li>
-            <button className="navbar-moblist__item">FAQ’s</button>
+            <button
+              onClick={() => handleScroll(5000)}
+              className="navbar-moblist__item">
+              FAQ’s
+            </button>
           </li>
           <li>
-            <button className="navbar-moblist__item">Contacts</button>
+            <button
+              onClick={() => handleScroll(7700)}
+              className="navbar-moblist__item">
+              Contacts
+            </button>
           </li>
         </ul>
       )}

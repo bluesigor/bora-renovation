@@ -165,7 +165,6 @@
             color: $scrollbar-reviews;
             white-space: nowrap;
             @include onMobile {
-              font-family: "Inter";
               font-size: 15px;
               line-height: 18px;
             }
@@ -228,6 +227,7 @@
       display: block;
     }
     & > a {
+      padding-bottom: 2px;
       text-decoration: underline;
       color: $quote-accent;
     }

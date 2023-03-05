@@ -38,6 +38,10 @@ const Reviews = () => {
 
   const buttonDown = () => {
     switch (currentIndex) {
+      case 0:
+        setCurrentIndex(2);
+        setItemInfo(reviews.slice(2, 5));
+        break;
       case 1:
         setCurrentIndex(0);
         setItemInfo(reviews.slice(0, 3));

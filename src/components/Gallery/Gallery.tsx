@@ -1,6 +1,22 @@
+import { useEffect } from "react";
+
 import Carousel from "./Carousel";
+import useMeasures from "../../core/hooks/useMeasures";
+import MobGallery from "../MobGallery";
 
 const Gallery = () => {
+  const { innerWidth } = useMeasures();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+    const timer = setTimeout(() => {
+      return window.scrollTo(0, 300);
+    }, 400);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section className="page-gallery">
       <div className="page-gallery-top">
@@ -17,7 +33,7 @@ const Gallery = () => {
         </div>
       </div>
       <div className="page-gallery__carousel-main carousel-main">
-        <Carousel />
+        {innerWidth > 768 ? <Carousel /> : <MobGallery />}
       </div>
     </section>
   );
