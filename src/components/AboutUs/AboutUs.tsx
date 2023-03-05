@@ -9,7 +9,7 @@ const AboutUs = () => {
   const [isMore, setIsMore] = useState(false);
 
   const videoRef = useRef<HTMLVideoElement>(null);
-  const ref = useRef(null);
+
   const handlePlay = () => {
     videoRef.current?.play();
     setIsPlaying(true);
