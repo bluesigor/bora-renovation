@@ -27,7 +27,11 @@ const Header = () => {
       }}
       className="bora-header">
       <Link to="/">
-        <img src={bora_logo} alt="bora-logo" className="bora-header__logo" />
+        <img
+          src={require("../../assets/images/logo.png")}
+          alt="bora-logo"
+          className="bora-header__logo"
+        />
       </Link>
       <nav className="bora-header__navbar navbar">
         <ul className="navbar-list">

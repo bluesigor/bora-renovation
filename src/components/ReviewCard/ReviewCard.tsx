@@ -1,5 +1,3 @@
-import { Img } from "react-progressive-loader";
-
 import stars from "../../assets/images/reviews/stars.svg";
 import useMeasures from "../../core/hooks/useMeasures";
 
