@@ -31,7 +31,7 @@
     }
   }
   &-title {
-    padding-left: 70px;
+    padding-left: 190px;
     &__txt {
       font-family: "Semi Montserrat";
       font-style: normal;
@@ -58,8 +58,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-left: 95px;
-    padding-right: 72px;
+    padding-left: 180px;
+    padding-right: 160px;
     @include onMobile {
       flex-direction: column;
       gap: 58px;
@@ -80,7 +80,7 @@
         font-family: "Montserrat";
         font-style: normal;
         font-weight: 400;
-        font-size: 32px;
+        font-size: 24px;
         line-height: 150.52%;
         letter-spacing: 0.04em;
         color: $scrollbar-reviews;
@@ -103,6 +103,7 @@
       flex-direction: column;
       gap: 39px;
       flex: 1;
+      margin-top: -110px;
       @include onMobile {
         align-items: center;
       }
@@ -144,18 +145,20 @@
         border-radius: 20px;
         padding: 23px 49px;
         border: none;
+        max-width: 250px;
         @include onMobile {
           display: none;
         }
         &__txt {
           font-family: "Semi Inter";
           font-style: normal;
-          font-size: 20px;
+          font-size: 16px;
           line-height: 24px;
           text-align: center;
           letter-spacing: 0.04em;
           text-transform: uppercase;
           color: $scrollbar-reviews;
+          white-space: nowrap;
         }
       }
     }

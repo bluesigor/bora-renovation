@@ -58,6 +58,22 @@ const Carousel = () => {
               />
             ))}
           </div>
+          <div className="carousel-controls">
+            <button className="carousel-controls__btn" onClick={onPrev}>
+              <img
+                src={prev}
+                alt="prev"
+                className="carousel-controls__btn-icon"
+              />
+            </button>
+            <button className="carousel-controls__btn" onClick={onNext}>
+              <img
+                src={next}
+                alt="next"
+                className="carousel-controls__btn-icon"
+              />
+            </button>
+          </div>
           {currentIndex < 6 && (
             <ul className="carousel-wrapper-list">
               <li className="carousel-wrapper-list__item">
@@ -203,14 +219,6 @@ const Carousel = () => {
           </li>
         </ul>
       )}
-      <div className="carousel-controls">
-        <button className="carousel-controls__btn" onClick={onPrev}>
-          <img src={prev} alt="prev" className="carousel-controls__btn-icon" />
-        </button>
-        <button className="carousel-controls__btn" onClick={onNext}>
-          <img src={next} alt="next" className="carousel-controls__btn-icon" />
-        </button>
-      </div>
     </div>
   );
 };

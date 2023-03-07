@@ -122,12 +122,13 @@
       gap: 30px;
       &__item {
         border: 1px solid $scrollbar-reviews;
-        &-active {
-          border: 3px solid red;
-        }
         & > img {
           width: 218px;
           height: 216px;
+          @media (max-width: 1200px) {
+            width: 150px;
+            height: 142px;
+          }
         }
       }
     }
@@ -150,11 +151,19 @@
   border: 1px solid $scrollbar-reviews;
   object-fit: cover;
   animation: fade-in-keyframes 1s;
+  @media (max-width: 1200px) {
+    width: 310px;
+    height: 313px;
+  }
   &-active {
-    width: 714px;
-    height: 554px;
+    width: 467px;
+    height: 414px;
     border: 2px solid $scrollbar-reviews;
     object-fit: fill;
+    @media (max-width: 1200px) {
+      width: 430px;
+      height: 380px;
+    }
   }
 }
 

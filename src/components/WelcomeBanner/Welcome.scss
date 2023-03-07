@@ -13,7 +13,7 @@
       font-family: "Raleway";
       font-style: normal;
       font-weight: 600;
-      font-size: 64px;
+      font-size: 48px;
       line-height: 150.52%;
       text-align: center;
       letter-spacing: 0.06em;
@@ -27,27 +27,31 @@
     }
   }
   &-wrapper {
-    background-image: url("../../assets/images/welcome/welcome-banner.svg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-width: 100%;
-    min-height: 592px;
+    min-height: 550px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
+    &-video {
+      z-index: 0;
+      width: 90%;
+      @include onMobile {
+        display: none;
+      }
+    }
     @include onMobile {
       background-image: url("../../assets/images/welcome/welcome-mob.svg");
       background-size: cover;
       min-height: 276px;
     }
     &-outer {
+      z-index: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       padding-bottom: 96px;
       gap: 21px;
+      position: absolute;
       @include onMobile {
         gap: 80px;
       }
@@ -79,7 +83,7 @@
           $linears-second 98.84%
         );
         border-radius: 20px;
-        max-width: 300px;
+        max-width: 250px;
         border: none;
         box-shadow: 0px 0px 0px 0px #00000012;
         box-shadow: 0px 3px 7px 0px #00000012;
@@ -114,7 +118,7 @@
           font-family: "Inter";
           font-style: normal;
           font-weight: 600;
-          font-size: 20px;
+          font-size: 16px;
           line-height: 24px;
           text-align: center;
           letter-spacing: 0.04em;

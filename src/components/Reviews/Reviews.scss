@@ -56,6 +56,12 @@
       box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.25);
       border-radius: 10px;
       height: 419px;
+      @media (max-width: 1200px) {
+        width: 366px;
+        height: 340px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+      }
       @include onMobile {
         width: 345px;
         height: 290px;
@@ -89,6 +95,10 @@
       box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
       border-radius: 10px;
       width: 343px;
+      @media (max-width: 1200px) {
+        width: 283px;
+        height: 230px;
+      }
       @include onMobile {
         padding: 20px 11px;
         padding-left: 56px;
@@ -179,7 +189,7 @@
     justify-content: center;
     &-btn {
       padding: 24px 33px 25px 32px;
-      width: 327px;
+      width: 250px;
       background: linear-gradient(93.35deg, #ffda55 3.71%, #ffaa2c 98.84%);
       box-shadow: 6px 7px 10px rgba(0, 0, 0, 0.25);
       border-radius: 20px;
@@ -187,7 +197,7 @@
       &__txt {
         font-family: "Semi Inter";
         font-style: normal;
-        font-size: 24px;
+        font-size: 16px;
         line-height: 135.68%;
         letter-spacing: 0.08em;
         text-transform: uppercase;

@@ -2,21 +2,33 @@
 @import "../../styles/vars.scss";
 
 .quest {
-  height: 95vh;
+  height: 80vh;
   position: relative;
   background-color: $primary;
   display: flex;
   justify-content: center;
+  padding-left: 195px;
+  padding-right: 196px;
+  @media (max-width: 1440px) {
+    height: 96vh;
+  }
+  @media (max-width: 1150px) {
+    height: 80vh;
+  }
   @include onMobile {
     align-items: flex-end;
     height: 105vh;
+    padding: 0px;
   }
   &-banner {
     position: absolute;
-    width: 1457px;
+    max-width: 1200px;
     top: -65px;
     border-radius: 50px;
     background: $primary;
+    @media (max-width: 1200px) {
+      max-width: 1000px;
+    }
     @include onMobile {
       top: 0px;
       width: 100%;
@@ -30,10 +42,7 @@
       background: none;
     }
     &-top {
-      padding-top: 111px;
-      padding-right: 120px;
-      padding-left: 129px;
-      padding-bottom: 116px;
+      padding: 80px 73px 60px 68px;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -47,7 +56,7 @@
         &-title {
           font-family: "Semi Montserrat";
           font-style: normal;
-          font-size: 120px;
+          font-size: 90px;
           line-height: 146px;
           text-align: center;
           text-transform: uppercase;
@@ -65,7 +74,7 @@
           font-family: "Medium Inter";
           font-style: normal;
           font-weight: 500;
-          font-size: 32px;
+          font-size: 24px;
           line-height: 140.52%;
           text-align: center;
           letter-spacing: 0.04em;
@@ -78,7 +87,7 @@
       }
     }
     &-bottom {
-      height: 743px;
+      height: 600px;
       background-image: url("../../assets/images/questions/contact-bckg.svg");
       background-position: center;
       background-size: cover;
@@ -87,7 +96,11 @@
       display: flex;
       align-items: center;
       flex-direction: column;
-      padding-top: 94px;
+      padding-top: 70px;
+      @media (max-width: 1150px) {
+        height: 500px;
+        padding-top: 20px;
+      }
       @include onMobile {
         background-image: url("../../assets/images/questions/house-bckg-mob.svg");
         background-size: cover;

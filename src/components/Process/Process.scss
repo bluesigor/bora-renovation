@@ -20,7 +20,7 @@
       font-family: "Raleway";
       font-style: normal;
       font-weight: 500;
-      font-size: 48px;
+      font-size: 40px;
       line-height: 150.52%;
       letter-spacing: 0.105em;
       text-transform: uppercase;
@@ -35,6 +35,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
+    @media (max-width: 1400px) {
+      gap: 25px;
+    }
+    @media (max-width: 1230px) {
+      gap: 15px;
+    }
     @include onMobile {
       display: flex;
       flex-direction: row;
@@ -51,7 +57,13 @@
       border-radius: 100px;
     }
     &-wrapper {
-      min-width: 487px;
+      min-width: 437px;
+      @media (max-width: 1300px) {
+        min-width: 370px;
+      }
+      @media (max-width: 1230px) {
+        min-width: 310px;
+      }
       @include onMobile {
         min-width: 345px;
         margin-bottom: 60px;
@@ -59,7 +71,24 @@
     }
     &-logo {
       margin-bottom: -4px;
+      & > img {
+        max-width: 380px;
+        @media (max-width: 1300px) {
+          max-width: 330px;
+        }
+        @media (max-width: 1230px) {
+          max-width: 300px;
+        }
+      }
       & > div svg {
+        width: 380px;
+        height: 100%;
+        @media (max-width: 1300px) {
+          width: 330px;
+        }
+        @media (max-width: 1230px) {
+          max-width: 300px;
+        }
         @include onMobile {
           height: 100%;
           max-width: 345px;
@@ -71,7 +100,14 @@
       padding: 31px 40px;
       background: linear-gradient(180deg, #e2e1e1 0%, $primary 100%);
       border-radius: 0px 0px 50px 0px;
-      width: 468px;
+      width: 380px;
+      @media (max-width: 1300px) {
+        width: 330px;
+      }
+      @media (max-width: 1230px) {
+        width: 300px;
+      }
+      margin: 0;
       &-desc1,
       &-desc2,
       &-desc3,

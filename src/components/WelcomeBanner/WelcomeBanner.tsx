@@ -2,6 +2,9 @@ import { useAppContext } from "../../context/AppContext";
 
 import useMeasures from "../../core/hooks/useMeasures";
 
+import poster from "../../assets/images/welcome/welcome-banner.svg";
+import welcome from "../../assets/videos/main.mp4";
+
 const WelcomeBanner = () => {
   const { openModalQuote } = useAppContext();
 
@@ -17,6 +20,15 @@ const WelcomeBanner = () => {
         </div>
       )}
       <div className="welcome-banner-wrapper">
+        <video
+          id="video-player"
+          poster={poster}
+          autoPlay
+          muted
+          className="welcome-banner-wrapper-video"
+          loop={true}>
+          <source src={welcome} type="video/mp4" />
+        </video>
         <div className="welcome-banner-wrapper-outer">
           {innerWidth > 768 ? (
             <h4 className="welcome-banner-wrapper-outer__inner">

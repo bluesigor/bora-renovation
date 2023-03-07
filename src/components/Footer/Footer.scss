@@ -18,7 +18,13 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 227px;
+    gap: 168px;
+    @media (max-width: 1300px) {
+      gap: 140px;
+    }
+    @media (max-width: 1200px) {
+      gap: 100px;
+    }
     @include onMobile {
       gap: 27px;
       margin-bottom: 50px;
@@ -26,7 +32,13 @@
     &-links {
       display: flex;
       flex-direction: row;
-      gap: 98px;
+      gap: 58px;
+      @media (max-width: 1300px) {
+        gap: 30px;
+      }
+      @media (max-width: 1280px) {
+        gap: 20px;
+      }
       @include onMobile {
         flex-direction: column;
         gap: 15px;
@@ -46,7 +58,7 @@
         font-family: "Medium Raleway";
         font-style: normal;
         font-weight: 500;
-        font-size: 20px;
+        font-size: 16px;
         line-height: 23px;
         letter-spacing: 0.04em;
         text-transform: uppercase;
@@ -71,11 +83,22 @@
       flex-direction: row;
       align-items: center;
       gap: 135px;
+      @media (max-width: 1400px) {
+        gap: 85px;
+      }
+      @media (max-width: 1280px) {
+        gap: 35px;
+      }
       &-logo {
         display: flex;
         flex-direction: column;
         gap: 22px;
         align-items: center;
+        & > img {
+          @media (max-width: 1280px) {
+            max-width: 200px;
+          }
+        }
         @include onMobile {
           display: none;
         }

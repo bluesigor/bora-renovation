@@ -1,12 +1,12 @@
+import { memo } from "react";
+import { Link } from "react-router-dom";
+import ReactPixel from "react-facebook-pixel";
 import { ReactSVG } from "react-svg";
 
 import kitchen_first from "../../assets/images/gallery/kitchen.svg";
 import kitchen_second from "../../assets/images/gallery/bg-kitchen.svg";
 import repair from "../../assets/images/gallery/repair.svg";
 import gallery_mob from "../../assets/images/gallery/gallery-mob.svg";
-
-import { memo } from "react";
-import { Link } from "react-router-dom";
 
 const GallerySection = () => {
   return (
@@ -68,7 +68,14 @@ const GallerySection = () => {
         </div>
       </div>
       <div className="gallery-view">
-        <Link to="gallery" className="gallery-view-btn">
+        <Link
+          to="gallery"
+          onClick={() => {
+            ReactPixel.track("ClickButton", {
+              buttonName: "Step to gallery",
+            });
+          }}
+          className="gallery-view-btn">
           <span className="gallery-view-btn__txt">View full gallery</span>
         </Link>
       </div>

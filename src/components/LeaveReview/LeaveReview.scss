@@ -13,10 +13,10 @@
   &-content {
     background-color: #fefefe;
     margin: 15% auto;
-    padding: 40px;
+    padding: 31px;
     border: 1px solid #888;
     border-radius: 20px;
-    width: 600px;
+    width: 539px;
     @include onMobile {
       width: 345px;
       margin: 50% auto;
@@ -50,7 +50,7 @@
         font-family: "Raleway";
         font-style: normal;
         font-weight: 600;
-        font-size: 24px;
+        font-size: 20px;
         line-height: 160.52%;
         text-align: center;
         letter-spacing: 0.05em;

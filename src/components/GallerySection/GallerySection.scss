@@ -11,7 +11,7 @@
       font-family: "Raleway";
       font-style: normal;
       font-weight: 500;
-      font-size: 48px;
+      font-size: 40px;
       line-height: 150.52%;
       text-align: center;
       letter-spacing: 0.105em;
@@ -83,6 +83,10 @@
           border: 2px solid $scrollbar-reviews;
           max-width: 342px;
           max-height: 273px;
+          @media (max-width: 1200px) {
+            max-width: 300px;
+            max-height: 214px;
+          }
         }
       }
       &-secondlogo {
@@ -90,6 +94,10 @@
           border: 2px solid $scrollbar-reviews;
           max-width: 342px;
           max-height: 273px;
+          @media (max-width: 1200px) {
+            max-width: 300px;
+            max-height: 214px;
+          }
         }
       }
       &-thirdlogo {
@@ -97,12 +105,19 @@
           border: 2px solid $scrollbar-reviews;
           max-width: 467px;
           max-height: 576px;
+          @media (max-width: 1200px) {
+            max-width: 400px;
+            max-height: 520px;
+          }
         }
       }
       &-first {
         display: flex;
         flex-direction: column;
         gap: 30px;
+        @media (max-width: 1200px) {
+          gap: 86px;
+        }
       }
       &-second {
         &__logo {
@@ -119,7 +134,7 @@
     justify-content: center;
     &-btn {
       padding: 20px 32px;
-      max-width: 300px;
+      max-width: 250px;
       border: 1px solid $scrollbar-reviews;
       border-radius: 20px;
       background: none;
@@ -140,13 +155,13 @@
         }
       }
       @include onMobile {
-        min-width: 300px;
+        max-width: 250px;
       }
       &__txt {
         font-family: "Inter";
         font-style: normal;
         font-weight: 600;
-        font-size: 20px;
+        font-size: 16px;
         line-height: 150.52%;
         text-align: center;
         letter-spacing: 0.105em;

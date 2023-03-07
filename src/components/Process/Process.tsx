@@ -69,7 +69,7 @@ function Process() {
           onMouseLeave={offHover}
           className="process-list-wrapper">
           <div className="process-list-logo">
-            <ReactSVG src={sand} />
+            <img src={sand} alt={sand} />
           </div>
           <div className="process-list__outer">
             <p className="process-list__title">
@@ -126,7 +126,7 @@ function Process() {
           onMouseLeave={offHover}
           className="process-list-wrapper">
           <div className="process-list-logo">
-            <ReactSVG src={install} />
+            <img src={install} alt={install} />
           </div>
           <div className="process-list__outer">
             <p className="process-list__title">

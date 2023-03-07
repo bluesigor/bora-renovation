@@ -4,7 +4,7 @@
 .aboutus {
   padding-left: 68px;
   padding-right: 71;
-  margin-bottom: 200px;
+  margin-bottom: 150px;
   @include onMobile {
     padding-left: 15px;
     padding-right: 15px;
@@ -19,7 +19,7 @@
       font-family: "Raleway";
       font-style: normal;
       font-weight: 500;
-      font-size: 48px;
+      font-size: 40px;
       line-height: 150.52%;
       letter-spacing: 0.105em;
       text-transform: uppercase;
@@ -157,10 +157,13 @@
 
       &__mov {
         z-index: 0;
-        width: 713px;
+        max-width: 600px;
         height: 443px;
         object-fit: cover;
         border-radius: 50px;
+        @media (min-width: 1440px) {
+          max-width: 713px;
+        }
         @include onMobile {
           width: 345px;
           height: 239px;
