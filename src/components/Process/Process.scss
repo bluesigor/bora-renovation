@@ -79,6 +79,9 @@
         @media (max-width: 1230px) {
           max-width: 300px;
         }
+        @include onMobile {
+          max-width: 345px;
+        }
       }
       & > div svg {
         width: 380px;
@@ -91,7 +94,7 @@
         }
         @include onMobile {
           height: 100%;
-          max-width: 345px;
+          min-width: 345px;
         }
       }
     }

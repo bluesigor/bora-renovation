@@ -7,6 +7,7 @@
   @include onMobile {
     padding-left: 15px;
     padding-right: 15px;
+    padding-top: 25px;
   }
   &-title {
     &__txt {
@@ -43,6 +44,7 @@
       background-image: url("../../assets/images/welcome/welcome-mob.svg");
       background-size: cover;
       min-height: 276px;
+      border-radius: 20px;
     }
     &-outer {
       z-index: 1;
@@ -53,7 +55,8 @@
       gap: 21px;
       position: absolute;
       @include onMobile {
-        gap: 80px;
+        gap: 50px;
+        padding-bottom: 70px;
       }
       &__inner {
         font-family: "Montserrat";
@@ -67,8 +70,8 @@
         color: $scrollbar-reviews;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
         @include onMobile {
-          font-family: "Montserrat";
-          font-weight: 500;
+          // font-family: "Medium Montserrat";
+          font-weight: 400;
           font-size: 20px;
           letter-spacing: 0.04em;
           padding-left: 20px;

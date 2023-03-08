@@ -32,6 +32,10 @@
   }
   &-title {
     padding-left: 190px;
+    @include onMobile {
+      padding-left: 0;
+      text-align: center;
+    }
     &__txt {
       font-family: "Semi Montserrat";
       font-style: normal;
@@ -62,7 +66,7 @@
     padding-right: 160px;
     @include onMobile {
       flex-direction: column;
-      gap: 58px;
+      gap: 168px;
       margin-top: 30px;
       padding-left: 40px;
       padding-right: 40px;
