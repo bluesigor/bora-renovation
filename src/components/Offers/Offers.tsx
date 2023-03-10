@@ -19,6 +19,7 @@ const Offers = () => {
           <li className="offers-main-list__item">
             crown molding, accent pieces and trims installation
           </li>
+          <li className="offers-main-list__item">cabinets intallation</li>
         </ul>
         <div className="offers-main-contact">
           <button

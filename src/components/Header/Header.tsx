@@ -34,19 +34,19 @@ const Header = () => {
           <Link to="/">
             <li className="navbar-list__item">Home</li>
           </Link>
-          <li onClick={() => handleScroll(1800)} className="navbar-list__item">
+          <li onClick={() => handleScroll(1500)} className="navbar-list__item">
             About us
           </li>
-          <li onClick={() => handleScroll(2700)} className="navbar-list__item">
+          <li onClick={() => handleScroll(2400)} className="navbar-list__item">
             our process
           </li>
-          <li onClick={() => handleScroll(4500)} className="navbar-list__item">
+          <li onClick={() => handleScroll(4300)} className="navbar-list__item">
             gallery
           </li>
-          <li onClick={() => handleScroll(5700)} className="navbar-list__item">
+          <li onClick={() => handleScroll(4900)} className="navbar-list__item">
             FAQ’s
           </li>
-          <li onClick={() => handleScroll(8400)} className="navbar-list__item">
+          <li onClick={() => handleScroll(7600)} className="navbar-list__item">
             Contacts
           </li>
         </ul>
@@ -57,7 +57,9 @@ const Header = () => {
           alt="phone-icon"
           className="bora-header__contact-btn__icon"
         />
-        <span className="bora-header__contact-btn__txt"> 302-244-1338 </span>
+        <a className="bora-header__contact-btn__txt" href="tel:+13022441338">
+          302-244-1338
+        </a>
       </button>
       <div className="bora-header-burger">
         <div className="bora-header-burger-wrapper ">

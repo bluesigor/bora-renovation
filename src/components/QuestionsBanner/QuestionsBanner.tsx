@@ -1,6 +1,11 @@
+import { useForm } from "@formspree/react";
+
 import online from "../../assets/images/questions/online.svg";
 import mob_online from "../../assets/images/questions/mob-online.svg";
+
 const QuestionsBanner = () => {
+  const [state, handleSubmit] = useForm("mqkoqvra");
+
   return (
     <section className="quest">
       <div className="quest-banner">
@@ -33,12 +38,23 @@ const QuestionsBanner = () => {
             </p>
           </div>
           <div className="quest-banner-bottom-wrapper">
-            <form className="quest-banner-bottom-form">
+            <form
+              action="https://formspree.io/f/mqkoqvra"
+              onSubmit={handleSubmit}
+              className="quest-banner-bottom-form">
               <div className="quest-banner-bottom-form-inputs">
-                <input type="text" placeholder="Name" />
-                <input type="text" placeholder="Phone" />
-                <input type="text" placeholder="E-mail*" />
-                <button className="quest-banner-bottom-form-inputs__submit-mob">
+                <input type="text" placeholder="Name" id="name" name="Name" />
+                <input type="text" placeholder="Phone" id="name" name="Phone" />
+                <input
+                  type="text"
+                  placeholder="E-mail*"
+                  id="name"
+                  name="Email"
+                />
+                <button
+                  disabled={state.submitting}
+                  type="submit"
+                  className="quest-banner-bottom-form-inputs__submit-mob">
                   <span>Submit</span>
                 </button>
               </div>

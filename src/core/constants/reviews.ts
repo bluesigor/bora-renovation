@@ -1,38 +1,57 @@
 import { General } from "../../models";
 
-import leo from "../../assets/images/reviews/leo.svg";
-import michelle from "../../assets/images/reviews/michell.svg";
-import vanessa from "../../assets/images/reviews/vanessa.svg";
+import review_first from "../../assets/images/reviews/review-first.svg";
+import review_second from "../../assets/images/reviews/review-second.svg";
+import review_third from "../../assets/images/reviews/review-third.svg";
+import review_fourth from "../../assets/images/reviews/review-fourth.svg";
+import review_fifth from "../../assets/images/reviews/review-fifth.svg";
+import review_sixth from "../../assets/images/reviews/review-sixth.svg";
+import review_seventh from "../../assets/images/reviews/review-seventh.svg";
+import review_eight from "../../assets/images/reviews/review-eight.svg";
 
 export const reviews: General.Review[] = [
   {
     id: 1,
-    name: "Leo Di",
-    avatar: leo,
-    desc: "I love this company. Their employees do an excellent job and they are so polite and kind.",
+    img: review_first,
   },
   {
     id: 2,
-    name: "Vanessa Grab",
-    avatar: vanessa,
-    desc: " Denys and Anastasia were consummate professionals. I buy and remodel a lot of homes and use a many different contractors. You can hire anyone to “paint” cabinets but if you want it done 100% the right way... HIRE BORA!",
+    img: review_second,
   },
   {
     id: 3,
-    name: "Michell Andrade",
-    avatar: michelle,
-    desc: "We chose Bora Renovation because they are the best kitchen redesign company! Thanks for the great work!",
+    img: review_third,
   },
   {
     id: 4,
-    name: "Leo Di",
-    avatar: leo,
-    desc: "I love this company. Their employees do an excellent job and they are so polite and kind.",
+    img: review_fourth,
   },
   {
     id: 5,
-    name: "Vanessa Grab",
-    avatar: vanessa,
-    desc: " Denys and Anastasia were consummate professionals. I buy and remodel a lot of homes and use a many different contractors. You can hire anyone to “paint” cabinets but if you want it done 100% the right way... HIRE BORA!",
+    img: review_fifth,
+  },
+  {
+    id: 6,
+    img: review_sixth,
+  },
+  {
+    id: 7,
+    img: review_seventh,
+  },
+  {
+    id: 8,
+    img: review_eight,
+  },
+  {
+    id: 9,
+    img: review_first,
+  },
+  {
+    id: 10,
+    img: review_second,
+  },
+  {
+    id: 11,
+    img: review_third,
   },
 ];

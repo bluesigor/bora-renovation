@@ -19,9 +19,7 @@ export declare namespace General {
 
   interface Review {
     id: number;
-    name: string;
-    avatar: string;
-    desc: string;
+    img: string;
   }
   interface Image {
     id: number;

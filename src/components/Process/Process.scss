@@ -30,7 +30,12 @@
       }
     }
   }
-
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
   &-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -100,7 +105,7 @@
     }
 
     &__outer {
-      padding: 31px 40px;
+      padding: 31px 26px;
       background: linear-gradient(180deg, #e2e1e1 0%, $primary 100%);
       border-radius: 0px 0px 50px 0px;
       width: 380px;
@@ -148,7 +153,7 @@
           font-family: "Inter";
           font-style: normal;
           font-weight: 500;
-          font-size: 20px;
+          font-size: 16px;
           line-height: 140.02%;
           letter-spacing: 0.04em;
           color: $primary;
@@ -163,7 +168,7 @@
         font-family: "Semi Inter";
         font-style: normal;
         font-weight: 600;
-        font-size: 24px;
+        font-size: 20px;
         line-height: 140.02%;
         text-align: center;
         letter-spacing: 0.04em;

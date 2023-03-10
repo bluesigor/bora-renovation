@@ -14,7 +14,7 @@ const Reviews = () => {
   const { openReviewModal } = useAppContext();
 
   useEffect(() => {
-    setItemInfo(reviews.slice(0, 3));
+    setItemInfo(reviews);
   }, []);
 
   const buttonUp = () => {
@@ -28,19 +28,37 @@ const Reviews = () => {
         setItemInfo(reviews.slice(2, 5));
         break;
       case 2:
+        setCurrentIndex(3);
+        setItemInfo(reviews.slice(3, 6));
+        break;
+      case 3:
+        setCurrentIndex(4);
+        setItemInfo(reviews.slice(4, 7));
+        break;
+      case 4:
+        setCurrentIndex(5);
+        setItemInfo(reviews.slice(5, 8));
+        break;
+      case 5:
+        setCurrentIndex(6);
+        setItemInfo(reviews.slice(6, 9));
+        break;
+      case 6:
+        setCurrentIndex(7);
+        setItemInfo(reviews.slice(7, 10));
+        break;
+      case 7:
         setCurrentIndex(0);
         setItemInfo(reviews.slice(0, 3));
         break;
-      default:
-        return;
     }
   };
 
   const buttonDown = () => {
     switch (currentIndex) {
       case 0:
-        setCurrentIndex(2);
-        setItemInfo(reviews.slice(2, 5));
+        setCurrentIndex(7);
+        setItemInfo(reviews.slice(7, 10));
         break;
       case 1:
         setCurrentIndex(0);
@@ -49,6 +67,26 @@ const Reviews = () => {
       case 2:
         setCurrentIndex(1);
         setItemInfo(reviews.slice(1, 4));
+        break;
+      case 3:
+        setCurrentIndex(2);
+        setItemInfo(reviews.slice(2, 5));
+        break;
+      case 4:
+        setCurrentIndex(3);
+        setItemInfo(reviews.slice(3, 6));
+        break;
+      case 5:
+        setCurrentIndex(4);
+        setItemInfo(reviews.slice(4, 7));
+        break;
+      case 6:
+        setCurrentIndex(5);
+        setItemInfo(reviews.slice(5, 8));
+        break;
+      case 7:
+        setCurrentIndex(6);
+        setItemInfo(reviews.slice(6, 9));
         break;
       default:
         return;
@@ -60,17 +98,14 @@ const Reviews = () => {
       <div className="wrapper-reviews">
         <div className="reviews-list">
           {itemInfo.slice(0, 3).map((review: General.Review, index: number) => {
-            const { avatar, id, desc, name } = review;
-
-            return (
-              <ReviewCard
-                key={id}
-                currentIndex={index}
-                avatar={avatar}
-                name={name}
-                desc={desc}
-              />
-            );
+            const { id, img } = review;
+            return <ReviewCard key={id} currentIndex={index} img={img} />;
+          })}
+        </div>
+        <div className="reviews-moblist">
+          {itemInfo.slice(0, 9).map((review: General.Review, index: number) => {
+            const { id, img } = review;
+            return <ReviewCard key={id} currentIndex={index} img={img} />;
           })}
         </div>
         <div className="reviews-arrows">
