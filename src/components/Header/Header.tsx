@@ -20,7 +20,7 @@ const Header = () => {
     if (innerWidth > 768) {
       closeHamb();
     }
-  }, [innerWidth]);
+  }, [innerWidth, closeHamb]);
 
   return (
     <header

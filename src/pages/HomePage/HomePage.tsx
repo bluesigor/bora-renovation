@@ -1,7 +1,3 @@
-import { useEffect } from "react";
-
-import { useAppContext } from "../../context/AppContext";
-
 import AboutUs from "../../components/AboutUs";
 import Benefits from "../../components/Benefits";
 import FAQ from "../../components/FAQ";
@@ -17,14 +13,6 @@ import ContactUs from "../../components/ContactUs/ContactUs";
 import GetQuote from "../../components/GetQuote";
 
 const HomePage = () => {
-  const { isOpen, closeHamb } = useAppContext();
-
-  useEffect(() => {
-    if (isOpen) {
-      closeHamb();
-    }
-  }, []);
-
   return (
     <>
       <WelcomeBanner />

@@ -9,7 +9,7 @@ const GetQuote = () => {
     if (isModalOpen) {
       setIsVisisble(false);
     }
-  }, [isModalOpen]);
+  }, [isModalOpen, setIsVisisble]);
 
   if (isVisisble) {
     return (

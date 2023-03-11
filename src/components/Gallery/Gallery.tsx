@@ -1,14 +1,11 @@
-import { ChangeEvent, useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 import Carousel from "./Carousel";
 import useMeasures from "../../core/hooks/useMeasures";
 import MobGallery from "../MobGallery";
-import { useAppContext } from "../../context/AppContext";
 
 const Gallery = () => {
   const { innerWidth } = useMeasures();
-
-  const { closeHamb, isOpen } = useAppContext();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -16,10 +13,6 @@ const Gallery = () => {
     const timer = setTimeout(() => {
       return window.scrollTo(0, 200);
     }, 400);
-
-    if (isOpen) {
-      closeHamb();
-    }
 
     return () => clearTimeout(timer);
   }, []);
