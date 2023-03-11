@@ -1,14 +1,9 @@
 @import "../../styles/mixins.scss";
 @import "../../styles/vars.scss";
 .benefits {
-  padding-top: 100px;
-  padding-bottom: 96px;
-  padding-left: 68px;
-  padding-right: 71px;
+  padding: 100px 71px 96px 68px;
   @include onMobile {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 59px;
+    padding: 59px 15px 30px;
   }
   &-header {
     display: flex;

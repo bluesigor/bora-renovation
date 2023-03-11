@@ -1,14 +1,16 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Hamburger from "hamburger-react";
 
 import bora_logo from "../../assets/images/header/bora-logo.svg";
 import phone_icon from "../../assets/images/header/phone-icon.svg";
 import useMeasures from "../../core/hooks/useMeasures";
+import { useAppContext } from "../../context/AppContext";
 
 const Header = () => {
-  const [isOpen, setOpen] = useState(false);
   const { innerWidth } = useMeasures();
+
+  const { openHamb, isOpen, closeHamb } = useAppContext();
 
   function handleScroll(height: number) {
     window.scrollTo(0, height);
@@ -16,7 +18,7 @@ const Header = () => {
 
   useEffect(() => {
     if (innerWidth > 768) {
-      setOpen(false);
+      closeHamb();
     }
   }, [innerWidth]);
 
@@ -69,7 +71,7 @@ const Header = () => {
             easing="ease-in"
             label="Show menu"
             toggled={isOpen}
-            toggle={setOpen}
+            toggle={isOpen ? closeHamb : openHamb}
           />
         </div>
       </div>
@@ -82,7 +84,7 @@ const Header = () => {
           </li>
           <li>
             <button
-              onClick={() => handleScroll(2000)}
+              onClick={() => handleScroll(1900)}
               className="navbar-moblist__item">
               About us
             </button>
@@ -103,7 +105,7 @@ const Header = () => {
           </li>
           <li>
             <button
-              onClick={() => handleScroll(5000)}
+              onClick={() => handleScroll(4900)}
               className="navbar-moblist__item">
               FAQ’s
             </button>

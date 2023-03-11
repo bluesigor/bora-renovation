@@ -1,7 +1,15 @@
 import { useAppContext } from "../../context/AppContext";
+import { useEffect } from "react";
 
 const GetQuote = () => {
-  const { isVisisble, openModalQuote } = useAppContext();
+  const { isVisisble, openModalQuote, isModalOpen, setIsVisisble } =
+    useAppContext();
+
+  useEffect(() => {
+    if (isModalOpen) {
+      setIsVisisble(false);
+    }
+  }, [isModalOpen]);
 
   if (isVisisble) {
     return (

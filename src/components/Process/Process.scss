@@ -70,7 +70,7 @@
         min-width: 310px;
       }
       @include onMobile {
-        min-width: 345px;
+        min-width: 300px;
         margin-bottom: 60px;
       }
     }
@@ -85,7 +85,7 @@
           max-width: 300px;
         }
         @include onMobile {
-          max-width: 345px;
+          max-width: 300px;
         }
       }
       & > div svg {
@@ -99,7 +99,7 @@
         }
         @include onMobile {
           height: 100%;
-          min-width: 345px;
+          min-width: 280px;
         }
       }
     }
@@ -109,13 +109,18 @@
       background: linear-gradient(180deg, #e2e1e1 0%, $primary 100%);
       border-radius: 0px 0px 50px 0px;
       width: 380px;
+      margin: 0;
+
       @media (max-width: 1300px) {
         width: 330px;
       }
       @media (max-width: 1230px) {
         width: 300px;
       }
-      margin: 0;
+      @include onMobile {
+        padding-top: 25px;
+        width: 300px;
+      }
       &-desc1,
       &-desc2,
       &-desc3,
@@ -124,16 +129,15 @@
       &-desc6 {
         display: none;
       }
-      @include onMobile {
-        width: 345px;
-      }
       &:hover {
         background: $scrollbar-reviews;
         height: 256px;
         transition: 2.2s;
         text-align: center;
         padding-bottom: 65px;
-
+        @include onMobile {
+          height: 200px;
+        }
         & > p {
           background: linear-gradient(93.35deg, #ffda55 3.71%, #ffaa2c 98.84%);
           -webkit-background-clip: text;
@@ -183,6 +187,7 @@
           text-fill-color: transparent;
           font-size: 16px;
           line-height: 140.02%;
+          margin-bottom: 7px;
         }
       }
     }

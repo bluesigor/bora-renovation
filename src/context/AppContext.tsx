@@ -4,10 +4,14 @@ const defaultState = {
   isModalOpen: false,
   isReviewModalOpen: false,
   isVisisble: false,
+  isOpen: false,
   openModalQuote: () => {},
   closeModalQuote: () => {},
   openReviewModal: () => {},
   closeReviewModal: () => {},
+  setIsVisisble: (state: boolean) => {},
+  closeHamb: () => {},
+  openHamb: () => {},
 };
 
 const AppContext = createContext(defaultState);
@@ -20,6 +24,7 @@ export const AppContextProvider = ({
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isReviewModalOpen, setReviewModalOpen] = useState(false);
   const [isVisisble, setIsVisisble] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     function handleScroll() {
@@ -71,6 +76,15 @@ export const AppContextProvider = ({
     },
 
     isVisisble,
+    setIsVisisble,
+    isOpen,
+
+    closeHamb: () => {
+      setIsOpen(false);
+    },
+    openHamb: () => {
+      setIsOpen(true);
+    },
   };
 
   return (

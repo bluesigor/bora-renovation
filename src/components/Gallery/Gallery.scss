@@ -5,6 +5,7 @@
   min-height: 100vh;
   padding: 60px 67px 123px 70px;
   @include onMobile {
+    min-height: 80vh;
     padding: 21px 15px 60px 15px;
   }
   &-top {

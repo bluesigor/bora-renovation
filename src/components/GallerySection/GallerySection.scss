@@ -2,6 +2,9 @@
 
 .gallery {
   padding: 100px 63px;
+  @include onMobile {
+    padding: 70px 15px;
+  }
   &-title {
     width: 100%;
     display: flex;
