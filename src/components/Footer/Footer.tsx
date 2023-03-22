@@ -6,13 +6,16 @@ import bora_mob from "../../assets/images/footer/bora-mob.svg";
 import facebook from "../../assets/images/contact/facebook.svg";
 import logo_foot from "../../assets/images/footer/logo-foot.svg";
 import to_top_arrow from "../../assets/images/footer/to-top-arrow.svg";
-import phone from "../../assets/images/footer/phone.svg";
+import phone from "../../assets/images/header/phone-icon.svg";
+import desk_phone from "../../assets/images/header/desc-phone-icon.svg";
 import instagram from "../../assets/images/contact/inst.svg";
+import useMeasures from "../../core/hooks/useMeasures";
 
 const Footer = () => {
   const [showButton, setShowButton] = useState(false);
 
   const { openModalQuote } = useAppContext();
+  const { innerWidth } = useMeasures();
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -75,7 +78,12 @@ const Footer = () => {
           </button>
           <div className="foot-inner-controls-end">
             <button className="foot-inner-controls-end-phone">
-              <img src={phone} alt="" />
+              {innerWidth > 768 ? (
+                <img src={desk_phone} alt="phone" />
+              ) : (
+                <img src={phone} alt="phone" />
+              )}
+
               <a href="tel:+13022441338">302-244-1338</a>
             </button>
             <button

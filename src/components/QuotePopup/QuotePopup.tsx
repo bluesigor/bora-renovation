@@ -39,9 +39,9 @@ const QuotePopup = () => {
               />
               <input
                 id="number"
-                name="Number phone"
+                name="Phone number"
                 type="text"
-                placeholder="Number phone"
+                placeholder="Phone number"
                 className="modal-form-inputs__item"
               />
               <input

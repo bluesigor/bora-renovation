@@ -4,6 +4,7 @@ import Hamburger from "hamburger-react";
 
 import bora_logo from "../../assets/images/header/bora-logo.svg";
 import phone_icon from "../../assets/images/header/phone-icon.svg";
+import desc_phone_icon from "../../assets/images/header/desc-phone-icon.svg";
 import useMeasures from "../../core/hooks/useMeasures";
 import { useAppContext } from "../../context/AppContext";
 
@@ -54,11 +55,19 @@ const Header = () => {
         </ul>
       </nav>
       <button type="button" className="bora-header__contact-btn">
-        <img
-          src={phone_icon}
-          alt="phone-icon"
-          className="bora-header__contact-btn__icon"
-        />
+        {innerWidth > 768 ? (
+          <img
+            src={desc_phone_icon}
+            alt="desc_phone_icon"
+            className="bora-header__contact-btn__icon"
+          />
+        ) : (
+          <img
+            src={phone_icon}
+            alt="phone-icon"
+            className="bora-header__contact-btn__icon"
+          />
+        )}
         <a className="bora-header__contact-btn__txt" href="tel:+13022441338">
           302-244-1338
         </a>
@@ -67,7 +76,7 @@ const Header = () => {
         <div className="bora-header-burger-wrapper ">
           <Hamburger
             size={28}
-            duration={0.4}
+            duration={0.5}
             easing="ease-in"
             label="Show menu"
             toggled={isOpen}

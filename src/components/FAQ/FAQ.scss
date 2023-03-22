@@ -61,6 +61,8 @@
       border: 1px solid $scrollbar-reviews;
       border-radius: 30px;
       height: 107px;
+      max-height: 107px;
+      transition: max-height 0.15s ease-out;
       @include onMobile {
         min-width: 345px;
         padding: 20px 22px;
@@ -70,24 +72,26 @@
         background: linear-gradient(180.24deg, #e2e1e1 -40.8%, $primary 99.79%);
         border: 2px solid $scrollbar-reviews;
         box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
-        height: 268px;
-        transition: 1.2s;
+        height: max-content;
+        transition: 1.3s;
         display: flex;
         flex-direction: column;
         gap: 27px;
+        max-height: 500px;
+        transition: max-height 1.2s ease-in;
         @include onMobile {
-          height: 223px;
+          transition: max-height 1.5s ease-in;
           gap: 8px;
         }
         &:nth-child(2),
         &:nth-child(3) {
-          height: 290px;
+          height: fit-content;
         }
         &:first-child {
-          height: 390px;
+          height: fit-content;
         }
         &:last-child {
-          height: 300px;
+          height: fit-content;
         }
         .faq-questions-entity__title {
           font-family: "Semi Montserrat";
@@ -126,8 +130,19 @@
         text-align: center;
         letter-spacing: 0.04em;
         color: $scrollbar-reviews;
+        opacity: 0;
+        animation: show-div 1.1s ease-in-out 1s forwards;
         @include onMobile {
           font-size: 16px;
+        }
+
+        @keyframes show-div {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
         }
       }
     }

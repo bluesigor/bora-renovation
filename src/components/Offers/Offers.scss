@@ -10,15 +10,20 @@
   padding-bottom: 67px;
   @include onMobile {
     background-image: url("../../assets/images/offers/offers-banner-mob.svg");
-    padding-top: 63px;
-    padding-bottom: 40px;
+    padding-top: 47px;
+    padding-bottom: 61px;
+    background-position: center;
+    background-size: cover;
+    min-height: 0px;
+    max-height: 517px;
   }
   &-new {
     width: 100%;
     margin-bottom: 64px;
     height: 112px;
     @include onMobile {
-      height: 70px;
+      margin-bottom: 41px;
+      height: 58px;
     }
     &__logo {
       background-image: url("../../assets/images/offers/new-logo.svg");
@@ -28,7 +33,7 @@
       max-width: 873px;
       @include onMobile {
         background-image: url("../../assets/images/offers/new-logo-mob.svg");
-        max-width: 320px;
+        max-width: 288px;
       }
     }
   }
@@ -68,10 +73,11 @@
     padding-right: 160px;
     @include onMobile {
       flex-direction: column;
-      gap: 128px;
+      justify-content: space-between;
+      gap: 39px;
       margin-top: 30px;
-      padding-left: 40px;
-      padding-right: 40px;
+      padding-left: 61px;
+      padding-right: 60px;
     }
     &-list {
       display: flex;
@@ -81,6 +87,8 @@
       @include onMobile {
         align-items: center;
         text-align: center;
+        gap: 10px;
+        margin-bottom: 55px;
       }
       &__item {
         font-family: "Montserrat";
@@ -98,9 +106,8 @@
           }
         }
         @include onMobile {
-          min-width: 300px;
-          width: 100%;
-          font-size: 16px;
+          width: 250px;
+          font-size: 15px;
           letter-spacing: 0.04em;
         }
       }
@@ -128,7 +135,7 @@
         width: 377px;
         @include onMobile {
           padding: 13px 47px;
-          max-width: 300px;
+          width: 300px;
           text-align: center;
           box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
           border-radius: 20px;

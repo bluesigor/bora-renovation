@@ -9,7 +9,7 @@ const Offers = () => {
         <div className="offers-new__logo" />
       </div>
       <div className="offers-title">
-        <h5 className="offers-title__txt">Now offering</h5>
+        <h6 className="offers-title__txt">Now offering</h6>
       </div>
       <div className="offers-main">
         <ul className="offers-main-list">

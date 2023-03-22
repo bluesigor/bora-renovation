@@ -105,8 +105,8 @@
         background-image: url("../../assets/images/questions/house-bckg-mob.svg");
         background-size: cover;
         width: 100%;
-        min-height: 734px;
-        padding-top: 60px;
+        min-height: 627px;
+        padding-top: 22px;
         border-radius: 0px 0px 20px 20px;
       }
       &-header {
@@ -117,7 +117,12 @@
         max-width: 706px;
         margin-bottom: 69px;
         @include onMobile {
-          margin-bottom: 37px;
+          margin-bottom: -20px;
+          flex-direction: row;
+          gap: 10px;
+          align-items: center;
+          min-width: 283px;
+          justify-content: space-between;
         }
         &__title {
           font-family: "Bold Montserrat";
@@ -130,7 +135,7 @@
           font-feature-settings: "pnum" on, "lnum" on;
           color: $primary;
           @include onMobile {
-            max-width: 305px;
+            max-width: 190px;
             font-family: "Medium Raleway";
             font-size: 24px;
             line-height: 150.52%;
@@ -176,6 +181,7 @@
           @include onMobile {
             min-width: 300px;
             gap: 15px;
+            align-items: center;
           }
           & > input {
             padding: 12px 31px;
@@ -191,6 +197,7 @@
               letter-spacing: 0.04em;
               color: $scrollbar-reviews;
               height: 50px;
+              width: 100%;
             }
             &::-webkit-input-placeholder {
               font-family: "Light Montserrat";
@@ -221,11 +228,13 @@
               0px 0px 0px rgba(0, 0, 0, 0.07);
             border-radius: 20px;
             border: none;
-            padding: 23px 109px;
+            padding: 26px 92px;
+            max-width: 250px;
+            text-align: center;
             & > span {
               font-family: "Semi Inter";
               font-style: normal;
-              font-size: 20px;
+              font-size: 16px;
               line-height: 24px;
               text-align: center;
               letter-spacing: 0.04em;
@@ -275,6 +284,8 @@
           }
           &-moblogo {
             display: none;
+            max-width: 100px;
+            padding-top: 30px;
             @include onMobile {
               display: block;
             }
@@ -293,6 +304,7 @@
             line-height: 150.52%;
             letter-spacing: 0.04em;
             color: $primary;
+            text-align: center;
             @include onMobile {
               display: block;
             }

@@ -6,13 +6,13 @@ import poster from "../../assets/images/welcome/welcome-banner.svg";
 import welcome from "../../assets/videos/main.mp4";
 
 const WelcomeBanner = () => {
-  const { openModalQuote } = useAppContext();
+  const { openModalQuote, isOpen } = useAppContext();
 
   const { innerWidth } = useMeasures();
 
   return (
     <section className="bora__welcome-banner welcome-banner">
-      {innerWidth > 768 && (
+      {isOpen ? null : (
         <div className="welcome-banner-title">
           <h1 className="welcome-banner-title__txt">
             Bora kitchen cabinet renovation

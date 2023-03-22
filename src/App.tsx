@@ -18,8 +18,8 @@ function App() {
           <Route element={<Layout />}>
             <Route path="/" element={<HomePage />} />
             <Route path="gallery" element={<GalleryPage />} />
+            <Route path="*" element={<Fallback />} />
           </Route>
-          <Route path="*" element={<Fallback />} />
         </Routes>
       </BrowserRouter>
     </AppContextProvider>

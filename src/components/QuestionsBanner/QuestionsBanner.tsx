@@ -29,6 +29,11 @@ const QuestionsBanner = () => {
         </div>
         <div className="quest-banner-bottom">
           <div className="quest-banner-bottom-header">
+            <img
+              src={mob_online}
+              alt="mob_online"
+              className="quest-banner-bottom-form-control-moblogo"
+            />
             <h4 className="quest-banner-bottom-header__title">
               Do you have questions?
             </h4>
@@ -65,11 +70,11 @@ const QuestionsBanner = () => {
                     alt="online"
                     className="quest-banner-bottom-form-control-logo"
                   />
-                  <img
+                  {/* <img
                     src={mob_online}
                     alt="mob_online"
                     className="quest-banner-bottom-form-control-moblogo"
-                  />
+                  /> */}
                   <button
                     className="quest-banner-bottom-form-control__submit"
                     type="submit">
