@@ -1,7 +1,6 @@
 import useMeasures from "../../core/hooks/useMeasures";
 
 import stars from "../../assets/images/reviews/stars.svg";
-import { General } from "../../models/index";
 
 type ReviewCardProps = {
   name: string;
