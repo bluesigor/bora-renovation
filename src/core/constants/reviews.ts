@@ -1,14 +1,5 @@
 import { General } from "../../models";
 
-import review_first from "../../assets/images/reviews/review-first.svg";
-import review_second from "../../assets/images/reviews/review-second.svg";
-import review_third from "../../assets/images/reviews/review-third.svg";
-import review_fourth from "../../assets/images/reviews/review-fourth.svg";
-import review_fifth from "../../assets/images/reviews/review-fifth.svg";
-import review_sixth from "../../assets/images/reviews/review-sixth.svg";
-import review_seventh from "../../assets/images/reviews/review-seventh.svg";
-import review_eight from "../../assets/images/reviews/review-eight.svg";
-
 export const reviews: General.Review[] = [
   {
     id: 1,
