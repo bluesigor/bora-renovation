@@ -136,14 +136,17 @@
         height: 230px;
       }
       @include onMobile {
-        padding: 40px 10px;
-        min-width: 345px;
+        padding: 20px 10px;
+        min-width: 300px;
         height: 290px;
         margin-bottom: 83px;
       }
       &__stars {
         max-width: min-content;
         margin-bottom: 16px;
+        @include onMobile {
+          margin-bottom: 12px;
+        }
       }
       &__txt {
         font-family: "Montserrat";
@@ -154,6 +157,11 @@
         letter-spacing: 0.04em;
         color: $darken;
         margin-bottom: 22px;
+        @include onMobile {
+          font-size: 14px;
+          letter-spacing: -0.01;
+          margin-bottom: 14px;
+        }
       }
       &__name {
         font-family: "Open Sans";
