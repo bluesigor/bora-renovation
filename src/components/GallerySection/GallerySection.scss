@@ -90,8 +90,12 @@
           border: 2px solid $scrollbar-reviews;
           max-width: 342px;
           max-height: 273px;
+          @media (max-width: 1500px) {
+            max-width: 265px;
+            max-height: 214px;
+          }
           @media (max-width: 1200px) {
-            max-width: 300px;
+            max-width: 265px;
             max-height: 214px;
           }
         }
@@ -101,8 +105,12 @@
           border: 2px solid $scrollbar-reviews;
           max-width: 342px;
           max-height: 273px;
+          @media (max-width: 1500px) {
+            max-width: 265px;
+            max-height: 214px;
+          }
           @media (max-width: 1200px) {
-            max-width: 300px;
+            max-width: 265px;
             max-height: 214px;
           }
         }
@@ -110,20 +118,28 @@
       &-thirdlogo {
         & > div svg {
           border: 2px solid $scrollbar-reviews;
-          max-width: 467px;
+          max-width: max-content;
           max-height: 576px;
+          @media (max-width: 1500px) {
+            max-width: 370px;
+            max-height: 493px;
+          }
           @media (max-width: 1200px) {
-            max-width: 400px;
-            max-height: 520px;
+            max-width: 370px;
+            max-height: 493px;
           }
         }
       }
       &-first {
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: 26px;
+        @media (max-width: 1500px) {
+          gap: 60px;
+          width: 250px;
+        }
         @media (max-width: 1200px) {
-          gap: 86px;
+          gap: 60px;
           width: 250px;
         }
       }

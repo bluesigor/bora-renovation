@@ -123,12 +123,14 @@
       gap: 30px;
       &__item {
         border: 1px solid $scrollbar-reviews;
+        display: flex;
         & > img {
           width: 218px;
           height: 216px;
-          @media (max-width: 1200px) {
-            width: 150px;
-            height: 142px;
+          @media (max-width: 1400px) {
+            max-width: 150px;
+            height: max-content;
+            object-fit: cover;
           }
         }
       }

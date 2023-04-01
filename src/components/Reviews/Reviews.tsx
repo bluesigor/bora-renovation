@@ -10,7 +10,8 @@ import { General } from "../../models";
 
 const Reviews = () => {
   const [itemInfo, setItemInfo] = useState<General.Review[]>([]);
-  const [currentIndex, setCurrentIndex] = useState(1);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const { openReviewModal } = useAppContext();
 
   useEffect(() => {
@@ -48,6 +49,42 @@ const Reviews = () => {
         setItemInfo(reviews.slice(7, 10));
         break;
       case 7:
+        setCurrentIndex(8);
+        setItemInfo(reviews.slice(8, 11));
+        break;
+      case 8:
+        setCurrentIndex(9);
+        setItemInfo(reviews.slice(9, 12));
+        break;
+      case 9:
+        setCurrentIndex(10);
+        setItemInfo(reviews.slice(10, 13));
+        break;
+      case 10:
+        setCurrentIndex(11);
+        setItemInfo(reviews.slice(11, 14));
+        break;
+      case 11:
+        setCurrentIndex(12);
+        setItemInfo(reviews.slice(12, 15));
+        break;
+      case 12:
+        setCurrentIndex(13);
+        setItemInfo(reviews.slice(13, 16));
+        break;
+      case 13:
+        setCurrentIndex(14);
+        setItemInfo(reviews.slice(14, 17));
+        break;
+      case 14:
+        setCurrentIndex(15);
+        setItemInfo(reviews.slice(15, 18));
+        break;
+      case 15:
+        setCurrentIndex(16);
+        setItemInfo(reviews.slice(16, 19));
+        break;
+      case 16:
         setCurrentIndex(0);
         setItemInfo(reviews.slice(0, 3));
         break;
@@ -57,8 +94,8 @@ const Reviews = () => {
   const buttonDown = () => {
     switch (currentIndex) {
       case 0:
-        setCurrentIndex(7);
-        setItemInfo(reviews.slice(7, 10));
+        setCurrentIndex(16);
+        setItemInfo(reviews.slice(16, 19));
         break;
       case 1:
         setCurrentIndex(0);
@@ -88,6 +125,43 @@ const Reviews = () => {
         setCurrentIndex(6);
         setItemInfo(reviews.slice(6, 9));
         break;
+      case 8:
+        setCurrentIndex(7);
+        setItemInfo(reviews.slice(7, 10));
+        break;
+      case 9:
+        setCurrentIndex(8);
+        setItemInfo(reviews.slice(8, 11));
+        break;
+      case 10:
+        setCurrentIndex(9);
+        setItemInfo(reviews.slice(9, 12));
+        break;
+      case 11:
+        setCurrentIndex(10);
+        setItemInfo(reviews.slice(10, 13));
+        break;
+      case 12:
+        setCurrentIndex(11);
+        setItemInfo(reviews.slice(11, 14));
+        break;
+      case 13:
+        setCurrentIndex(12);
+        setItemInfo(reviews.slice(12, 15));
+        break;
+      case 14:
+        setCurrentIndex(13);
+        setItemInfo(reviews.slice(13, 16));
+        break;
+      case 15:
+        setCurrentIndex(14);
+        setItemInfo(reviews.slice(14, 17));
+        break;
+      case 16:
+        setCurrentIndex(15);
+        setItemInfo(reviews.slice(15, 18));
+        break;
+
       default:
         return;
     }
@@ -98,14 +172,28 @@ const Reviews = () => {
       <div className="wrapper-reviews">
         <div className="reviews-list">
           {itemInfo.slice(0, 3).map((review: General.Review, index: number) => {
-            const { id, img } = review;
-            return <ReviewCard key={id} currentIndex={index} img={img} />;
+            const { id, name, text } = review;
+            return (
+              <ReviewCard
+                key={id}
+                currentIndex={index}
+                name={name}
+                text={text}
+              />
+            );
           })}
         </div>
         <div className="reviews-moblist">
-          {itemInfo.slice(0, 9).map((review: General.Review, index: number) => {
-            const { id, img } = review;
-            return <ReviewCard key={id} currentIndex={index} img={img} />;
+          {itemInfo.map((review: General.Review, index: number) => {
+            const { id, name, text } = review;
+            return (
+              <ReviewCard
+                key={id}
+                currentIndex={index}
+                name={name}
+                text={text}
+              />
+            );
           })}
         </div>
         <div className="reviews-arrows">
