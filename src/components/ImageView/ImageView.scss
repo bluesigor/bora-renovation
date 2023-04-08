@@ -1,0 +1,23 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/vars.scss";
+
+.image {
+  &-wrapper {
+    background-color: #fefefe;
+    margin: 7% auto;
+    max-width: 684px;
+    height: 684px;
+    @include onMobile {
+      margin-top: 50%;
+      height: 300px;
+      width: 325px;
+    }
+  }
+  &-large {
+    height: 684px;
+    @include onMobile {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

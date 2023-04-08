@@ -5,16 +5,16 @@ import google from "../../assets/images/reviews/google.svg";
 import facebook from "../../assets/images/reviews/facebook.svg";
 
 const LeaveReview = () => {
-  const { isReviewModalOpen, closeReviewModal } = useAppContext();
+  const { isModalOpen, modalType, closeModal } = useAppContext();
 
   return (
     <>
-      {isReviewModalOpen && (
+      {modalType === "review" && isModalOpen && (
         <div className="leave-review">
           <div className="leave-review-content">
             <div className="leave-review-content-top">
               <button
-                onClick={closeReviewModal}
+                onClick={closeModal}
                 className="quote-modal-content-top__btn-close">
                 <img src={close} alt="close" />
               </button>

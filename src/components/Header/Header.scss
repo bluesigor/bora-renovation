@@ -146,6 +146,9 @@
       white-space: nowrap;
       border: none;
       background: none;
+      & > a {
+        color: $scrollbar-reviews;
+      }
     }
   }
   &-list {
@@ -170,6 +173,9 @@
       color: $scrollbar-reviews;
       white-space: nowrap;
       border: none;
+      & > a {
+        color: $scrollbar-reviews;
+      }
       &:hover {
         color: $blue-accent;
         font-family: "Bold Inter";

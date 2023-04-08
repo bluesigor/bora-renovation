@@ -2,8 +2,13 @@ import { useAppContext } from "../../context/AppContext";
 import { useEffect } from "react";
 
 const GetQuote = () => {
-  const { isVisisble, openModalQuote, isModalOpen, setIsVisisble } =
-    useAppContext();
+  const {
+    isVisisble,
+    setIsModalOpen,
+    setModalType,
+    isModalOpen,
+    setIsVisisble,
+  } = useAppContext();
 
   useEffect(() => {
     if (isModalOpen) {
@@ -14,7 +19,12 @@ const GetQuote = () => {
   if (isVisisble) {
     return (
       <div className="quote-container">
-        <button onClick={openModalQuote} className="quote-container-btn">
+        <button
+          onClick={() => {
+            setModalType("quote");
+            setIsModalOpen(true);
+          }}
+          className="quote-container-btn">
           <span className="quote-container-btn__txt">get a quote</span>
         </button>
       </div>

@@ -11,6 +11,13 @@
     padding-top: 0px;
   }
   &-title {
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+    margin-bottom: 30px;
+    @include onMobile {
+      margin-bottom: 0px;
+    }
     &__txt {
       font-family: "Semi Raleway";
       font-style: normal;
@@ -30,16 +37,30 @@
         text-shadow: none;
       }
     }
+    &__subtxt {
+      font-family: "Medium Montserrat";
+      font-style: normal;
+      font-size: 28px;
+      line-height: 150.52%;
+      text-align: center;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: $scrollbar-reviews;
+      @include onMobile {
+        display: none;
+      }
+    }
   }
+
   &-wrapper {
     min-height: 550px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     flex-direction: column;
+    position: relative;
     &-video {
       z-index: 0;
-      width: 90%;
+      width: 100%;
       @include onMobile {
         display: none;
       }
@@ -58,9 +79,13 @@
       padding-bottom: 96px;
       gap: 21px;
       position: absolute;
+      top: 87%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       @include onMobile {
-        gap: 50px;
-        padding-bottom: 70px;
+        gap: 43px;
+        padding-bottom: 170px;
+        width: 100%;
       }
       &__inner {
         font-family: "Montserrat";

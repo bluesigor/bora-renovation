@@ -3,8 +3,11 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { General } from "../../models";
 
 import { collection } from "../../core/constants/collection";
+import { useAppContext } from "../../context/AppContext";
 
 const MobGallery = () => {
+  const { setIsModalOpen, setModalType, setImageData } = useAppContext();
+
   return (
     <div className="mob-gallery">
       {collection.map((image: General.Image) => {
@@ -17,6 +20,11 @@ const MobGallery = () => {
             key={id}
             src={src}
             alt={src}
+            onClick={() => {
+              setImageData(src);
+              setIsModalOpen(true);
+              setModalType("image");
+            }}
           />
         );
       })}

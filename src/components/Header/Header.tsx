@@ -4,7 +4,7 @@ import Hamburger from "hamburger-react";
 
 import bora_logo from "../../assets/images/header/bora-logo.svg";
 import phone_icon from "../../assets/images/header/phone-icon.svg";
-import desc_phone_icon from "../../assets/images/header/desc-phone-icon.svg";
+
 import useMeasures from "../../core/hooks/useMeasures";
 import { useAppContext } from "../../context/AppContext";
 
@@ -44,7 +44,7 @@ const Header = () => {
             our process
           </li>
           <li onClick={() => handleScroll(4300)} className="navbar-list__item">
-            gallery
+            <Link to="/gallery">gallery</Link>
           </li>
           <li onClick={() => handleScroll(4900)} className="navbar-list__item">
             FAQ’s
@@ -55,19 +55,11 @@ const Header = () => {
         </ul>
       </nav>
       <button type="button" className="bora-header__contact-btn">
-        {innerWidth > 768 ? (
-          <img
-            src={desc_phone_icon}
-            alt="desc_phone_icon"
-            className="bora-header__contact-btn__icon"
-          />
-        ) : (
-          <img
-            src={phone_icon}
-            alt="phone-icon"
-            className="bora-header__contact-btn__icon"
-          />
-        )}
+        <img
+          src={phone_icon}
+          alt="phone-icon"
+          className="bora-header__contact-btn__icon"
+        />
         <a className="bora-header__contact-btn__txt" href="tel:+13022441338">
           302-244-1338
         </a>
@@ -87,44 +79,111 @@ const Header = () => {
       {isOpen && (
         <ul className="navbar-moblist">
           <li>
-            <Link to="/" className="navbar-moblist__item">
+            <Link onClick={closeHamb} to="/" className="navbar-moblist__item">
               Home
             </Link>
           </li>
           <li>
-            <button
-              onClick={() => handleScroll(1900)}
-              className="navbar-moblist__item">
-              About us
-            </button>
+            {window.location.pathname.includes("gallery") ||
+            window.location.pathname.includes("privacy-policy") ? (
+              <Link
+                to="/"
+                onClick={() => {
+                  closeHamb();
+                  handleScroll(1900);
+                }}
+                className="navbar-moblist__item">
+                About us
+              </Link>
+            ) : (
+              <button
+                onClick={() => {
+                  closeHamb();
+                  handleScroll(1900);
+                }}
+                className="navbar-moblist__item">
+                About us
+              </button>
+            )}
           </li>
           <li>
-            <button
-              onClick={() => handleScroll(2700)}
-              className="navbar-moblist__item">
-              our process
-            </button>
+            {window.location.pathname.includes("gallery") ||
+            window.location.pathname.includes("privacy-policy") ? (
+              <Link
+                to="/"
+                onClick={() => {
+                  closeHamb();
+                  handleScroll(2700);
+                }}
+                className="navbar-moblist__item">
+                our process
+              </Link>
+            ) : (
+              <button
+                onClick={() => {
+                  closeHamb();
+                  handleScroll(2700);
+                }}
+                className="navbar-moblist__item">
+                our process
+              </button>
+            )}
           </li>
           <li>
-            <button
-              onClick={() => handleScroll(4100)}
+            <Link
+              to="/gallery"
+              onClick={() => {
+                closeHamb();
+              }}
               className="navbar-moblist__item">
               gallery
-            </button>
+            </Link>
           </li>
           <li>
-            <button
-              onClick={() => handleScroll(4900)}
-              className="navbar-moblist__item">
-              FAQ’s
-            </button>
+            {window.location.pathname.includes("gallery") ||
+            window.location.pathname.includes("privacy-policy") ? (
+              <Link
+                to="/"
+                onClick={() => {
+                  closeHamb();
+                  handleScroll(4900);
+                }}
+                className="navbar-moblist__item">
+                FAQ’s
+              </Link>
+            ) : (
+              <button
+                onClick={() => {
+                  closeHamb();
+                  handleScroll(4900);
+                }}
+                className="navbar-moblist__item">
+                FAQ’s
+              </button>
+            )}
           </li>
           <li>
-            <button
-              onClick={() => handleScroll(7700)}
-              className="navbar-moblist__item">
-              Contacts
-            </button>
+            {window.location.pathname.includes("gallery") ||
+            window.location.pathname.includes("privacy-policy") ? (
+              <Link
+                to="/"
+                onClick={() => {
+                  closeHamb();
+                  handleScroll(7700);
+                }}
+                className="navbar-moblist__item">
+                Contacts
+              </Link>
+            ) : (
+              <button
+                onClick={() => {
+                  closeHamb();
+                  handleScroll(7700);
+                }}
+                className="navbar-moblist__item">
+                Contacts
+              </button>
+            )}
           </li>
         </ul>
       )}

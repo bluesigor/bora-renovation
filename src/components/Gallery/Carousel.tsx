@@ -5,10 +5,13 @@ import next from "../../assets/images/collection/next.svg";
 
 import { collection } from "../../core/constants/collection";
 import { General } from "../../models";
+import { useAppContext } from "../../context/AppContext";
 
 const Carousel = () => {
   const [loansInfo, setLoansInfo] = useState<any>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const { setImageData, setIsModalOpen, setModalType } = useAppContext();
 
   useEffect(() => {
     setLoansInfo(collection.slice(currentIndex, currentIndex + 3));
@@ -51,6 +54,11 @@ const Carousel = () => {
           <div className="carousel-wrapper-slides">
             {loansInfo.map(({ id, src }: General.Image, index: number) => (
               <img
+                onClick={() => {
+                  setModalType("image");
+                  setIsModalOpen(true);
+                  setImageData(src);
+                }}
                 key={id}
                 className={index === 1 ? "carousel-img-active" : "carousel-img"}
                 alt={src}

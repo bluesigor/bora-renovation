@@ -1,7 +1,13 @@
 import Gallery from "../../components/Gallery";
+import ImageView from "../../components/ImageView";
 
 const GalleryPage = () => {
-  return <Gallery />;
+  return (
+    <>
+      <Gallery />
+      <ImageView />
+    </>
+  );
 };
 
 export default GalleryPage;

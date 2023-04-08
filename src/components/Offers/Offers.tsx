@@ -1,7 +1,7 @@
 import { useAppContext } from "../../context/AppContext";
 
 const Offers = () => {
-  const { openModalQuote } = useAppContext();
+  const { setIsModalOpen, setModalType } = useAppContext();
 
   return (
     <section className="offers">
@@ -23,14 +23,20 @@ const Offers = () => {
         </ul>
         <div className="offers-main-contact">
           <button
-            onClick={openModalQuote}
+            onClick={() => {
+              setIsModalOpen(true);
+              setModalType("quote");
+            }}
             className="offers-main-contact-prime">
             <span className="offers-main-contact-prime__txt">
               Contact us today to get more information
             </span>
           </button>
           <button
-            onClick={openModalQuote}
+            onClick={() => {
+              setIsModalOpen(true);
+              setModalType("quote");
+            }}
             className="offers-main-contact-quote">
             <span className="offers-main-contact-quote__txt">
               GET a FREE quote

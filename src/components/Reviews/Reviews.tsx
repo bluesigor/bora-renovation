@@ -12,7 +12,7 @@ const Reviews = () => {
   const [itemInfo, setItemInfo] = useState<General.Review[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const { openReviewModal } = useAppContext();
+  const { setIsModalOpen, setModalType } = useAppContext();
 
   useEffect(() => {
     setItemInfo(reviews);
@@ -215,7 +215,10 @@ const Reviews = () => {
       </div>
       <div className="reviews-feedback-block">
         <button
-          onClick={openReviewModal}
+          onClick={() => {
+            setIsModalOpen(true);
+            setModalType("review");
+          }}
           className="reviews-feedback-block-btn">
           <span className="reviews-feedback-block-btn__txt">
             write a feedback

@@ -2,23 +2,11 @@ import { useState, useRef } from "react";
 
 import about from "../../assets/videos/about-us.mp4";
 import poster from "../../assets/images/about/poster.svg";
-import play from "../../assets/images/about/play.svg";
 
 const AboutUs = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
   const [isMore, setIsMore] = useState(false);
 
   const videoRef = useRef<HTMLVideoElement>(null);
-
-  const handlePlay = () => {
-    videoRef.current?.play();
-    setIsPlaying(true);
-  };
-
-  const handlePause = () => {
-    videoRef.current?.pause();
-    setIsPlaying(false);
-  };
 
   const showMore = () => {
     if (isMore) {
@@ -88,10 +76,9 @@ const AboutUs = () => {
             </button>
           </div>
         </div>
-        <div
-          onClick={() => (isPlaying ? handlePause() : null)}
-          className="aboutus-content-media">
+        <div className="aboutus-content-media">
           <video
+            controls
             id="video-player"
             ref={videoRef}
             poster={poster}
@@ -102,17 +89,6 @@ const AboutUs = () => {
           <p className="aboutus-content-media__mov-title">
             Bora kitchen cabinet renovation
           </p>
-          <button
-            onClick={() => (isPlaying ? null : handlePlay())}
-            className="aboutus-content-media__play">
-            {isPlaying ? null : (
-              <img
-                className="aboutus-content-media__play-logo"
-                src={play}
-                alt="play"
-              />
-            )}
-          </button>
         </div>
       </div>
     </section>

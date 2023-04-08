@@ -2,16 +2,19 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 const defaultState = {
   isModalOpen: false,
-  isReviewModalOpen: false,
+
   isVisisble: false,
   isOpen: false,
-  openModalQuote: () => {},
-  closeModalQuote: () => {},
-  openReviewModal: () => {},
-  closeReviewModal: () => {},
+  imageData: "",
+  modalType: "",
+
+  closeModal: () => {},
+  setIsModalOpen: (state: boolean) => {},
   setIsVisisble: (state: boolean) => {},
   closeHamb: () => {},
   openHamb: () => {},
+  setImageData: (state: string) => {},
+  setModalType: (state: string) => {},
 };
 
 const AppContext = createContext(defaultState);
@@ -22,9 +25,10 @@ export const AppContextProvider = ({
   children: React.ReactNode;
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isReviewModalOpen, setReviewModalOpen] = useState(false);
+  const [modalType, setModalType] = useState("");
   const [isVisisble, setIsVisisble] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [imageData, setImageData] = useState("");
 
   useEffect(() => {
     function handleScroll() {
@@ -58,21 +62,10 @@ export const AppContextProvider = ({
 
   const contextValue = {
     isModalOpen,
-    openModalQuote: () => {
-      setIsModalOpen(true);
-    },
-
-    closeModalQuote: () => {
+    setIsModalOpen,
+    closeModal: () => {
       setIsModalOpen(false);
-    },
-
-    isReviewModalOpen,
-    openReviewModal: () => {
-      setReviewModalOpen(true);
-    },
-
-    closeReviewModal: () => {
-      setReviewModalOpen(false);
+      setModalType("");
     },
 
     isVisisble,
@@ -85,6 +78,12 @@ export const AppContextProvider = ({
     openHamb: () => {
       setIsOpen(true);
     },
+
+    imageData,
+    setImageData,
+
+    modalType,
+    setModalType,
   };
 
   return (

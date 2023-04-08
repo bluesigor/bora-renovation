@@ -6,7 +6,7 @@ import poster from "../../assets/images/welcome/welcome-banner.svg";
 import welcome from "../../assets/videos/main.mp4";
 
 const WelcomeBanner = () => {
-  const { openModalQuote, isOpen } = useAppContext();
+  const { setIsModalOpen, setModalType, isOpen } = useAppContext();
 
   const { innerWidth } = useMeasures();
 
@@ -17,6 +17,9 @@ const WelcomeBanner = () => {
           <h1 className="welcome-banner-title__txt">
             Bora kitchen cabinet renovation
           </h1>
+          <h4 className="welcome-banner-title__subtxt">
+            high quality cabinets refinishing and refacing for your cozy home
+          </h4>
         </div>
       )}
       <div className="welcome-banner-wrapper">
@@ -30,18 +33,16 @@ const WelcomeBanner = () => {
           <source src={welcome} type="video/mp4" />
         </video>
         <div className="welcome-banner-wrapper-outer">
-          {innerWidth > 768 ? (
-            <h4 className="welcome-banner-wrapper-outer__inner">
-              high quality cabinets refinishing and <br />
-              refacing for your cozy home
-            </h4>
-          ) : (
+          {innerWidth < 768 && (
             <h4 className="welcome-banner-wrapper-outer__inner">
               quality cabinet refinishing for your cozy home
             </h4>
           )}
           <button
-            onClick={openModalQuote}
+            onClick={() => {
+              setIsModalOpen(true);
+              setModalType("quote");
+            }}
             className="welcome-banner-wrapper-outer__free-btn">
             <span className="welcome-banner-wrapper-outer__free-btn-txt">
               GET a FREE quote

@@ -11,11 +11,7 @@ const Benefits = () => {
     <section className="benefits">
       <div className="benefits-header">
         <h3 className="benefits-header__title">
-          {innerWidth > 768 ? (
-            <>why choose us?</>
-          ) : (
-            <> Bora kitchen cabinet renovation</>
-          )}
+          {innerWidth > 768 && <>why choose us?</>}
         </h3>
       </div>
       <div className="benefits-list">

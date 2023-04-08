@@ -5,9 +5,9 @@ import close from "../../assets/images/quote/close-icon.svg";
 
 const QuotePopup = () => {
   const [state, handleSubmit] = useForm("mqkoqvra");
-  const { isModalOpen, closeModalQuote } = useAppContext();
+  const { isModalOpen, closeModal, modalType } = useAppContext();
 
-  if (isModalOpen) {
+  if (isModalOpen && modalType === "quote") {
     if (state.succeeded) {
       return <p>Thanks for joining!</p>;
     }
@@ -16,7 +16,7 @@ const QuotePopup = () => {
         <div className="quote-modal-content">
           <div className="quote-modal-content-top">
             <button
-              onClick={closeModalQuote}
+              onClick={closeModal}
               className="quote-modal-content-top__btn-close">
               <img src={close} alt="close" />
             </button>

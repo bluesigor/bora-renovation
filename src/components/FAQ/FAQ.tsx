@@ -132,7 +132,7 @@ const FAQ = () => {
                 inspired for your future project.
               </p>
             </div>
-            <div className="faq-questions-entity">
+            {/* <div className="faq-questions-entity">
               <p className="faq-questions-entity__title">
                 Where should I choose a color?
               </p>
@@ -142,7 +142,7 @@ const FAQ = () => {
                 see how the color matches your backsplash, countertop, walls and
                 the interior of the house. Please contact us if you need help.
               </p>
-            </div>
+            </div> */}
           </>
         )}
         {showMore && (
@@ -219,17 +219,6 @@ const FAQ = () => {
               <p className="faq-questions-entity__desc">
                 Sure! Please visit our Facebook or Instagram page to get
                 inspired for your future project.
-              </p>
-            </div>
-            <div className="faq-questions-entity">
-              <p className="faq-questions-entity__title">
-                Where should I choose a color?
-              </p>
-              <p className="faq-questions-entity__desc">
-                You can go to Sherwin Williams or Benjamin Moore and choose any
-                color you like. They have samples which you can take home and
-                see how the color matches your backsplash, countertop, walls and
-                the interior of the house. Please contact us if you need help.
               </p>
             </div>
           </>

@@ -62,8 +62,10 @@
         line-height: 23px;
         letter-spacing: 0.04em;
         text-transform: uppercase;
-        color: $scrollbar-reviews;
         white-space: nowrap;
+        & > a {
+          color: $scrollbar-reviews;
+        }
         &:hover {
           font-size: "Semi Raleway";
           color: $blue-accent;
