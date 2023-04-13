@@ -7,6 +7,15 @@
     margin: 7% auto;
     max-width: 684px;
     height: 684px;
+    position: relative;
+    &__close {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      border: none;
+      border-radius: 50%;
+      background-color: $primary;
+    }
     @include onMobile {
       margin-top: 50%;
       height: 300px;

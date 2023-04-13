@@ -181,7 +181,7 @@ const Header = () => {
                   handleScroll(7700);
                 }}
                 className="navbar-moblist__item">
-                Contacts
+                Contact us
               </button>
             )}
           </li>

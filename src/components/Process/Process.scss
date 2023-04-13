@@ -196,3 +196,84 @@
     }
   }
 }
+
+.mob-process {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 450px;
+  background-color: #ffffff;
+  &::-webkit-scrollbar {
+    background: #dadada;
+    border-radius: 100px;
+    height: 12px;
+  }
+  &::-webkit-scrollbar-thumb {
+    width: 65px;
+    background: $quote-accent;
+    border-radius: 100px;
+  }
+  &-list {
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+    &__item {
+      min-width: 278px;
+      height: 381px;
+      display: flex;
+      flex-direction: column;
+      -webkit-box-shadow: 4px 6px 36px -11px rgba(184, 184, 184, 1);
+      -moz-box-shadow: 4px 6px 36px -11px rgba(184, 184, 184, 1);
+      box-shadow: 4px 6px 36px -11px rgba(184, 184, 184, 1);
+      border-radius: 0px 0px 20px 20px;
+      & > div {
+        & > img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      &-content {
+        margin-top: -4px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 21px 12px 10px;
+        background: linear-gradient(180deg, #e2e1e1 0%, #ffffff 100%);
+        border-radius: 0px 0px 20px 20px;
+        height: inherit;
+        &__active {
+          background: $scrollbar-reviews;
+        }
+        & > span {
+          font-family: "Inter";
+          font-style: normal;
+          font-size: 15px;
+          line-height: 140.02%;
+          color: $scrollbar-reviews;
+          text-align: center;
+          letter-spacing: 0.04em;
+        }
+      }
+      &-title {
+        font-family: "Semi Inter";
+        font-style: normal;
+        font-size: 16px;
+        line-height: 140.02%;
+        text-transform: uppercase;
+        background: linear-gradient(180deg, #065a97 0%, #012f50 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        text-align: center;
+        letter-spacing: 0.04e;
+        &__active {
+          background: linear-gradient(93.35deg, #ffda55 3.71%, #ffaa2c 98.84%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+        }
+      }
+    }
+  }
+}
