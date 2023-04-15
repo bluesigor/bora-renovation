@@ -12,7 +12,7 @@ import { useState } from "react";
 const ProcessList = () => {
   const [showDesc, setShowDesc] = useState(false);
   const [type, setType] = useState("");
-  const [tyApe, setAType] = useState("");
+
   return (
     <div className="mob-process">
       <ul className="mob-process-list">
