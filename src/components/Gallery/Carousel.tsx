@@ -57,7 +57,7 @@ const Carousel = () => {
                 onClick={() => {
                   setModalType("image");
                   setIsModalOpen(true);
-                  setImageData(src);
+                  setImageData({ id, src, index });
                 }}
                 key={id}
                 className={index === 1 ? "carousel-img-active" : "carousel-img"}

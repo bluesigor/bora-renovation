@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import AboutUs from "../../components/AboutUs";
 import Benefits from "../../components/Benefits";
 import FAQ from "../../components/FAQ";
@@ -13,6 +15,16 @@ import ContactUs from "../../components/ContactUs/ContactUs";
 import GetQuote from "../../components/GetQuote";
 
 const HomePage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+    const timer = setTimeout(() => {
+      return window.scrollTo(0, 0);
+    }, 300);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <WelcomeBanner />

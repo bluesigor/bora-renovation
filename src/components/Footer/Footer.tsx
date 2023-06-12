@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { useAppContext } from "../../context/AppContext";
 
@@ -11,11 +11,14 @@ import logo_foot from "../../assets/images/footer/logo-foot.svg";
 import to_top_arrow from "../../assets/images/footer/to-top-arrow.svg";
 import phone from "../../assets/images/header/phone-icon.svg";
 import instagram from "../../assets/images/contact/inst.svg";
+import useMeasures from "../../core/hooks/useMeasures";
 
 const Footer = () => {
   const [showButton, setShowButton] = useState(false);
+  const navigate = useNavigate();
 
   const { setIsModalOpen, setModalType } = useAppContext();
+  const { innerWidth } = useMeasures();
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -37,18 +40,64 @@ const Footer = () => {
       <div className="foot-inner">
         <div className="foot-inner-links">
           <ul className="foot-inner-links-first">
-            <li className="foot-inner-links__item">
-              <Link to="/"> Home</Link>
+            <li
+              className="foot-inner-links__item"
+              onClick={() => navigate("/")}>
+              Home
             </li>
-            <li className="foot-inner-links__item">About us</li>
-            <li className="foot-inner-links__item">our process</li>
+            <li
+              className="foot-inner-links__item"
+              onClick={() =>
+                window.location.pathname.includes("/gallery") ||
+                window.location.pathname.includes("/privacy-policy")
+                  ? navigate("/")
+                  : window.scrollTo(0, 1500)
+              }>
+              About us
+            </li>
+            <li
+              className="foot-inner-links__item"
+              onClick={() =>
+                window.location.pathname.includes("/gallery") ||
+                window.location.pathname.includes("/privacy-policy")
+                  ? navigate("/")
+                  : innerWidth < 768
+                  ? window.scrollTo(0, 2200)
+                  : window.scrollTo(0, 2400)
+              }>
+              our process
+            </li>
           </ul>
           <ul className="foot-inner-links-second">
-            <li className="foot-inner-links__item">
-              <Link to="/gallery">gallery</Link>
+            <li
+              className="foot-inner-links__item"
+              onClick={() => navigate("/gallery")}>
+              gallery
             </li>
-            <li className="foot-inner-links__item">FAQ</li>
-            <li className="foot-inner-links__item">Contacts</li>
+            <li
+              className="foot-inner-links__item"
+              onClick={() =>
+                window.location.pathname.includes("/gallery") ||
+                window.location.pathname.includes("/privacy-policy")
+                  ? navigate("/")
+                  : innerWidth < 768
+                  ? window.scrollTo(0, 4250)
+                  : window.scrollTo(0, 4900)
+              }>
+              FAQ
+            </li>
+            <li
+              className="foot-inner-links__item"
+              onClick={() =>
+                window.location.pathname.includes("/gallery") ||
+                window.location.pathname.includes("/privacy-policy")
+                  ? navigate("/")
+                  : innerWidth < 768
+                  ? window.scrollTo(0, 6850)
+                  : window.scrollTo(0, 7600)
+              }>
+              Contacts
+            </li>
           </ul>
         </div>
         <div className="foot-inner-controls">
@@ -87,9 +136,14 @@ const Footer = () => {
               info@borarenovation.com
             </a>
             <div className="foot-inner-controls-end-socials">
-              <img src={instagram} alt="instagram" />
               <a
-                href="https://www.facebook.com/BoraRenovation/reviews/?ref=page_internal"
+                href="https://instagram.com/bora_renovation?igshid=MzRlODBiNWFlZA=="
+                rel="noreferrer"
+                target="_blank">
+                <img src={instagram} alt="instagram" />
+              </a>
+              <a
+                href="https://www.facebook.com/BoraRenovation?mibextid=LQQJ4d"
                 rel="noreferrer"
                 target="_blank">
                 <img src={facebook} alt="facebook" />

@@ -7,7 +7,7 @@
   padding-right: 70px;
   padding-bottom: 91px;
   @include onMobile {
-    padding: 30px 15px;
+    padding: 15px;
   }
   &-header {
     width: 100%;
@@ -26,6 +26,8 @@
       color: $darken;
       @include onMobile {
         font-size: 24px;
+        font-family: "Inter";
+        font-weight: 600;
       }
     }
   }
@@ -78,9 +80,9 @@
         flex-direction: column;
         gap: 27px;
         max-height: 500px;
-        transition: max-height 1.2s ease-in;
+        transition: max-height 0.4s ease-in;
         @include onMobile {
-          transition: max-height 1.5s ease-in;
+          transition: max-height 0.7s ease-in;
           gap: 8px;
         }
         &:nth-child(2),
@@ -131,7 +133,7 @@
         letter-spacing: 0.04em;
         color: $scrollbar-reviews;
         opacity: 0;
-        animation: show-div 1.1s ease-in-out 1s forwards;
+        animation: show-div 0.4s ease-in-out 0.3s forwards;
         @include onMobile {
           font-size: 16px;
         }

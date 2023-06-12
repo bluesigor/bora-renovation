@@ -25,5 +25,6 @@ export declare namespace General {
   interface Image {
     id: number;
     src: string;
+    index?: number;
   }
 }

@@ -45,13 +45,12 @@
       background: linear-gradient(93.35deg, #ffdd66 3.71%, #ffb74a 98.84%);
       box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
       border-radius: 20px;
-      max-width: 377px;
+      max-width: 247px;
       border: none;
       &-txt {
         font-family: "Medium Inter";
-        font-style: italic;
         font-weight: 500;
-        font-size: 24px;
+        font-size: 18px;
         line-height: 135.68%;
         text-align: center;
         letter-spacing: 0.07em;
@@ -135,6 +134,9 @@
     text-transform: uppercase;
     font-feature-settings: "pnum" on, "lnum" on;
     color: $scrollbar-reviews;
+    @include onMobile {
+      font-size: 21px;
+    }
   }
   &__sub {
     font-family: "Montserrat";

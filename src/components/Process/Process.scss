@@ -29,6 +29,8 @@
       text-transform: uppercase;
       color: $scrollbar-reviews;
       @include onMobile {
+        text-align: center;
+        font-weight: 600;
         font-size: 24px;
       }
     }
@@ -217,8 +219,8 @@
     flex-direction: row;
     gap: 28px;
     &__item {
-      min-width: 278px;
-      height: 381px;
+      min-width: 298px;
+      height: 401px;
       display: flex;
       flex-direction: column;
       -webkit-box-shadow: 4px 6px 36px -11px rgba(184, 184, 184, 1);

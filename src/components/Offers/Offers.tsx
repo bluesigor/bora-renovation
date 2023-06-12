@@ -1,13 +1,18 @@
 import { useAppContext } from "../../context/AppContext";
+import useMeasures from "../../core/hooks/useMeasures";
 
 const Offers = () => {
   const { setIsModalOpen, setModalType } = useAppContext();
 
+  const { innerWidth } = useMeasures();
+
   return (
     <section className="offers">
-      <div className="offers-new">
-        <div className="offers-new__logo" />
-      </div>
+      {innerWidth > 768 && (
+        <div className="offers-new">
+          <div className="offers-new__logo" />
+        </div>
+      )}
       <div className="offers-title">
         <h6 className="offers-title__txt">Now offering</h6>
       </div>

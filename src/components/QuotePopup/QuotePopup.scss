@@ -3,7 +3,7 @@
 
 .quote-modal {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   left: 0;
   top: 0;
   width: 100%;
@@ -98,11 +98,10 @@
       margin-bottom: 56px;
     }
     &__item {
-      border: none;
-      border-bottom: solid $quote-accent;
-      padding-bottom: 13px;
+      border: 1px solid $quote-accent;
+      padding: 7px 20px 7px 10px;
       border-radius: 0px;
-
+      outline: none;
       &::placeholder {
         font-family: "Montserrat";
         font-style: normal;
@@ -127,6 +126,7 @@
     min-height: 155px;
     overflow: hidden;
     margin-bottom: 35px;
+    outline: none;
     @include onMobile {
       padding: 26px 19px;
       margin-bottom: 60px;

@@ -10,8 +10,8 @@ const MobGallery = () => {
 
   return (
     <div className="mob-gallery">
-      {collection.map((image: General.Image) => {
-        const { id, src } = image;
+      {collection.map((image: General.Image, indexNum: number) => {
+        const { id, src, index } = image;
         return (
           <LazyLoadImage
             delayTime={100}
@@ -21,7 +21,12 @@ const MobGallery = () => {
             src={src}
             alt={src}
             onClick={() => {
-              setImageData(src);
+              setImageData(() => {
+                return {
+                  ...image,
+                  index: indexNum,
+                };
+              });
               setIsModalOpen(true);
               setModalType("image");
             }}

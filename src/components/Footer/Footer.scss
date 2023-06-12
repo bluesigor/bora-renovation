@@ -55,7 +55,7 @@
       }
 
       &__item {
-        font-family: "Medium Raleway";
+        font-family: "Inter";
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
@@ -105,7 +105,7 @@
           display: none;
         }
         &__txt {
-          font-family: "Open Sans";
+          font-family: "Inter";
           font-style: normal;
           font-weight: 400;
           font-size: 16px;
@@ -205,12 +205,12 @@
         }
         &__mail {
           font-family: "Medium Inter";
-          font-style: italic;
+          font-style: normal;
           font-size: 20px;
           line-height: 24px;
           letter-spacing: 0.06em;
           text-transform: lowercase;
-          color: $blue-accent;
+          color: $scrollbar-reviews;
           @include onMobile {
             font-size: 15px;
             line-height: 18px;
@@ -247,7 +247,7 @@
     }
   }
   &__copyrights {
-    font-family: "Open Sans";
+    font-family: "Inter";
     font-style: normal;
     font-weight: 400;
     font-size: 15px;

@@ -1,19 +1,23 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import { General } from "../models";
 
 const defaultState = {
   isModalOpen: false,
 
   isVisisble: false,
   isOpen: false,
-  imageData: "",
+  imageData: {
+    id: 1,
+    src: "",
+    index: 0,
+  },
   modalType: "",
-
   closeModal: () => {},
   setIsModalOpen: (state: boolean) => {},
   setIsVisisble: (state: boolean) => {},
   closeHamb: () => {},
   openHamb: () => {},
-  setImageData: (state: string) => {},
+  setImageData: (state: any) => {},
   setModalType: (state: string) => {},
 };
 
@@ -28,7 +32,7 @@ export const AppContextProvider = ({
   const [modalType, setModalType] = useState("");
   const [isVisisble, setIsVisisble] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [imageData, setImageData] = useState("");
+  const [imageData, setImageData] = useState<any>();
 
   useEffect(() => {
     function handleScroll() {

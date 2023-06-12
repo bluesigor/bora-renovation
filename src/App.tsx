@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ReactPixel from "react-facebook-pixel";
 
 import Fallback from "./components/Fallback";
-import Layout from "./components/Outlet/Layout";
+import Layout from "./components/Layout/Layout";
 
 import HomePage from "./pages/HomePage";
 import GalleryPage from "./pages/GalleryPage";

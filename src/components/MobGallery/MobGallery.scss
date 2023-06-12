@@ -9,6 +9,9 @@
   overflow-x: scroll;
   overflow-y: hidden;
   padding-bottom: 90px;
+  @include onMobile {
+    padding-bottom: 40px;
+  }
   &::-webkit-scrollbar {
     padding-top: 100px;
     background: #dadada;

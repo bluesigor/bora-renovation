@@ -1,18 +1,22 @@
 import { useState, useEffect } from "react";
+
 import { useAppContext } from "../../context/AppContext";
+import ReviewCard from "../ReviewCard";
+
+import { General } from "../../models";
 
 import arrow_left from "../../assets/images/reviews/arrow-left.svg";
 import arrow_right from "../../assets/images/reviews/arrow-right.svg";
-import { reviews } from "../../core/constants/reviews";
 
-import ReviewCard from "../ReviewCard";
-import { General } from "../../models";
+import { reviews } from "../../core/constants/reviews";
+import useMeasures from "../../core/hooks/useMeasures";
 
 const Reviews = () => {
   const [itemInfo, setItemInfo] = useState<General.Review[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const { setIsModalOpen, setModalType } = useAppContext();
+  const { innerWidth } = useMeasures();
 
   useEffect(() => {
     setItemInfo(reviews);
@@ -170,6 +174,9 @@ const Reviews = () => {
   return (
     <section className="reviews">
       <div className="wrapper-reviews">
+        {innerWidth < 768 && (
+          <h1 className="reviews__title">Swipe right to read our reviews</h1>
+        )}
         <div className="reviews-list">
           {itemInfo.slice(0, 3).map((review: General.Review, index: number) => {
             const { id, name, text } = review;

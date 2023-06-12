@@ -24,7 +24,9 @@ function Process() {
   return (
     <section className="process">
       <div className="process-header">
-        <h1 className="process-header__title">Our process</h1>
+        <h1 className="process-header__title">
+          Swipe right to learn about our process
+        </h1>
       </div>
       {innerWidth > 768 ? (
         <div className="process-wrapper">

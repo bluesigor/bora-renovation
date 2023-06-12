@@ -19,7 +19,9 @@ const Policy = () => {
     <section className="policy">
       <div className="policy-head">
         <h5 className="policy-head__title">
-          Privacy Policy for Bora Renovation, LLC
+          Privacy Policy
+          <br />
+          for Bora Renovation, LLC
         </h5>
         <p className="policy-head__subtitle">
           Last updated January 01, 2022 At Bora Renovation, LLC accessible from{" "}
@@ -50,7 +52,7 @@ const Policy = () => {
           }}
           className="policy-comunicate__btn">
           <span className="policy-comunicate__btn-txt">
-            Contact us today to get more information
+            Get more information
           </span>
         </button>
       </div>

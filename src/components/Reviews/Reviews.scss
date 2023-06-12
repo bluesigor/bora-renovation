@@ -28,6 +28,17 @@
     background-position: center;
     min-height: 100%;
   }
+  &__title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    line-height: 135.52%;
+    letter-spacing: 0.04em;
+    color: $primary;
+    margin-bottom: 35px;
+  }
   &-moblist {
     display: none;
     flex-direction: row;

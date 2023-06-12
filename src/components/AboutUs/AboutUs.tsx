@@ -86,9 +86,7 @@ const AboutUs = () => {
             loop>
             <source src={about} type="video/mp4" />
           </video>
-          <p className="aboutus-content-media__mov-title">
-            Bora kitchen cabinet renovation
-          </p>
+          <p className="aboutus-content-media__mov-title">Bora renovation</p>
         </div>
       </div>
     </section>

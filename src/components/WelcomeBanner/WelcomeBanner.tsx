@@ -14,9 +14,11 @@ const WelcomeBanner = () => {
     <section className="bora__welcome-banner welcome-banner">
       {isOpen ? null : (
         <div className="welcome-banner-title">
-          <h1 className="welcome-banner-title__txt">
-            Bora kitchen cabinet renovation
-          </h1>
+          {innerWidth > 1025 && (
+            <h1 className="welcome-banner-title__txt">
+              Bora kitchen cabinet renovation
+            </h1>
+          )}
           <h4 className="welcome-banner-title__subtxt">
             high quality cabinets refinishing and refacing for your cozy home
           </h4>

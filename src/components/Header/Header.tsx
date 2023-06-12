@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Hamburger from "hamburger-react";
 
 import bora_logo from "../../assets/images/header/bora-logo.svg";
@@ -10,7 +10,7 @@ import { useAppContext } from "../../context/AppContext";
 
 const Header = () => {
   const { innerWidth } = useMeasures();
-
+  const navigate = useNavigate();
   const { openHamb, isOpen, closeHamb } = useAppContext();
 
   function handleScroll(height: number) {
@@ -18,7 +18,7 @@ const Header = () => {
   }
 
   useEffect(() => {
-    if (innerWidth > 768) {
+    if (innerWidth > 1025) {
       closeHamb();
     }
   }, [innerWidth, closeHamb]);
@@ -26,7 +26,7 @@ const Header = () => {
   return (
     <header
       style={{
-        height: isOpen ? "361px" : "137px",
+        height: innerWidth < 768 ? (isOpen ? "461px" : "240px") : "175px",
       }}
       className="bora-header">
       <Link to="/">
@@ -37,45 +37,114 @@ const Header = () => {
           <Link to="/">
             <li className="navbar-list__item">Home</li>
           </Link>
-          <li onClick={() => handleScroll(1500)} className="navbar-list__item">
+          <li
+            onClick={() =>
+              window.location.pathname.includes("/gallery") ||
+              window.location.pathname.includes("/privacy-policy")
+                ? navigate("/")
+                : handleScroll(1500)
+            }
+            className="navbar-list__item">
             About us
           </li>
-          <li onClick={() => handleScroll(2400)} className="navbar-list__item">
+          <li
+            onClick={() =>
+              window.location.pathname.includes("/gallery") ||
+              window.location.pathname.includes("/privacy-policy")
+                ? navigate("/")
+                : handleScroll(2400)
+            }
+            className="navbar-list__item">
             our process
           </li>
-          <li onClick={() => handleScroll(4300)} className="navbar-list__item">
+          <li
+            onClick={() =>
+              window.location.pathname.includes("/gallery") ||
+              window.location.pathname.includes("/privacy-policy")
+                ? navigate("/")
+                : handleScroll(4300)
+            }
+            className="navbar-list__item">
             <Link to="/gallery">gallery</Link>
           </li>
-          <li onClick={() => handleScroll(4900)} className="navbar-list__item">
+          <li
+            onClick={() =>
+              window.location.pathname.includes("/gallery") ||
+              window.location.pathname.includes("/privacy-policy")
+                ? navigate("/")
+                : handleScroll(4900)
+            }
+            className="navbar-list__item">
             FAQ’s
           </li>
-          <li onClick={() => handleScroll(7600)} className="navbar-list__item">
+          <li
+            onClick={() =>
+              window.location.pathname.includes("/gallery") ||
+              window.location.pathname.includes("/privacy-policy")
+                ? navigate("/")
+                : handleScroll(7600)
+            }
+            className="navbar-list__item">
             Contacts
           </li>
         </ul>
       </nav>
-      <button type="button" className="bora-header__contact-btn">
-        <img
-          src={phone_icon}
-          alt="phone-icon"
-          className="bora-header__contact-btn__icon"
-        />
-        <a className="bora-header__contact-btn__txt" href="tel:+13022441338">
-          302-244-1338
-        </a>
-      </button>
-      <div className="bora-header-burger">
-        <div className="bora-header-burger-wrapper ">
-          <Hamburger
-            size={28}
-            duration={0.5}
-            easing="ease-in"
-            label="Show menu"
-            toggled={isOpen}
-            toggle={isOpen ? closeHamb : openHamb}
-          />
+      {innerWidth < 1025 ? (
+        <div className="bora-header-end-wrapper">
+          {/* <button type="button" className="bora-header__contact-btn">
+            <img
+              src={phone_icon}
+              alt="phone-icon"
+              className="bora-header__contact-btn__icon"
+            />
+            <a
+              className="bora-header__contact-btn__txt"
+              href="tel:+13022441338">
+              302-244-1338
+            </a>
+          </button> */}
+          <div className="bora-header-burger">
+            <div className="bora-header-burger-wrapper ">
+              <Hamburger
+                size={28}
+                duration={0.5}
+                easing="ease-in"
+                label="Show menu"
+                toggled={isOpen}
+                toggle={isOpen ? closeHamb : openHamb}
+              />
+            </div>
+          </div>
         </div>
-      </div>
+      ) : (
+        <>
+          <button type="button" className="bora-header__contact-btn">
+            <img
+              src={phone_icon}
+              alt="phone-icon"
+              className="bora-header__contact-btn__icon"
+            />
+            <a
+              className="bora-header__contact-btn__txt"
+              href="tel:+13022441338">
+              302-244-1338
+            </a>
+          </button>
+          <div className="bora-header-burger">
+            <div className="bora-header-burger-wrapper ">
+              <Hamburger
+                size={28}
+                duration={0.5}
+                easing="ease-in"
+                label="Show menu"
+                toggled={isOpen}
+                toggle={isOpen ? closeHamb : openHamb}
+              />
+            </div>
+          </div>
+        </>
+      )}
+
       {isOpen && (
         <ul className="navbar-moblist">
           <li>

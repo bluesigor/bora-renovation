@@ -3,13 +3,16 @@
 .gallery {
   padding: 100px 83px;
   @include onMobile {
-    padding: 70px 15px;
+    padding: 50px 15px 30px;
   }
   &-title {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-bottom: 70px;
+    @include onMobile {
+      margin-bottom: 30px;
+    }
     &__txt {
       font-family: "Raleway";
       font-style: normal;
@@ -22,6 +25,8 @@
       color: #000000;
       @include onMobile {
         font-size: 24px;
+        font-family: "Inter";
+        font-weight: 600;
       }
     }
   }
@@ -33,6 +38,8 @@
     margin-bottom: 50px;
     @include onMobile {
       display: flex;
+      gap: 30px;
+      margin-bottom: 30px;
     }
     &-desc {
       min-width: 345px;
@@ -45,11 +52,6 @@
         text-align: center;
         letter-spacing: 0.04em;
         color: $scrollbar-reviews;
-      }
-    }
-    &-logo {
-      &__image {
-        border: 1px solid $scrollbar-reviews;
       }
     }
   }
@@ -87,7 +89,6 @@
       gap: 26px;
       &-firstlogo {
         & > div svg {
-          border: 2px solid $scrollbar-reviews;
           max-width: 342px;
           max-height: 273px;
           @media (max-width: 1500px) {
@@ -102,7 +103,6 @@
       }
       &-secondlogo {
         & > div svg {
-          border: 2px solid $scrollbar-reviews;
           max-width: 342px;
           max-height: 273px;
           @media (max-width: 1500px) {
@@ -117,7 +117,6 @@
       }
       &-thirdlogo {
         & > div svg {
-          border: 2px solid $scrollbar-reviews;
           max-width: max-content;
           max-height: 576px;
           @media (max-width: 1500px) {
@@ -160,7 +159,6 @@
     &-btn {
       padding: 20px 32px;
       max-width: 250px;
-      border: 1px solid $scrollbar-reviews;
       border-radius: 20px;
       background: none;
       text-decoration: none;
