@@ -1,5 +1,4 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { General } from "../models";
 
 const defaultState = {
   isModalOpen: false,

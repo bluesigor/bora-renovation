@@ -101,7 +101,7 @@
       border: 1px solid $quote-accent;
       padding: 7px 20px 7px 10px;
       border-radius: 0px;
-      outline: none;
+      outline: none !important;
       &::placeholder {
         font-family: "Montserrat";
         font-style: normal;

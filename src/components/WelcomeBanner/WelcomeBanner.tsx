@@ -37,7 +37,7 @@ const WelcomeBanner = () => {
         <div className="welcome-banner-wrapper-outer">
           {innerWidth < 768 && (
             <h4 className="welcome-banner-wrapper-outer__inner">
-              quality cabinet refinishing for your cozy home
+              KITCHEN CABINET <br /> REFINISHING AND REFACING
             </h4>
           )}
           <button

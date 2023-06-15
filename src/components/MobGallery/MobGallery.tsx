@@ -11,7 +11,7 @@ const MobGallery = () => {
   return (
     <div className="mob-gallery">
       {collection.map((image: General.Image, indexNum: number) => {
-        const { id, src, index } = image;
+        const { id, src } = image;
         return (
           <LazyLoadImage
             delayTime={100}

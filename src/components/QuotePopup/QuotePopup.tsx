@@ -9,7 +9,7 @@ const QuotePopup = () => {
 
   if (isModalOpen && modalType === "quote") {
     if (state.succeeded) {
-      return <p>Thanks for joining!</p>;
+      return null;
     }
     return (
       <div className="quote-modal">
