@@ -38,8 +38,18 @@ const ContactUs = () => {
           <div className="contact-wrapper-form__footer">
             <h6 className="contact-wrapper-form__footer-title">Follow us!</h6>
             <div className="contact-wrapper-form__footer-social">
-              <img src={instagram} alt="instagram" />
-              <img src={facebook} alt="facebook" />
+              <a
+                href="https://instagram.com/bora_renovation?igshid=MzRlODBiNWFlZA=="
+                rel="noreferrer"
+                target="_blank">
+                <img src={instagram} alt="instagram" />
+              </a>
+              <a
+                href="https://www.facebook.com/BoraRenovation?mibextid=LQQJ4d"
+                rel="noreferrer"
+                target="_blank">
+                <img src={facebook} alt="facebook" />
+              </a>
             </div>
           </div>
         </div>
