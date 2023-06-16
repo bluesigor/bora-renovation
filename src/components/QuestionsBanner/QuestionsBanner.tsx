@@ -4,7 +4,7 @@ import online from "../../assets/images/questions/online.svg";
 import mob_online from "../../assets/images/questions/mob-online.svg";
 
 const QuestionsBanner = () => {
-  const [state, handleSubmit] = useForm("mqkoqvra");
+  const [state, handleSubmit] = useForm("xyyarpqp");
 
   return (
     <section className="quest">
@@ -44,7 +44,7 @@ const QuestionsBanner = () => {
           </div>
           <div className="quest-banner-bottom-wrapper">
             <form
-              action="https://formspree.io/f/mqkoqvra"
+              action="https://formspree.io/f/xyyarpqp"
               onSubmit={handleSubmit}
               className="quest-banner-bottom-form">
               <div className="quest-banner-bottom-form-inputs">

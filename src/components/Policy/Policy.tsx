@@ -8,7 +8,7 @@ import online from "../../assets/images/questions/online-dark.svg";
 import { goToTop } from "../../core/helpers/goToTop";
 
 const Policy = () => {
-  const [state, handleSubmit] = useForm("mqkoqvra");
+  const [state, handleSubmit] = useForm("xyyarpqp");
   const { setIsModalOpen, setModalType } = useAppContext();
 
   useEffect(() => {
@@ -202,7 +202,7 @@ const Policy = () => {
           </div>
           <div className="quest-banner-bottom-wrapper">
             <form
-              action="https://formspree.io/f/mqkoqvra"
+              action="https://formspree.io/f/xyyarpqp"
               onSubmit={handleSubmit}
               className="quest-banner-bottom-form">
               <div className="quest-banner-bottom-form-inputs">
