@@ -40,7 +40,7 @@ function Process() {
               </div>
               <div className="process-list__outer">
                 <p className="process-list__title">
-                  Taking off doors and drawer fronts
+                  Taking off doors and <br /> drawer fronts
                 </p>
                 {isHovered && (
                   <span className="process-list__outer-desc1">

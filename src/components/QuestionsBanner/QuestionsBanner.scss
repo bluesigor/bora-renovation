@@ -228,8 +228,8 @@
               0px 0px 0px rgba(0, 0, 0, 0.07);
             border-radius: 20px;
             border: none;
-            padding: 26px 92px;
-            max-width: 250px;
+            padding: 18px 72px;
+            max-width: 210px;
             text-align: center;
             & > span {
               font-family: "Semi Inter";
@@ -295,6 +295,7 @@
           display: flex;
           @include onMobile {
             flex-direction: row;
+            padding-top: 15px;
           }
           &-txt {
             display: none;

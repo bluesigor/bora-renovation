@@ -213,7 +213,7 @@
     &-btn {
       padding: 24px 33px 25px 32px;
       width: 250px;
-      background: linear-gradient(93.35deg, #ffda55 3.71%, #ffaa2c 98.84%);
+      background: $primary;
       box-shadow: 6px 7px 10px rgba(0, 0, 0, 0.25);
       border-radius: 20px;
       border: none;
@@ -224,7 +224,7 @@
         line-height: 135.68%;
         letter-spacing: 0.08em;
         text-transform: uppercase;
-        color: $reviews-accent;
+        color: $blue-accent;
         white-space: nowrap;
         @include onMobile {
           white-space: nowrap;
@@ -242,6 +242,6 @@
   align-items: center;
   margin-bottom: 84px;
   @include onMobile {
-    margin-bottom: 64px;
+    margin-bottom: 45px;
   }
 }

@@ -44,7 +44,7 @@ const ProcessList = () => {
                   ? "mob-process-list__item-title mob-process-list__item-title__active"
                   : "mob-process-list__item-title"
               }>
-              Taking off doors and drawer fronts
+              Taking off doors and <br /> drawer fronts
             </p>
             <span
               style={{

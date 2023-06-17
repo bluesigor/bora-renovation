@@ -154,14 +154,11 @@
       &-btn {
         max-width: 250px;
         padding: 23px 57px;
-        border: 1px solid $blue-accent;
-        background: none;
+        border: 1px solid;
+        background: $blue-accent;
         border-radius: 20px;
         @include onMobile {
           height: 69px;
-        }
-        &:hover {
-          border: 2px solid $blue-accent;
         }
         &:active {
           background: $blue-accent;
@@ -177,7 +174,7 @@
           text-align: center;
           letter-spacing: 0.15em;
           text-transform: uppercase;
-          color: $blue-accent;
+          color: $primary;
           white-space: nowrap;
         }
       }

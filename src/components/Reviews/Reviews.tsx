@@ -175,7 +175,9 @@ const Reviews = () => {
     <section className="reviews">
       <div className="wrapper-reviews">
         {innerWidth < 768 && (
-          <h1 className="reviews__title">Swipe right to read our reviews</h1>
+          <h1 className="reviews__title">
+            Swipe right to read <br /> our reviews
+          </h1>
         )}
         <div className="reviews-list">
           {itemInfo.slice(0, 3).map((review: General.Review, index: number) => {

@@ -8,8 +8,8 @@
   @include onMobile {
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 10px;
-    margin-bottom: 130px;
+    padding-top: 25px;
+    margin-bottom: 150px;
   }
   &-header {
     display: flex;
@@ -41,6 +41,7 @@
     }
     @include onMobile {
       flex-direction: column-reverse;
+      padding: 0px 40px;
     }
     &-desc {
       flex: 1;
@@ -70,7 +71,6 @@
       &-more {
         display: flex;
         justify-content: center;
-
         &__btn {
           border: none;
           background: none;

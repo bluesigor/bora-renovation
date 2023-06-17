@@ -83,8 +83,8 @@
       left: 50%;
       transform: translate(-50%, -50%);
       @include onMobile {
-        gap: 43px;
-        padding-bottom: 170px;
+        gap: 135px;
+        padding-bottom: 350px;
         width: 100%;
       }
       &__inner {
