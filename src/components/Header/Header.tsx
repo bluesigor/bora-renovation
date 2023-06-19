@@ -11,7 +11,8 @@ import { useAppContext } from "../../context/AppContext";
 const Header = () => {
   const { innerWidth } = useMeasures();
   const navigate = useNavigate();
-  const { openHamb, isOpen, closeHamb } = useAppContext();
+  const { openHamb, isOpen, closeHamb, setIsModalOpen, setModalType } =
+    useAppContext();
 
   function handleScroll(height: number) {
     window.scrollTo(0, height);
@@ -65,7 +66,7 @@ const Header = () => {
                 : handleScroll(4300)
             }
             className="navbar-list__item">
-            <Link to="/gallery">gallery</Link>
+            <Link to="gallery">gallery</Link>
           </li>
           <li
             onClick={() =>
@@ -75,7 +76,7 @@ const Header = () => {
                 : handleScroll(4900)
             }
             className="navbar-list__item">
-            FAQ’s
+            FAQ’ <span style={{ textTransform: "lowercase" }}>s</span>
           </li>
           <li
             onClick={() =>
@@ -85,7 +86,7 @@ const Header = () => {
                 : handleScroll(7600)
             }
             className="navbar-list__item">
-            Contacts
+            Contact us
           </li>
         </ul>
       </nav>
@@ -118,7 +119,7 @@ const Header = () => {
         </div>
       ) : (
         <>
-          <button type="button" className="bora-header__contact-btn">
+          {/* <button type="button" className="bora-header__contact-btn">
             <img
               src={phone_icon}
               alt="phone-icon"
@@ -129,7 +130,18 @@ const Header = () => {
               href="tel:+13022441338">
               302-244-1338
             </a>
-          </button>
+          </button> */}
+
+          <div className="policy-comunicate">
+            <button
+              onClick={() => {
+                setModalType("quote");
+                setIsModalOpen(true);
+              }}
+              className="policy-comunicate__btn">
+              <span className="policy-comunicate__btn-txt">Get a quote</span>
+            </button>
+          </div>
           <div className="bora-header-burger">
             <div className="bora-header-burger-wrapper ">
               <Hamburger

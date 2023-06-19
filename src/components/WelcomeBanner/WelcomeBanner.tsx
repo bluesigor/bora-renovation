@@ -16,7 +16,7 @@ const WelcomeBanner = () => {
         <div className="welcome-banner-title">
           {innerWidth > 1025 && (
             <h1 className="welcome-banner-title__txt">
-              Bora kitchen cabinet renovation
+              Kitchen Cabinet Refinishing and Refacing
             </h1>
           )}
           <h4 className="welcome-banner-title__subtxt">

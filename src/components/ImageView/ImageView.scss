@@ -4,9 +4,8 @@
 .image {
   &-wrapper {
     background-color: #fefefe;
-    margin: 7% auto;
-    max-width: 684px;
-    height: 684px;
+    max-width: 545px;
+    height: 545px;
     position: relative;
     &__close {
       position: absolute;
@@ -23,7 +22,7 @@
     }
   }
   &-large {
-    height: 684px;
+    height: 545px;
     @include onMobile {
       height: 100%;
       width: 100%;
@@ -34,7 +33,7 @@
 .control__prev {
   position: absolute;
   left: -10px;
-  top: 45%;
+  top: 48%;
   border-radius: 10px;
   background-color: $primary;
   border: none;
@@ -46,7 +45,7 @@
 .control__next {
   position: absolute;
   right: -10px;
-  top: 45%;
+  top: 48%;
   border-radius: 10px;
   background-color: $primary;
   border: none;

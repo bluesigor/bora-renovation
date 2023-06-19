@@ -3,12 +3,16 @@ import { Link } from "react-router-dom";
 import ReactPixel from "react-facebook-pixel";
 import { ReactSVG } from "react-svg";
 
+import useMeasures from "../../core/hooks/useMeasures";
+
 import kitchen_first from "../../assets/images/gallery/kitchen.svg";
 import kitchen_second from "../../assets/images/gallery/bg-kitchen.svg";
 import repair from "../../assets/images/gallery/repair.svg";
 import gallery_mob from "../../assets/images/gallery/gallery-mob.svg";
 
 const GallerySection = () => {
+  const { innerWidth } = useMeasures();
+
   return (
     <section className="gallery">
       <div className="gallery-title">
@@ -30,6 +34,18 @@ const GallerySection = () => {
             Take a look at our gallery of pictures to get inspired for your
             future project.
           </p>
+          <div className="gallery-view">
+            <Link
+              to="gallery"
+              onClick={() => {
+                ReactPixel.track("ClickButton", {
+                  buttonName: "Step to gallery",
+                });
+              }}
+              className="gallery-view-btn">
+              <span className="gallery-view-btn__txt">View full gallery</span>
+            </Link>
+          </div>
         </div>
         <div className="gallery-content-logos">
           <div className="gallery-content-logos-first">
@@ -67,18 +83,20 @@ const GallerySection = () => {
           />
         </div>
       </div>
-      <div className="gallery-view">
-        <Link
-          to="gallery"
-          onClick={() => {
-            ReactPixel.track("ClickButton", {
-              buttonName: "Step to gallery",
-            });
-          }}
-          className="gallery-view-btn">
-          <span className="gallery-view-btn__txt">View full gallery</span>
-        </Link>
-      </div>
+      {innerWidth < 768 ? (
+        <div className="gallery-view">
+          <Link
+            to="gallery"
+            onClick={() => {
+              ReactPixel.track("ClickButton", {
+                buttonName: "Step to gallery",
+              });
+            }}
+            className="gallery-view-btn">
+            <span className="gallery-view-btn__txt">View full gallery</span>
+          </Link>
+        </div>
+      ) : null}
     </section>
   );
 };

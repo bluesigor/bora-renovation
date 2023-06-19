@@ -25,7 +25,9 @@ function Process() {
     <section className="process">
       <div className="process-header">
         <h1 className="process-header__title">
-          Swipe right to learn about our process
+          {innerWidth > 768
+            ? "Our process"
+            : "Swipe right to learn about our process"}
         </h1>
       </div>
       {innerWidth > 768 ? (

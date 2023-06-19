@@ -44,7 +44,7 @@ const Policy = () => {
           .
         </p>
       </div>
-      <div className="policy-comunicate">
+      {/* <div className="policy-comunicate">
         <button
           onClick={() => {
             setModalType("quote");
@@ -55,7 +55,7 @@ const Policy = () => {
             Get more information
           </span>
         </button>
-      </div>
+      </div> */}
       <main className="policy-main">
         <p className="policy-main__first">
           Please read this privacy notice carefully, as it will help you

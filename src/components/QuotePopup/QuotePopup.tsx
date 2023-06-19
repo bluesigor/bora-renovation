@@ -2,6 +2,7 @@ import { useForm } from "@formspree/react";
 
 import { useAppContext } from "../../context/AppContext";
 import close from "../../assets/images/quote/close-icon.svg";
+import { toast } from "react-hot-toast";
 
 const QuotePopup = () => {
   const [state, handleSubmit] = useForm("xyyarpqp");
@@ -23,7 +24,9 @@ const QuotePopup = () => {
           </div>
           <div className="quote-modal-content-head">
             <p className="quote-modal-content-head__title">Get a quote</p>
-            <p className="quote-modal-content-head__desc">Estimate request</p>
+            <p className="quote-modal-content-head__desc">
+              We will get in touch with you shortly.
+            </p>
           </div>
           <form
             action="https://formspree.io/f/xyyarpqp"
@@ -56,10 +59,13 @@ const QuotePopup = () => {
               id="message"
               name="message"
               className="modal-form__review"
-              placeholder="Write your message..."
+              placeholder="MESSAGE..."
             />
             <div className="modal-form__submit-block">
               <button
+                onClick={() =>
+                  toast("Thank you! We will get back to you shortly")
+                }
                 disabled={state.submitting}
                 type="submit"
                 className="modal-form__submit-block-btn">
