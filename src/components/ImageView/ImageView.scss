@@ -31,10 +31,12 @@
 }
 
 .control__prev {
+  min-width: 30px;
+  min-height: 30px;
   position: absolute;
   left: -10px;
-  top: 48%;
-  border-radius: 10px;
+  top: 47%;
+  border-radius: 20px;
   background-color: $primary;
   border: none;
   display: flex;
@@ -43,10 +45,12 @@
 }
 
 .control__next {
+  min-width: 30px;
+  min-height: 30px;
   position: absolute;
   right: -10px;
-  top: 48%;
-  border-radius: 10px;
+  top: 47%;
+  border-radius: 20px;
   background-color: $primary;
   border: none;
   display: flex;

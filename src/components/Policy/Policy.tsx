@@ -18,6 +18,11 @@ const Policy = () => {
   return (
     <section className="policy">
       <div className="policy-head">
+        <div className="policy-head-wrapper">
+          <h1 className="policy-head-wrapper__title">
+            Kitchen Cabinet <br /> Refinishing and Refacing
+          </h1>
+        </div>
         <h5 className="policy-head__title">
           Privacy Policy
           <br />
@@ -67,6 +72,7 @@ const Policy = () => {
           <h6 className="policy-main__second-title">
             WHAT INFORMATION DO WE COLLECT?
           </h6>
+          <br />
           <p className="policy-main__second-txt">
             We collect personal information that you voluntarily provide to us
             directly via the website when you fill out forms or subscribe to our
@@ -105,6 +111,7 @@ const Policy = () => {
           <h6 className="policy-main__second-title">
             HOW DO WE USE YOUR INFORMATION?
           </h6>
+          <br />
           <p className="policy-main__second-txt">
             Bora Renovation, LLC use personal information collected via our
             website for a variety of business purposes described below:
@@ -137,6 +144,7 @@ const Policy = () => {
           <h6 className="policy-main__second-title">
             WILL YOUR INFORMATION BE SHARED WITH ANYONE?
           </h6>
+          <br />
           <p className="policy-main__second-txt">
             We will ensure that your data is treated securely and in accordance
             with this Privacy Policy. We never sell, trade or rent your personal
@@ -146,6 +154,7 @@ const Policy = () => {
         </div>
         <div className="policy-main__second">
           <h6 className="policy-main__second-title">CHILDREN'S PRIVACY</h6>
+          <br />
           <p className="policy-main__second-txt">
             Our website is directed toward and designed for use by persons aged
             18 or older. We encourage parents and guardians to observe,
@@ -159,6 +168,7 @@ const Policy = () => {
         </div>
         <div className="policy-main__second">
           <h6 className="policy-main__second-title">CONTACT US</h6>
+          <br />
           <p className="policy-main__second-txt">
             This Privacy Policy applies only to our online activities and is
             valid for visitors to our website with regards to the information

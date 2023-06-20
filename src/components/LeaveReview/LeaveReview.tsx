@@ -30,8 +30,8 @@ const LeaveReview = () => {
             </div>
             <div className="leave-review-content-desc">
               <p className="leave-review-content-desc__text">
-                Leave a review on one of the platforms that is most convenient
-                for you
+                Leave a review on one of <br /> the platforms that is most
+                convenient <br /> for you
               </p>
             </div>
             <div className="leave-review-content-social">

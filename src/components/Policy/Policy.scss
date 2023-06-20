@@ -30,9 +30,31 @@
       letter-spacing: 0.05em;
       text-transform: uppercase;
       color: $scrollbar-reviews;
+      @include onMobile {
+        font-size: 14px;
+      }
       &-link {
         text-decoration: underline;
         color: $scrollbar-reviews;
+      }
+    }
+    &-wrapper {
+      width: 100%;
+      @include onMobile {
+        margin-top: -110px;
+      }
+      &__title {
+        text-align: center;
+        font-family: "Bold Montserrat";
+        font-style: normal;
+        line-height: 150.52%;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: $scrollbar-reviews;
+        font-size: 32px;
+        @include onMobile {
+          font-size: 24px;
+        }
       }
     }
   }
@@ -69,6 +91,9 @@
       line-height: 150.52%;
       color: $darken;
       letter-spacing: 0.04em;
+      @include onMobile {
+        font-size: 16px;
+      }
     }
     &__second {
       &-title {
@@ -79,6 +104,9 @@
         letter-spacing: 0.05em;
         text-transform: uppercase;
         color: $blue-accent;
+        @include onMobile {
+          font-size: 20px;
+        }
       }
       &-txt {
         font-family: "Montserrat";
@@ -87,6 +115,9 @@
         line-height: 150.52%;
         color: $darken;
         letter-spacing: 0.04em;
+        @include onMobile {
+          font-size: 14px;
+        }
       }
       &-list {
         padding-left: 20px;
@@ -98,6 +129,9 @@
           line-height: 150.52%;
           color: $darken;
           letter-spacing: 0.04em;
+          @include onMobile {
+            font-size: 16px;
+          }
           &:nth-child(2) {
             & > a {
               text-decoration: none;
@@ -135,7 +169,7 @@
     font-feature-settings: "pnum" on, "lnum" on;
     color: $scrollbar-reviews;
     @include onMobile {
-      font-size: 21px;
+      font-size: 20px;
     }
   }
   &__sub {
@@ -161,6 +195,7 @@
     text-align: center;
     @include onMobile {
       display: block;
+      font-size: 14px;
     }
   }
   &__input {

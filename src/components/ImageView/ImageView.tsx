@@ -58,10 +58,10 @@ const ImageView = () => {
               alt="imageData"
             />
             <button className="control__prev" onClick={handlePrev}>
-              <AiOutlineArrowLeft />
+              <AiOutlineArrowLeft size={26} />
             </button>
             <button className="control__next" onClick={handleNext}>
-              <AiOutlineArrowRight />
+              <AiOutlineArrowRight size={26} />
             </button>
           </div>
         </div>

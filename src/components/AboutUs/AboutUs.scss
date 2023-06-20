@@ -9,7 +9,7 @@
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 25px;
-    margin-bottom: 150px;
+    margin-bottom: 210px;
   }
   &-header {
     display: flex;
@@ -41,7 +41,7 @@
     }
     @include onMobile {
       flex-direction: column-reverse;
-      padding: 0px 40px;
+      padding: 0px 12px;
     }
     &-desc {
       flex: 1;
@@ -64,7 +64,7 @@
           border-bottom: 1px solid $scrollbar-reviews;
         }
         @include onMobile {
-          text-align: justify;
+          text-align: center;
           font-size: 18px;
         }
       }

@@ -59,14 +59,15 @@ const Header = () => {
             our process
           </li>
           <li
-            onClick={() =>
+            onClick={() => {
               window.location.pathname.includes("/gallery") ||
               window.location.pathname.includes("/privacy-policy")
                 ? navigate("/")
-                : handleScroll(4300)
-            }
+                : handleScroll(4300);
+              navigate("/gallery");
+            }}
             className="navbar-list__item">
-            <Link to="gallery">gallery</Link>
+            gallery
           </li>
           <li
             onClick={() =>
@@ -253,7 +254,7 @@ const Header = () => {
                   handleScroll(7700);
                 }}
                 className="navbar-moblist__item">
-                Contacts
+                Contact us
               </Link>
             ) : (
               <button

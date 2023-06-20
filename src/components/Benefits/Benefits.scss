@@ -9,7 +9,7 @@
     justify-content: center;
   }
   @include onMobile {
-    padding: 35px 15px 30px;
+    padding: 0px 15px 30px;
   }
   &-header {
     display: flex;
