@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Hamburger from "hamburger-react";
 
 import bora_logo from "../../assets/images/header/bora-logo.svg";
-import phone_icon from "../../assets/images/header/phone-icon.svg";
 
 import useMeasures from "../../core/hooks/useMeasures";
 import { useAppContext } from "../../context/AppContext";

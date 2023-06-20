@@ -1,15 +1,12 @@
 import { useEffect } from "react";
 import { useForm } from "@formspree/react";
 
-import { useAppContext } from "../../context/AppContext";
-
 import online from "../../assets/images/questions/online-dark.svg";
 
 import { goToTop } from "../../core/helpers/goToTop";
 
 const Policy = () => {
   const [state, handleSubmit] = useForm("xyyarpqp");
-  const { setIsModalOpen, setModalType } = useAppContext();
 
   useEffect(() => {
     goToTop();
