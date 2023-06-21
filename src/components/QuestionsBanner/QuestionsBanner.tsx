@@ -35,7 +35,7 @@ const QuestionsBanner = () => {
               className="quest-banner-bottom-form-control-moblogo"
             />
             <h4 className="quest-banner-bottom-header__title">
-              Do you have questions?
+              Do you have any questions?
             </h4>
             <p className="quest-banner-bottom-header__desc">
               We will contact you as soon as possible and provide you with a

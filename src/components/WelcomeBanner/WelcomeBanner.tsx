@@ -25,31 +25,35 @@ const WelcomeBanner = () => {
         </div>
       )}
       <div className="welcome-banner-wrapper">
-        <video
-          id="video-player"
-          poster={poster}
-          autoPlay
-          muted
-          className="welcome-banner-wrapper-video"
-          loop={true}>
-          <source src={welcome} type="video/mp4" />
-        </video>
+        {innerWidth > 768 && (
+          <video
+            id="video-player"
+            poster={poster}
+            autoPlay
+            muted
+            className="welcome-banner-wrapper-video"
+            loop={true}>
+            <source src={welcome} type="video/mp4" />
+          </video>
+        )}
         <div className="welcome-banner-wrapper-outer">
           {innerWidth < 768 && (
             <h4 className="welcome-banner-wrapper-outer__inner">
               KITCHEN CABINET <br /> REFINISHING AND REFACING
             </h4>
           )}
-          <button
-            onClick={() => {
-              setIsModalOpen(true);
-              setModalType("quote");
-            }}
-            className="welcome-banner-wrapper-outer__free-btn">
-            <span className="welcome-banner-wrapper-outer__free-btn-txt">
-              GET a FREE quote
-            </span>
-          </button>
+          {innerWidth > 768 && (
+            <button
+              onClick={() => {
+                setIsModalOpen(true);
+                setModalType("quote");
+              }}
+              className="welcome-banner-wrapper-outer__free-btn">
+              <span className="welcome-banner-wrapper-outer__free-btn-txt">
+                GET a FREE quote
+              </span>
+            </button>
+          )}
         </div>
       </div>
     </section>

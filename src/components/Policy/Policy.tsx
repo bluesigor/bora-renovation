@@ -201,7 +201,9 @@ const Policy = () => {
               alt="mob_online"
               className="quest-banner-bottom-form-control-moblogo"
             />
-            <h4 className="policy-main-form__title">Do you have questions?</h4>
+            <h4 className="policy-main-form__title">
+              Do you have any questions?
+            </h4>
             <p className="policy-main-form__sub">
               We will contact you as soon as possible and provide you with a
               free quote.

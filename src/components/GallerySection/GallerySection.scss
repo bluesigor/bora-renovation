@@ -163,21 +163,21 @@
       background: none;
       text-decoration: underline;
       text-decoration-color: $quote-accent;
-      &:hover {
-        background: $quote-accent;
-        transition: 0.7s;
-        border: 1px solid $quote-accent;
-        .gallery-view-btn__txt {
-          color: $primary;
-        }
-      }
-      &:active {
-        background: $scrollbar-reviews;
-        border: 1px solid $scrollbar-reviews;
-        .gallery-view-btn__txt {
-          color: $primary;
-        }
-      }
+      // &:hover {
+      //   background: $quote-accent;
+      //   transition: 0.7s;
+      //   border: 1px solid $quote-accent;
+      //   .gallery-view-btn__txt {
+      //     color: $primary;
+      //   }
+      // }
+      // &:active {
+      //   background: $scrollbar-reviews;
+      //   border: 1px solid $scrollbar-reviews;
+      //   .gallery-view-btn__txt {
+      //     color: $primary;
+      //   }
+      // }
       @include onMobile {
         max-width: 250px;
       }
