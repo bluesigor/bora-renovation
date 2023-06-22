@@ -2,6 +2,18 @@
 @import "./fonts.scss";
 @import "./index.scss";
 
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+}
+
 html {
   scroll-behavior: smooth;
   --animate-duration: 1s;

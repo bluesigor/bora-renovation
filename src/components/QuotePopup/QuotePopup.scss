@@ -24,7 +24,7 @@
     max-width: 707px;
     height: 684px;
     @include onMobile {
-      max-height: 684px;
+      max-height: 600px;
       width: 375px;
       padding: 15px 15px 70px 15px;
       margin: 15% auto;
@@ -95,10 +95,10 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     @include onMobile {
       gap: 20px;
-      margin-bottom: 56px;
+      margin-bottom: 20px;
     }
     &__item {
       border: 1px solid $quote-accent;
@@ -128,11 +128,11 @@
     padding: 27px 31px;
     min-height: 155px;
     overflow: hidden;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     outline: none;
     @include onMobile {
       padding: 26px 19px;
-      margin-bottom: 60px;
+      margin-bottom: 20px;
       min-height: 112px;
     }
     &::placeholder {

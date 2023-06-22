@@ -50,8 +50,8 @@ const AboutUs = () => {
                 &nbsp; and &nbsp;
                 <a
                   rel="noreferrer"
-                  target={"_blank"}
-                  href="https://www.facebook.com/BoraRenovation/reviews/?ref=page_internal">
+                  target="_blank"
+                  href="https://www.facebook.com/BoraRenovation?mibextid=LQQJ4d">
                   Facebook
                 </a>
                 . We feel confident in our ability to meet all of your

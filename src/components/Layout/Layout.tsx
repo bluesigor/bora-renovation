@@ -7,7 +7,7 @@ import Header from "../Header";
 const Layout = () => {
   return (
     <>
-      <Toaster position="top-right" containerClassName="toaster" />
+      <Toaster position="top-center" containerClassName="toaster" />
       <Header />
       <Outlet />
       <Footer />

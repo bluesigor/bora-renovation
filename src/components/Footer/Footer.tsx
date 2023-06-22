@@ -84,7 +84,7 @@ const Footer = () => {
                   ? window.scrollTo(0, 4250)
                   : window.scrollTo(0, 4900)
               }>
-              FAQ' <span style={{ textTransform: "lowercase" }}>s</span>
+              FAQ'S
             </li>
             <li
               className="foot-inner-links__item"

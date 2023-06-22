@@ -8,7 +8,9 @@ import useMeasures from "../../core/hooks/useMeasures";
 import kitchen_first from "../../assets/images/gallery/kitchen.svg";
 import kitchen_second from "../../assets/images/gallery/bg-kitchen.svg";
 import repair from "../../assets/images/gallery/repair.svg";
-import gallery_mob from "../../assets/images/gallery/gallery-mob.svg";
+// import gallery_mob from "../../assets/images/gallery/gallery-mob.svg";
+
+const img_gallery = require("../../assets/images/gallery/gallery-mob.JPG");
 
 const GallerySection = () => {
   const { innerWidth } = useMeasures();
@@ -77,7 +79,7 @@ const GallerySection = () => {
         </div>
         <div className="gallery-mob-logo">
           <img
-            src={gallery_mob}
+            src={img_gallery}
             alt="gallery_mob"
             className="gallery-mob-logo__image"
           />

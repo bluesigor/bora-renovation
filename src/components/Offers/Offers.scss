@@ -6,7 +6,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 629px;
-  padding-top: 93px;
+  padding-top: 53px;
   padding-bottom: 67px;
   @include onMobile {
     background-image: url("../../assets/images/offers/offers-banner-mob.svg");
@@ -15,7 +15,7 @@
     background-position: center;
     background-size: cover;
     min-height: 0px;
-    max-height: 517px;
+    max-height: 857px;
   }
   &-new {
     width: 100%;
@@ -38,7 +38,9 @@
     }
   }
   &-title {
-    padding-left: 190px;
+    width: 100%;
+    text-align: center;
+    // padding-left: 190px;
     @include onMobile {
       padding-left: 0;
       text-align: center;
@@ -65,19 +67,18 @@
     }
   }
   &-main {
-    margin-top: 27px;
+    margin-top: 67px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding-left: 180px;
-    padding-right: 160px;
+    justify-content: center;
+    padding-left: 130px;
+    padding-right: 130px;
     @include onMobile {
-      flex-direction: column;
       justify-content: space-between;
-      gap: 39px;
       margin-top: 30px;
-      padding-left: 61px;
-      padding-right: 60px;
+      gap: 12px;
+      padding-left: 31px;
+      padding-right: 30px;
     }
     &-list {
       display: flex;
@@ -176,6 +177,69 @@
           color: $scrollbar-reviews;
           white-space: nowrap;
         }
+      }
+    }
+
+    &-block {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 400px;
+      &__title {
+        font-family: "Medium Montserrat";
+        font-style: normal;
+        font-size: 24px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: $scrollbar-reviews;
+      }
+      &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @include onMobile {
+          gap: 15px;
+        }
+        & > li {
+          width: 450px;
+          display: flex;
+          justify-content: center;
+          min-height: 65px;
+          &:first-child {
+            @include onMobile {
+              min-height: 130px;
+            }
+          }
+          @include onMobile {
+            width: 180px;
+            align-items: center;
+            min-height: 80px;
+          }
+          & > span {
+            max-width: 320px;
+            font-family: "Inter";
+            font-style: normal;
+            font-size: 16px;
+            line-height: 21px;
+            letter-spacing: 0.01em;
+            color: $scrollbar-reviews;
+            @include onMobile {
+              text-align: center;
+            }
+          }
+        }
+      }
+      &__sum {
+        font-family: "Inter";
+        font-style: normal;
+        font-size: 16px;
+        line-height: 21px;
+        letter-spacing: 0.01em;
+        color: $scrollbar-reviews;
+        max-width: 450px;
+        text-align: center;
       }
     }
   }

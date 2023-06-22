@@ -90,7 +90,7 @@
         }
         &__item {
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
           // gap: 5px;
           align-items: center;
           @media (max-width: 1200px) {

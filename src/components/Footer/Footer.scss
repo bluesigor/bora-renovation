@@ -8,6 +8,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  -webkit-box-shadow: 2px -8px 21px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px -8px 21px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px -8px 21px -10px rgba(0, 0, 0, 0.75);
   @include onMobile {
     padding: 40px 16px;
     flex-direction: column;
