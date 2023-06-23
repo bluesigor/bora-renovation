@@ -81,6 +81,7 @@
         flex-direction: column;
         width: 100%;
         margin-bottom: 31px;
+        align-items: center;
         @media (max-width: 1200px) {
           gap: 10px;
         }
@@ -91,10 +92,14 @@
         &__item {
           display: flex;
           flex-direction: row;
-          // gap: 5px;
+          gap: 5px;
           align-items: center;
+          width: 300px;
           @media (max-width: 1200px) {
             gap: 10px;
+          }
+          @include onMobile {
+            width: 220px;
           }
         }
         &__item:first-child {

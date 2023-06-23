@@ -22,11 +22,6 @@ const Gallery = () => {
 
   return (
     <section className="page-gallery">
-      <div className="page-gallery-wrapper">
-        <h1 className="page-gallery-wrapper__title">
-          Kitchen Cabinet <br /> Refinishing and Refacing
-        </h1>
-      </div>
       <div className="page-gallery-header">
         <div className="page-gallery-header-content">
           {/* <h3 className="page-gallery-header-content__title">Work gallery</h3> */}

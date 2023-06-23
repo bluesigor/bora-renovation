@@ -13,7 +13,14 @@
       right: -10px;
       border: none;
       border-radius: 50%;
+      width: 40px;
+      font-size: 24px;
+      height: 40px;
       background-color: $primary;
+      @include onMobile {
+        width: 35px;
+        height: 35px;
+      }
     }
     @include onMobile {
       margin-top: 50%;

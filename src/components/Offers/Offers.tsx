@@ -1,4 +1,18 @@
+import useMeasures from "../../core/hooks/useMeasures";
+
 const Offers = () => {
+  // const [isMore, setIsMore] = useState(false);
+
+  const { innerWidth } = useMeasures();
+
+  // const showMore = () => {
+  //   if (isMore) {
+  //     setIsMore(false);
+  //   } else {
+  //     setIsMore(true);
+  //   }
+  // };
+
   return (
     <section className="offers">
       {/* {innerWidth > 768 && (
@@ -7,7 +21,9 @@ const Offers = () => {
         </div>
       )} */}
       <div className="offers-title">
-        <h6 className="offers-title__txt">What's right for my kitchen?</h6>
+        <h6 className="offers-title__txt">
+          What's right for my cabinet kitchen?
+        </h6>
       </div>
       <div className="offers-main">
         {/* <ul className="offers-main-list"> 
@@ -75,10 +91,7 @@ const Offers = () => {
               </span>
             </li>
             <li>
-              <span>
-                {" "}
-                My doors and drawer fronts are falling apart, have damage.
-              </span>
+              <span> My doors are falling apart, have damage.</span>
             </li>
             <li>
               <span>
@@ -92,6 +105,49 @@ const Offers = () => {
             doors and cabinet bases refinished in the same color.{" "}
           </p>
         </div>
+      </div>
+      <div className="offers-more">
+        {/* {isMore && ( */}
+        <div className="offers-more-block">
+          <h6 className="offers-more-block__title">
+            Available with
+            {innerWidth < 768 ? (
+              <>
+                {" "}
+                <br />
+                refinishing and refacing:
+              </>
+            ) : (
+              <>refinishing and refacing:</>
+            )}
+          </h6>
+          <ul className="offers-more-block-list">
+            <li>
+              <span>
+                New hardware, accent pieces, trims and crown molding
+                installation.
+              </span>
+            </li>
+            <li>
+              <span>New countertop and backsplash installation.</span>
+            </li>
+            <li>
+              <span>Choose any color you like.</span>
+            </li>
+          </ul>
+          {/* <p className="offers-main-block__sum">
+              All cabinet doors and drawer fronts replaced with new ones. The
+              new doors and cabinet bases refinished in the same color.{" "}
+            </p> */}
+        </div>
+        {/* )} */}
+        {/* <button onClick={showMore} className="offers-more__btn">
+          {isMore ? (
+            <span className="offers-more__btn-txt">Show less</span>
+          ) : (
+            <span className="offers-more__btn-txt">Read more</span>
+          )}
+        </button> */}
       </div>
     </section>
   );

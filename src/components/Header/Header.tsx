@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Hamburger from "hamburger-react";
 
 import bora_logo from "../../assets/images/header/bora-logo.svg";
-// import phone_icon from "../../assets/images/header/phone-icon.svg";
 
 import useMeasures from "../../core/hooks/useMeasures";
 import { useAppContext } from "../../context/AppContext";
@@ -23,8 +22,6 @@ const Header = () => {
       closeHamb();
     }
   }, [innerWidth, closeHamb]);
-
-  console.log(!window.location.pathname.includes("gallery"));
 
   return (
     <header
@@ -95,28 +92,25 @@ const Header = () => {
       </nav>
       {innerWidth < 1025 ? (
         <div className="bora-header-end-wrapper">
-          {!window.location.pathname.includes("gallery") &&
-            !window.location.pathname.includes("privacy-policy") && (
-              <button
-                type="button"
-                onClick={() => {
-                  setIsModalOpen(true);
-                  setModalType("quote");
-                }}
-                className="bora-header__contact-btn">
-                {/* <img
+          <button
+            type="button"
+            onClick={() => {
+              setIsModalOpen(true);
+              setModalType("quote");
+            }}
+            className="bora-header__contact-btn">
+            {/* <img
               src={phone_icon}
               alt="phone-icon"
               className="bora-header__contact-btn__icon"
             /> */}
-                <span
-                  className="bora-header__contact-btn__txt"
-                  // href="tel:+13022441338"
-                >
-                  Get a free quote
-                </span>
-              </button>
-            )}
+            <span
+              className="bora-header__contact-btn__txt"
+              // href="tel:+13022441338"
+            >
+              Get a free quote
+            </span>
+          </button>
           <div className="bora-header-burger">
             <div className="bora-header-burger-wrapper ">
               <Hamburger
@@ -257,8 +251,7 @@ const Header = () => {
             )}
           </li>
           <li>
-            {window.location.pathname.includes("gallery") ||
-            window.location.pathname.includes("privacy-policy") ? (
+            {window.location.pathname.includes("gallery") ? (
               <Link
                 to="/"
                 onClick={() => {

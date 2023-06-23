@@ -6,7 +6,7 @@
   padding: 60px 67px 50px 70px;
   @include onMobile {
     min-height: 70vh;
-    padding: 21px 15px 20px 15px;
+    padding: 21px 15px 40px 15px;
   }
   &-wrapper {
     width: 100%;
@@ -95,7 +95,8 @@
       &__sub {
         font-family: "Medium Montserrat";
         font-style: normal;
-        font-size: 32px;
+        font-size: 64px;
+        text-align: center;
         line-height: 150.52%;
         letter-spacing: 0.05em;
         text-transform: uppercase;
@@ -208,16 +209,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 25px;
+  margin-top: 55px;
   flex-direction: column;
   gap: 10px;
+  @include onMobile {
+    margin-top: 40px;
+  }
   & > p {
     font-family: "Medium Montserrat";
     font-style: normal;
-    font-size: 14px;
+    font-size: 21px;
     line-height: 150.52%;
     letter-spacing: 0.01em;
     text-transform: uppercase;
     text-align: center;
+    @include onMobile {
+      font-size: 16px;
+    }
   }
 }

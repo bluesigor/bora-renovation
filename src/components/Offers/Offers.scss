@@ -15,7 +15,7 @@
     background-position: center;
     background-size: cover;
     min-height: 0px;
-    max-height: 857px;
+    max-height: none;
   }
   &-new {
     width: 100%;
@@ -39,22 +39,26 @@
   }
   &-title {
     width: 100%;
-    text-align: center;
-    // padding-left: 190px;
+    display: flex;
+    justify-content: center;
+    padding-left: 70px;
+    padding-right: 69px;
     @include onMobile {
-      padding-left: 0;
-      text-align: center;
+      padding-left: 0px;
+      padding-right: 0px;
     }
     &__txt {
+      width: max-content;
       font-family: "Semi Montserrat";
       font-style: normal;
       font-weight: 600;
-      font-size: 36px;
+      font-size: 52px;
       line-height: 150.52%;
       letter-spacing: 0.04em;
       text-transform: uppercase;
       color: $blue-accent;
       @include onMobile {
+        text-align: center;
         font-family: "Inter";
         font-weight: 600;
         font-style: normal;
@@ -76,9 +80,9 @@
     @include onMobile {
       justify-content: space-between;
       margin-top: 30px;
-      gap: 12px;
-      padding-left: 31px;
-      padding-right: 30px;
+      gap: 14px;
+      padding-left: 21px;
+      padding-right: 20px;
     }
     &-list {
       display: flex;
@@ -184,16 +188,20 @@
       display: flex;
       flex-direction: column;
       gap: 16px;
-      max-width: 400px;
+      max-width: 550px;
+      align-items: center;
       &__title {
         font-family: "Medium Montserrat";
         font-style: normal;
-        font-size: 24px;
+        font-size: 32px;
         line-height: 24px;
         text-align: center;
         letter-spacing: 0.04em;
         text-transform: uppercase;
         color: $scrollbar-reviews;
+        @include onMobile {
+          font-size: 20px;
+        }
       }
       &-list {
         display: flex;
@@ -203,7 +211,7 @@
           gap: 15px;
         }
         & > li {
-          width: 450px;
+          width: 550px;
           display: flex;
           justify-content: center;
           min-height: 65px;
@@ -218,28 +226,115 @@
             min-height: 80px;
           }
           & > span {
-            max-width: 320px;
+            width: 420px;
+            text-align: center;
             font-family: "Inter";
             font-style: normal;
-            font-size: 16px;
+            font-size: 18px;
             line-height: 21px;
             letter-spacing: 0.01em;
             color: $scrollbar-reviews;
             @include onMobile {
-              text-align: center;
+              font-size: 14px;
             }
           }
         }
       }
       &__sum {
-        font-family: "Inter";
+        font-family: "Medium Inter";
         font-style: normal;
-        font-size: 16px;
+        font-size: 20px;
         line-height: 21px;
         letter-spacing: 0.01em;
         color: $scrollbar-reviews;
         max-width: 450px;
         text-align: center;
+        @include onMobile {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  &-more {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    &-block {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+      width: max-content;
+      @include onMobile {
+        gap: 10px;
+        margin-bottom: 10px;
+        width: 350px;
+        text-align: center;
+      }
+      &__title {
+        font-family: "Medium Montserrat";
+        font-style: normal;
+        font-size: 32px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: $scrollbar-reviews;
+        @include onMobile {
+          font-size: 21px;
+        }
+      }
+      &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        @include onMobile {
+          gap: 8px;
+        }
+        & > li {
+          list-style: none;
+          & > span {
+            font-family: "Medium Inter";
+            font-style: normal;
+            font-size: 20px;
+            line-height: 21px;
+            letter-spacing: 0.01em;
+            color: $blue-accent;
+            @include onMobile {
+              text-align: center;
+              @include onMobile {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__btn {
+      border: none;
+      background: none;
+      border-bottom: 1px solid $faq-accent;
+      &-txt {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 150.52%;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.04em;
+        color: $blue-accent;
+        @include onMobile {
+          font-weight: 300;
+          font-size: 15px;
+        }
       }
     }
   }

@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 
 import about from "../../assets/videos/about-us.mp4";
-import poster from "../../assets/images/about/poster.svg";
+import classNames from "classnames";
 
 const AboutUs = () => {
   const [isMore, setIsMore] = useState(false);
@@ -17,7 +17,11 @@ const AboutUs = () => {
   };
 
   return (
-    <section className="aboutus">
+    <section
+      className={classNames({
+        aboutus: true,
+        "aboutus-more": isMore,
+      })}>
       <div className="aboutus-header">
         <h1 className="aboutus-header__title">About us</h1>
       </div>
@@ -81,7 +85,7 @@ const AboutUs = () => {
             controls
             id="video-player"
             ref={videoRef}
-            poster={poster}
+            poster={require("../../assets/images/about/poster.JPG")}
             className="aboutus-content-media__mov"
             loop>
             <source src={about} type="video/mp4" />

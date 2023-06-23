@@ -15,11 +15,11 @@ const Policy = () => {
   return (
     <section className="policy">
       <div className="policy-head">
-        <div className="policy-head-wrapper">
+        {/* <div className="policy-head-wrapper">
           <h1 className="policy-head-wrapper__title">
             Kitchen Cabinet <br /> Refinishing and Refacing
           </h1>
-        </div>
+        </div> */}
         <h5 className="policy-head__title">
           Privacy Policy
           <br />

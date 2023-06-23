@@ -36,7 +36,7 @@ const ContactUs = () => {
             </div>
           </div>
           <div className="contact-wrapper-form__footer">
-            <h6 className="contact-wrapper-form__footer-title">Follow us!</h6>
+            {/* <h6 className="contact-wrapper-form__footer-title">Follow us!</h6> */}
             <div className="contact-wrapper-form__footer-social">
               <a
                 href="https://instagram.com/bora_renovation?igshid=MzRlODBiNWFlZA=="

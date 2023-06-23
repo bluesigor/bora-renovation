@@ -4,12 +4,18 @@
 .aboutus {
   padding-left: 68px;
   padding-right: 71px;
-  margin-bottom: 150px;
+  margin-bottom: 80px;
+  &-more {
+    margin-bottom: 200px;
+    @include onMobile {
+      margin-bottom: 120px;
+    }
+  }
   @include onMobile {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 25px;
-    margin-bottom: 210px;
+    margin-bottom: 140px;
   }
   &-header {
     display: flex;

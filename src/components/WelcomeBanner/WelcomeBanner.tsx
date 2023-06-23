@@ -6,7 +6,7 @@ import poster from "../../assets/images/welcome/welcome-banner.svg";
 import welcome from "../../assets/videos/main.mp4";
 
 const WelcomeBanner = () => {
-  const { setIsModalOpen, setModalType, isOpen } = useAppContext();
+  const { isOpen } = useAppContext();
 
   const { innerWidth } = useMeasures();
 
@@ -42,7 +42,7 @@ const WelcomeBanner = () => {
               KITCHEN CABINET <br /> REFINISHING AND REFACING
             </h4>
           )}
-          {innerWidth > 768 && (
+          {/* {innerWidth > 768 && (
             <button
               onClick={() => {
                 setIsModalOpen(true);
@@ -53,7 +53,7 @@ const WelcomeBanner = () => {
                 GET a FREE quote
               </span>
             </button>
-          )}
+          )} */}
         </div>
       </div>
     </section>

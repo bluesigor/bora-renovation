@@ -44,8 +44,10 @@ const GallerySection = () => {
                   buttonName: "Step to gallery",
                 });
               }}
-              className="gallery-view-btn">
-              <span className="gallery-view-btn__txt">View full gallery</span>
+              className="modal-form__submit-block-butn">
+              <span className="modal-form__submit-block-butn-txt">
+                View full gallery
+              </span>
             </Link>
           </div>
         </div>
@@ -94,8 +96,10 @@ const GallerySection = () => {
                 buttonName: "Step to gallery",
               });
             }}
-            className="gallery-view-btn">
-            <span className="gallery-view-btn__txt">View full gallery</span>
+            className="modal-form__submit-block-butn">
+            <span className="modal-form__submit-block-butn-txt">
+              View full gallery
+            </span>
           </Link>
         </div>
       ) : null}

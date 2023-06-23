@@ -24,8 +24,8 @@ const GetQuote = () => {
             setModalType("quote");
             setIsModalOpen(true);
           }}
-          className="quote-container-btn">
-          <span className="quote-container-btn__txt">get a quote</span>
+          className="policy-comunicate__btn">
+          <span className="policy-comunicate__btn-txt">Get a quote</span>
         </button>
       </div>
     );

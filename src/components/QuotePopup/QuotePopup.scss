@@ -181,6 +181,39 @@
           white-space: nowrap;
         }
       }
+      &-butn {
+        margin-top: 30px;
+        // max-width: 250px;
+        padding: 10px 20px;
+        cursor: pointer;
+        border: 1px solid;
+        background: $blue-accent;
+        border-radius: 20px;
+        @include onMobile {
+          margin-top: 10px;
+          // max-width: 190px;
+        }
+        &:active {
+          background: $blue-accent;
+          .modal-form__submit-block-btn-txt {
+            color: $quote-active-btn;
+          }
+        }
+        &-txt {
+          font-family: "Semi Inter";
+          font-style: normal;
+          font-size: 16px;
+          line-height: 24px;
+          text-align: center;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          color: $primary;
+          white-space: nowrap;
+          @include onMobile {
+            font-size: 14px;
+          }
+        }
+      }
     }
   }
 }

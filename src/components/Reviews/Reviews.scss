@@ -18,9 +18,7 @@
   padding-right: 194px;
   min-height: 100vh;
   @include onMobile {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 66px;
+    padding: 66px 15px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.38)),
       url("../../assets/images/reviews/reviews-bckg-mob.svg");
     background-repeat: no-repeat;
@@ -49,15 +47,18 @@
     @include onMobile {
       display: flex;
       &::-webkit-scrollbar {
-        background: $scrollbar-reviews;
-        border-radius: 100px;
-        height: 12px;
+        display: none;
       }
-      &::-webkit-scrollbar-thumb {
-        max-width: 65px;
-        background: linear-gradient(180deg, #e2e1e1 0%, $primary 100%);
-        border-radius: 100px;
-      }
+      // &::-webkit-scrollbar {
+      //   background: $scrollbar-reviews;
+      //   border-radius: 100px;
+      //   height: 12px;
+      // }
+      // &::-webkit-scrollbar-thumb {
+      //   max-width: 65px;
+      //   background: linear-gradient(180deg, #e2e1e1 0%, $primary 100%);
+      //   border-radius: 100px;
+      // }
     }
   }
   &-list {
@@ -150,7 +151,7 @@
         padding: 20px 10px;
         min-width: 300px;
         height: 290px;
-        margin-bottom: 83px;
+        margin-bottom: 66px;
       }
       &__stars {
         max-width: min-content;
@@ -242,6 +243,6 @@
   align-items: center;
   margin-bottom: 84px;
   @include onMobile {
-    margin-bottom: 45px;
+    margin-bottom: 5px;
   }
 }
