@@ -65,10 +65,15 @@
       }
     }
     @include onMobile {
-      background-image: url("../../assets/images/welcome/mob_welcome_second.JPG");
-      background-size: cover;
+      background: linear-gradient(
+          180deg,
+          #fff 24.35%,
+          rgba(255, 255, 255, 0) 66.85%
+        ),
+        url("../../assets/images/welcome/mob_welcome_second.JPG"), lightgray 50%;
       min-height: 276px;
       border-radius: 20px;
+      background-size: cover !important;
     }
     &-outer {
       z-index: 1;

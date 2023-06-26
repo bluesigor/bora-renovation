@@ -10,9 +10,11 @@
   overflow: hidden;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &-content {
     background-color: #fefefe;
-    margin: 15% auto;
     padding: 27px;
     border: 1px solid #888;
     border-radius: 20px;
@@ -26,7 +28,7 @@
     &-top {
       display: flex;
       justify-content: flex-end;
-      margin-bottom: 25px;
+      margin-bottom: 15px;
       @include onMobile {
         margin-bottom: 28px;
       }
@@ -50,7 +52,7 @@
         font-family: "Raleway";
         font-style: normal;
         font-weight: 600;
-        font-size: 20px;
+        font-size: 22px;
         line-height: 160.52%;
         text-align: center;
         letter-spacing: 0.05em;
@@ -81,7 +83,7 @@
       &__sub {
         font-family: "Medium Raleway";
         font-style: normal;
-        font-size: 24px;
+        font-size: 22px;
         line-height: 160.52%;
         text-align: center;
         letter-spacing: 0.05em;
@@ -106,7 +108,7 @@
       &__text {
         font-family: "Inter Light";
         font-style: normal;
-        font-size: 24px;
+        font-size: 20px;
         line-height: 150.52%;
         text-align: center;
         letter-spacing: 0.08em;

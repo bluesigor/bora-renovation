@@ -44,8 +44,11 @@ const GallerySection = () => {
                   buttonName: "Step to gallery",
                 });
               }}
-              className="modal-form__submit-block-butn">
-              <span className="modal-form__submit-block-butn-txt">
+              style={{
+                marginTop: "20px",
+              }}
+              className="aboutus-content-desc-more__btn">
+              <span className="aboutus-content-desc-more__btn-txt">
                 View full gallery
               </span>
             </Link>
@@ -96,8 +99,8 @@ const GallerySection = () => {
                 buttonName: "Step to gallery",
               });
             }}
-            className="modal-form__submit-block-butn">
-            <span className="modal-form__submit-block-butn-txt">
+            className="aboutus-content-desc-more__btn">
+            <span className="aboutus-content-desc-more__btn-txt">
               View full gallery
             </span>
           </Link>

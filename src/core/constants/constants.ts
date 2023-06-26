@@ -16,6 +16,12 @@ import cleaning from "../../assets/images/process/cleaning.svg";
 
 export const benefits: General.Benefits[] = [
   {
+    id: 5,
+    title: "Experienced technicians",
+    desc: "High level of knowledge and attention to details. Your satisfaction is top priority",
+    icon: technicans,
+  },
+  {
     id: 1,
     title: "Professional equipment",
     desc: "Doors and cabinet base will be sprayed (no brushes and rollers used)",
@@ -38,12 +44,6 @@ export const benefits: General.Benefits[] = [
     title: "The proper materials",
     desc: "Products created for cabinet manufacturing industries (no cheap store paint)",
     icon: materials,
-  },
-  {
-    id: 5,
-    title: "Experienced technicians",
-    desc: "High level of knowledge and attention to details. Your satisfaction is top priority",
-    icon: technicans,
   },
   {
     id: 6,

@@ -214,7 +214,7 @@
     &-btn {
       padding: 24px 33px 25px 32px;
       width: 250px;
-      background: $primary;
+      background: $blue-accent;
       box-shadow: 6px 7px 10px rgba(0, 0, 0, 0.25);
       border-radius: 20px;
       border: none;
@@ -225,7 +225,7 @@
         line-height: 135.68%;
         letter-spacing: 0.08em;
         text-transform: uppercase;
-        color: $blue-accent;
+        color: $primary;
         white-space: nowrap;
         @include onMobile {
           white-space: nowrap;

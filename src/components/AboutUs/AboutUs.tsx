@@ -85,7 +85,7 @@ const AboutUs = () => {
             controls
             id="video-player"
             ref={videoRef}
-            poster={require("../../assets/images/about/poster.JPG")}
+            poster={require("../../assets/images/about/new-poster.PNG")}
             className="aboutus-content-media__mov"
             loop>
             <source src={about} type="video/mp4" />

@@ -1,9 +1,5 @@
-import useMeasures from "../../core/hooks/useMeasures";
-
 const Offers = () => {
   // const [isMore, setIsMore] = useState(false);
-
-  const { innerWidth } = useMeasures();
 
   // const showMore = () => {
   //   if (isMore) {
@@ -22,7 +18,7 @@ const Offers = () => {
       )} */}
       <div className="offers-title">
         <h6 className="offers-title__txt">
-          What's right for my cabinet kitchen?
+          What's right for my kitchen cabinet?
         </h6>
       </div>
       <div className="offers-main">
@@ -60,7 +56,7 @@ const Offers = () => {
         <div className="offers-main-block">
           <h6 className="offers-main-block__title">Refinishing</h6>
           <ul className="offers-main-block-list">
-            <li>
+            <li id="first-list">
               <span>
                 I like the style of the existing doors and drawer fronts. I just
                 want to change the color of my cabinets.
@@ -109,24 +105,24 @@ const Offers = () => {
       <div className="offers-more">
         {/* {isMore && ( */}
         <div className="offers-more-block">
-          <h6 className="offers-more-block__title">
+          {/* <h6 className="offers-more-block__title">
             Available with
             {innerWidth < 768 ? (
               <>
                 {" "}
                 <br />
-                refinishing and refacing:
+                refinishing and refacing
               </>
             ) : (
-              <>refinishing and refacing:</>
+              <>refinishing and refacing</>
             )}
-          </h6>
+          </h6> */}
           <ul className="offers-more-block-list">
             <li>
-              <span>
-                New hardware, accent pieces, trims and crown molding
-                installation.
-              </span>
+              <span>New hardware installation.</span>
+            </li>
+            <li>
+              <span>Accent pieces and crown molding installation.</span>
             </li>
             <li>
               <span>New countertop and backsplash installation.</span>

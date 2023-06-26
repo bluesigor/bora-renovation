@@ -14,7 +14,7 @@
     margin-top: -100px;
     padding-left: 15px;
     padding-right: 15px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
   &-header {
     display: flex;
@@ -201,20 +201,22 @@
 }
 
 .mob-process {
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
   height: 450px;
   background-color: #ffffff;
+
   &::-webkit-scrollbar {
-    background: #dadada;
-    border-radius: 100px;
-    height: 12px;
+    // background: #dadada;
+    // border-radius: 100px;
+    // height: 12px;
+    display: none;
   }
-  &::-webkit-scrollbar-thumb {
-    width: 65px;
-    background: $quote-accent;
-    border-radius: 100px;
-  }
+  // &::-webkit-scrollbar-thumb {
+  //   width: 65px;
+  //   background: $quote-accent;
+  //   border-radius: 100px;
+  // }
   &-list {
     display: flex;
     flex-direction: row;

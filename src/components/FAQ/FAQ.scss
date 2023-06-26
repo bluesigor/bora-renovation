@@ -9,12 +9,18 @@
   @include onMobile {
     padding: 15px;
     padding-bottom: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
   &-header {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-bottom: 71px;
+    @include onMobile {
+      margin-bottom: 31px;
+    }
     &__txt {
       font-family: "Raleway";
       font-style: normal;
@@ -44,14 +50,15 @@
       max-height: 700px;
       gap: 20px;
       margin-bottom: 20px;
-      border-top: 2px solid $faq-accent;
-      border-bottom: 2px solid $faq-accent;
+      // border-top: 2px solid $faq-accent;
+      // border-bottom: 2px solid $faq-accent;
       padding-top: 5px;
       padding-bottom: 5px;
       &::-webkit-scrollbar {
         background: #dadada;
         border-radius: 100px;
         height: 12px;
+        display: none;
       }
       &::-webkit-scrollbar-thumb {
         width: 65px;
@@ -74,12 +81,12 @@
       justify-content: center;
       align-items: center;
       @include onMobile {
-        min-width: 345px;
+        width: 345px;
         padding: 20px 22px;
         height: 101px;
       }
       &__show {
-        background: linear-gradient(180.24deg, #e2e1e1 -40.8%, $primary 99.79%);
+        background: #f7f6f6;
         border: 2px solid $scrollbar-reviews;
         box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
         height: max-content;
