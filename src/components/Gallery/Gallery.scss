@@ -69,7 +69,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 63px;
+    margin-bottom: 60px;
     @include onMobile {
       margin-bottom: 31px;
     }
@@ -106,24 +106,12 @@
         letter-spacing: 0.05em;
         text-transform: uppercase;
         color: $reviews-accent;
-        margin-bottom: 40px;
-        // background: linear-gradient(180deg, #065a97 0%, #012f50 100%);
-        // -webkit-background-clip: text;
-        // -webkit-text-fill-color: transparent;
-        // background-clip: text;
-        // text-fill-color: transparent;
         @include onMobile {
           font-family: "Montserrat";
           font-size: 24px;
           text-align: center;
           font-weight: 700;
           letter-spacing: 0.04em;
-          margin-bottom: 10px;
-          // background: linear-gradient(180deg, #065a97 0%, #012f50 100%);
-          // -webkit-background-clip: text;
-          // -webkit-text-fill-color: transparent;
-          // background-clip: text;
-          // text-fill-color: transparent;
         }
       }
     }
@@ -153,7 +141,7 @@
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      gap: 30px;
+      gap: 23px;
       &__item {
         border: 1px solid $scrollbar-reviews;
         display: flex;

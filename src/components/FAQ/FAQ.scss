@@ -81,9 +81,8 @@
       justify-content: center;
       align-items: center;
       @include onMobile {
-        width: 345px;
         padding: 20px 22px;
-        height: 101px;
+        height: 70px;
       }
       &__show {
         background: #f7f6f6;

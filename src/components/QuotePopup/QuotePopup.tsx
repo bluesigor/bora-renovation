@@ -1,12 +1,43 @@
 import { useForm } from "@formspree/react";
+import * as Yup from "yup";
+import { useFormik } from "formik";
 
 import { useAppContext } from "../../context/AppContext";
 import close from "../../assets/images/quote/close-icon.svg";
 import { toast } from "react-hot-toast";
 
 const QuotePopup = () => {
-  const [state, handleSubmit] = useForm("xyyarpqp");
+  const [state, handleSubmit] = useForm("mqkoqvra");
+  // "xyyarpqp"
   const { isModalOpen, closeModal, modalType } = useAppContext();
+
+  const valueFormValidationSchema = Yup.object().shape({
+    full_name: Yup.string().required("This field is required"),
+    email: Yup.string()
+      .required("This field is required")
+      .email("Invalid email"),
+    phone: Yup.number()
+      .required("This field is required")
+      .min(9, "Provide your phone number"),
+  });
+
+  const formikForm = useFormik<{
+    full_name: string;
+    email: string;
+    phone: string;
+    text: string;
+  }>({
+    initialValues: {
+      full_name: "",
+      email: "",
+      phone: "",
+      text: "",
+    },
+    validationSchema: valueFormValidationSchema,
+    onSubmit: async (values: any) => {
+      handleSubmit(values);
+    },
+  });
 
   if (isModalOpen && modalType === "quote") {
     if (state.succeeded) {
@@ -17,6 +48,7 @@ const QuotePopup = () => {
         <div className="quote-modal-content">
           <div className="quote-modal-content-top">
             <button
+              type="button"
               onClick={closeModal}
               className="quote-modal-content-top__btn-close">
               <img src={close} alt="close" />
@@ -29,37 +61,52 @@ const QuotePopup = () => {
             </p>
           </div>
           <form
-            action="https://formspree.io/f/xyyarpqp"
-            onSubmit={handleSubmit}
+            action="https://formspree.io/f/mqkoqvra"
+            onSubmit={formikForm.handleSubmit}
             className="quote-modal-content__modal-form modal-form">
             <div className="modal-form-inputs">
-              <input
-                id="name"
-                name="First Name"
-                type="text"
-                placeholder="First Name"
-                className="modal-form-inputs__item"
-              />
-              <input
-                id="number"
-                name="Phone number"
-                type="text"
-                placeholder="Phone number"
-                className="modal-form-inputs__item"
-              />
-              <input
-                id="email"
-                name="email"
-                type="email"
-                placeholder="e-mail"
-                className="modal-form-inputs__item"
-              />
+              <label className="inp-wrap">
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="First Name"
+                  className="modal-form-inputs__item"
+                  {...formikForm.getFieldProps("full_name")}
+                />
+                {formikForm.errors.full_name && formikForm.errors.full_name && (
+                  <p className="error-msg">{formikForm.errors.full_name}</p>
+                )}
+              </label>
+              <label className="inp-wrap">
+                <input
+                  id="number"
+                  type="number"
+                  placeholder="Phone number"
+                  className="modal-form-inputs__item"
+                  {...formikForm.getFieldProps("phone")}
+                />
+                {formikForm.errors.phone && formikForm.errors.phone && (
+                  <p className="error-msg">{formikForm.errors.phone}</p>
+                )}
+              </label>
+              <label className="inp-wrap">
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="e-mail"
+                  className="modal-form-inputs__item"
+                  {...formikForm.getFieldProps("email")}
+                />
+                {formikForm.errors.email && formikForm.errors.email && (
+                  <p className="error-msg">{formikForm.errors.email}</p>
+                )}
+              </label>
             </div>
             <textarea
               id="message"
-              name="message"
               className="modal-form__review"
               placeholder="MESSAGE..."
+              {...formikForm.getFieldProps("text")}
             />
             <div className="modal-form__submit-block">
               <button

@@ -2,12 +2,12 @@
 @import "../../styles/vars.scss";
 
 .policy {
-  padding: 123px 70px 52px 70px;
+  padding: 123px 70px 0px 70px;
   display: flex;
   flex-direction: column;
   gap: 50px;
   @include onMobile {
-    padding: 0px 15px 20px;
+    padding: 0px 15px 0px;
     margin-top: -10px;
     gap: 40px;
   }
@@ -160,6 +160,7 @@
   @include onMobile {
     padding: 20px 15px 40px;
     margin: 0px -15px;
+    z-index: 1;
   }
   &__title {
     font-family: "Bold Montserrat";

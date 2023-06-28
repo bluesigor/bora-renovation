@@ -47,7 +47,6 @@
     }
     @include onMobile {
       flex-direction: column-reverse;
-      padding: 0px 12px;
     }
     &-desc {
       flex: 1;
@@ -81,11 +80,12 @@
           border: none;
           background: none;
           border-bottom: 1px solid $faq-accent;
+          cursor: pointer;
           &-txt {
             margin-left: -5px;
             font-family: "Montserrat";
             font-style: normal;
-            font-weight: 300;
+            font-weight: 500;
             font-size: 24px;
             line-height: 150.52%;
             display: flex;
@@ -93,7 +93,6 @@
             letter-spacing: 0.04em;
             color: $faq-accent;
             @include onMobile {
-              font-weight: 300;
               font-size: 15px;
             }
           }
@@ -177,7 +176,7 @@
           max-height: 330px;
         }
         @include onMobile {
-          max-width: 375px;
+          max-width: 400px;
           height: 259px;
           border-radius: 20px;
         }

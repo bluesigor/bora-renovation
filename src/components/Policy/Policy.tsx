@@ -38,12 +38,17 @@ const Policy = () => {
           committed to protecting your personal information and your right to
           privacy. If you have additional questions or require more information
           about our Privacy Policy, do not hesitate to contact us at{" "}
-          <a
-            className="policy-head__subtitle-link"
-            href="mailto:info@borarenovation.com">
-            info@borarenovation.com
-          </a>{" "}
-          .
+          <span
+            style={{
+              whiteSpace: "nowrap",
+            }}>
+            <a
+              className="policy-head__subtitle-link"
+              href="mailto:info@borarenovation.com">
+              info@borarenovation.com
+            </a>{" "}
+            .
+          </span>
         </p>
       </div>
       {/* <div className="policy-comunicate">

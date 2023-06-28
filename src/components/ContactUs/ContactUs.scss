@@ -14,16 +14,16 @@
   padding-top: 150px;
 
   @media (max-width: 1440px) {
-    height: 185vh;
+    height: 200vh;
     padding-top: 400px;
   }
   @media (max-width: 1100px) {
-    height: 160vh;
+    height: 175vh;
     padding-top: 410px;
   }
   @include onMobile {
     padding-bottom: 10vh;
-    height: 75vh;
+    height: 115vh;
     align-items: flex-end;
   }
   &-wrapper {
@@ -92,7 +92,7 @@
         &__item {
           display: flex;
           flex-direction: row;
-          gap: 5px;
+          gap: 17px;
           align-items: center;
           width: 300px;
           @media (max-width: 1200px) {
@@ -117,7 +117,7 @@
             }
           }
           & > img {
-            width: 40px;
+            width: 35px;
             @include onMobile {
               width: 29px;
             }
@@ -140,7 +140,7 @@
             }
           }
           & > img {
-            width: 40px;
+            width: 35px;
             @include onMobile {
               width: 29px;
             }
@@ -162,7 +162,7 @@
             }
           }
           & > img {
-            width: 40px;
+            width: 35px;
             @include onMobile {
               max-width: 29px;
             }
@@ -172,22 +172,16 @@
       &__footer {
         display: flex;
         align-items: center;
-        flex-direction: column;
+        flex-direction: row;
         gap: 20px;
         &-title {
-          font-family: "Inter";
-          font-style: italic;
+          font-family: "Medium Inter";
           font-size: 24px;
-          font-weight: 400;
           line-height: 39px;
           text-align: center;
           letter-spacing: 0.055em;
           text-transform: uppercase;
-          background: linear-gradient(180deg, #065a97 0%, #012f50 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          text-fill-color: transparent;
+          color: $scrollbar-reviews;
           @include onMobile {
             font-size: 16px;
             line-height: 19px;

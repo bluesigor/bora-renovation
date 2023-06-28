@@ -26,7 +26,7 @@ const Header = () => {
   return (
     <header
       style={{
-        height: innerWidth < 768 ? (isOpen ? "461px" : "240px") : "175px",
+        height: innerWidth < 768 ? (isOpen ? "461px" : "210px") : "175px",
       }}
       className="bora-header">
       <Link to="/">
@@ -187,7 +187,7 @@ const Header = () => {
               <button
                 onClick={() => {
                   closeHamb();
-                  handleScroll(1900);
+                  handleScroll(1500);
                 }}
                 className="navbar-moblist__item">
                 About us
@@ -210,7 +210,7 @@ const Header = () => {
               <button
                 onClick={() => {
                   closeHamb();
-                  handleScroll(2700);
+                  handleScroll(2100);
                 }}
                 className="navbar-moblist__item">
                 our process
@@ -243,7 +243,7 @@ const Header = () => {
               <button
                 onClick={() => {
                   closeHamb();
-                  handleScroll(4900);
+                  handleScroll(4200);
                 }}
                 className="navbar-moblist__item">
                 FAQ’s
@@ -265,7 +265,7 @@ const Header = () => {
               <button
                 onClick={() => {
                   closeHamb();
-                  handleScroll(7700);
+                  handleScroll(6400);
                 }}
                 className="navbar-moblist__item">
                 Contact us

@@ -93,7 +93,7 @@ const Footer = () => {
                 window.location.pathname.includes("/privacy-policy")
                   ? navigate("/")
                   : innerWidth < 768
-                  ? window.scrollTo(0, 6850)
+                  ? window.scrollTo(0, 6350)
                   : window.scrollTo(0, 7600)
               }>
               Contact us

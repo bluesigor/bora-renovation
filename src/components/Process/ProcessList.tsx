@@ -68,7 +68,7 @@ const ProcessList = () => {
               delayTime={100}
               height={194}
               alt={cleaning}
-              src={require("../../assets/images/process/clean.JPG")}
+              src={cleaning}
             />
           </div>
           <div

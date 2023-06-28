@@ -16,7 +16,7 @@ const WelcomeBanner = () => {
         <div className="welcome-banner-title">
           {innerWidth > 1025 && (
             <h1 className="welcome-banner-title__txt">
-              Professional Kitchen Cabinet Refinishing and Refacing
+              Professional Kitchen Cabinet <br /> Refinishing and Refacing
             </h1>
           )}
           {/* <h4 className="welcome-banner-title__subtxt">
@@ -39,8 +39,7 @@ const WelcomeBanner = () => {
         <div className="welcome-banner-wrapper-outer">
           {innerWidth < 768 && (
             <h4 className="welcome-banner-wrapper-outer__inner">
-              PROFESSIONAL <br /> KITCHEN CABINET <br /> REFINISHING AND
-              REFACING
+              PROFESSIONAL KITCHEN CABINET <br /> REFINISHING AND REFACING
             </h4>
           )}
           {/* {innerWidth > 768 && (
