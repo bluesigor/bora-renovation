@@ -127,7 +127,7 @@
   &__review {
     resize: none;
     border: 1px solid $quote-accent;
-    padding: 27px 31px;
+    padding: 20px 21px 27px 10px;
     min-height: 155px;
     overflow: hidden;
     margin-bottom: 30px;
@@ -163,6 +163,9 @@
         border-radius: 20px;
         @include onMobile {
           height: 69px;
+        }
+        &-not-active {
+          background-color: #888;
         }
         &:active {
           background: $blue-accent;

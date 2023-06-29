@@ -5,6 +5,7 @@ import { useFormik } from "formik";
 import { useAppContext } from "../../context/AppContext";
 import close from "../../assets/images/quote/close-icon.svg";
 import { toast } from "react-hot-toast";
+import classNames from "classnames";
 
 const QuotePopup = () => {
   const [state, handleSubmit] = useForm("xyyarpqp");
@@ -115,7 +116,11 @@ const QuotePopup = () => {
                 }
                 disabled={state.submitting}
                 type="submit"
-                className="modal-form__submit-block-btn">
+                className={classNames({
+                  "modal-form__submit-block-btn": true,
+                  "modal-form__submit-block-btn-not-active":
+                    !formikForm.isValid,
+                })}>
                 <span className="modal-form__submit-block-btn-txt">
                   Get a qoute
                 </span>

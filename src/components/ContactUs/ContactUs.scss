@@ -11,7 +11,7 @@
   align-items: center;
   padding-bottom: 85px;
   height: 125vh;
-  padding-top: 150px;
+  padding-top: 400px;
 
   @media (max-width: 1440px) {
     height: 200vh;
@@ -23,7 +23,7 @@
   }
   @include onMobile {
     padding-bottom: 10vh;
-    height: 115vh;
+    height: 85vh;
     align-items: flex-end;
   }
   &-wrapper {

@@ -125,6 +125,7 @@
         padding-bottom: 5px;
         @include onMobile {
           font-size: 20px;
+          padding-left: 0px;
         }
       }
       &-list {
@@ -135,7 +136,8 @@
         width: 100%;
         @include onMobile {
           gap: 15px;
-          padding-left: 10px;
+          padding-left: 0px;
+          align-items: center;
         }
         & > li {
           width: 550px;
@@ -176,6 +178,8 @@
         margin-bottom: 16px;
         @include onMobile {
           font-size: 14px;
+
+          padding: 0px 10px;
         }
       }
     }
@@ -222,7 +226,7 @@
           width: 1240px;
         }
         @include onMobile {
-          font-size: 21px;
+          font-size: 20px;
         }
       }
       &-list {
@@ -236,7 +240,7 @@
         & > li {
           list-style: none;
           & > span {
-            font-family: "Medium Inter";
+            font-family: "Inter";
             font-style: normal;
             font-size: 20px;
             line-height: 21px;

@@ -70,7 +70,7 @@
           #fff 24.35%,
           rgba(255, 255, 255, 0) 66.85%
         ),
-        url("../../assets/images/welcome/mob_welcome_second.JPG"), lightgray 50%;
+        url("../../assets/images/welcome/mob_welcome_first.JPG"), lightgray 50%;
       min-height: 276px;
       border-radius: 20px;
       background-size: cover !important;
@@ -103,7 +103,7 @@
         color: $scrollbar-reviews;
         text-shadow: 1px 1px 1px rgba(245, 245, 245, 245.25);
         @include onMobile {
-          font-weight: 500;
+          font-weight: 600;
           font-size: 20px;
           letter-spacing: 0.04em;
           color: #065a97;
