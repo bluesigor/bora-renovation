@@ -14,7 +14,7 @@
   @include onMobile {
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 25px;
+    padding-top: 0px;
     margin-bottom: 140px;
   }
   &-header {
@@ -22,17 +22,16 @@
     justify-content: center;
     margin-bottom: 30px;
     &__title {
-      font-family: "Raleway";
+      font-family: "Medium Inter";
       font-style: normal;
-      font-weight: 500;
-      font-size: 40px;
+      font-size: 48px;
       line-height: 150.52%;
       letter-spacing: 0.105em;
       text-transform: uppercase;
       color: $scrollbar-reviews;
       @include onMobile {
+        font-family: "Semi Inter";
         font-size: 24px;
-        font-weight: 600;
       }
     }
   }

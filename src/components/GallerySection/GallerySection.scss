@@ -14,10 +14,9 @@
       margin-bottom: 30px;
     }
     &__txt {
-      font-family: "Raleway";
+      font-family: "Medium Inter";
       font-style: normal;
-      font-weight: 500;
-      font-size: 40px;
+      font-size: 48px;
       line-height: 150.52%;
       text-align: center;
       letter-spacing: 0.105em;
@@ -25,8 +24,7 @@
       color: #000000;
       @include onMobile {
         font-size: 24px;
-        font-family: "Inter";
-        font-weight: 600;
+        font-family: "Semi Inter";
       }
     }
   }
@@ -154,6 +152,21 @@
           max-width: 467px;
           height: 576px;
         }
+      }
+    }
+    &-images {
+      @include onMobile {
+        display: none;
+      }
+      max-width: 600px;
+      display: grid;
+
+      grid-template-columns: repeat(2, 300px);
+      grid-template-rows: repeat(2, 300px);
+      row-gap: 20px;
+      column-gap: 20px;
+      & > img {
+        max-width: 300px;
       }
     }
   }

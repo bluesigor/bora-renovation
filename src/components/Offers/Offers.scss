@@ -1,10 +1,7 @@
 @import "../../styles/mixins.scss";
 @import "../../styles/vars.scss";
 .offers {
-  background-image: url("../../assets/images/offers/offers-bckg.svg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  position: relative;
   min-height: 629px;
   padding-top: 53px;
   padding-bottom: 67px;
@@ -12,8 +9,23 @@
   padding-right: 69px;
   display: flex;
   flex-direction: column;
+  &:before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("../../assets/images/welcome/mob_welcome_second.JPG");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    z-index: -1;
+    opacity: 0.65;
+  }
   @include onMobile {
-    background-image: url("../../assets/images/offers/offers-banner-mob.svg");
     padding-top: 47px;
     padding-bottom: 51px;
     background-position: center;
@@ -24,6 +36,8 @@
     padding-right: 15px;
   }
   &-new {
+    filter: none;
+    -webkit-filter: none;
     width: 100%;
     margin-bottom: 64px;
     height: 112px;
@@ -54,25 +68,22 @@
     }
     &__txt {
       width: max-content;
-      font-family: "Semi Montserrat";
+      font-family: "Semi Inter";
       font-style: normal;
-      font-weight: 600;
       font-size: 52px;
       line-height: 150.52%;
       letter-spacing: 0.04em;
       text-transform: uppercase;
-      color: $blue-accent;
+      color: $scrollbar-reviews;
       text-align: center;
       @include onMobile {
         text-align: center;
-        font-family: "Inter";
-        font-weight: 600;
+        font-family: "Semi Inter";
         font-style: normal;
         font-size: 24px;
         line-height: 150.52%;
         letter-spacing: 0.105em;
         text-transform: uppercase;
-        color: $blue-accent;
       }
     }
   }
@@ -123,6 +134,12 @@
         color: $scrollbar-reviews;
         border-bottom: 1px solid $scrollbar-reviews;
         padding-bottom: 5px;
+        // text-shadow: 1px 1px 1px rgba(235, 250, 245, 0.75);
+        background: linear-gradient(180deg, #065a97 0%, #012f50 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
         @include onMobile {
           font-size: 20px;
           padding-left: 0px;
@@ -160,6 +177,7 @@
             line-height: 21px;
             letter-spacing: 0.01em;
             color: $scrollbar-reviews;
+            text-shadow: 1px 1px 1px rgba(235, 250, 245, 0.75);
             @include onMobile {
               font-size: 14px;
             }
@@ -176,6 +194,7 @@
         color: $scrollbar-reviews;
         text-align: center;
         margin-bottom: 16px;
+        text-shadow: 1px 1px 1px rgba(235, 250, 245, 0.75);
         @include onMobile {
           font-size: 14px;
 
@@ -186,6 +205,7 @@
   }
   &-more {
     border: 1px solid $scrollbar-reviews;
+    border-top: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -217,11 +237,17 @@
         text-align: center;
         letter-spacing: 0.04em;
         text-transform: uppercase;
-        color: $scrollbar-reviews;
+        // color: $scrollbar-reviews;
         padding-top: 5px;
         padding-bottom: 5px;
         border-bottom: 1px solid $scrollbar-reviews;
         max-width: 1240px;
+        // text-shadow: 1px 1px 1px rgba(235, 250, 245, 0.75);
+        background: linear-gradient(180deg, #065a97 0%, #012f50 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
         @media (min-width: 1390px) {
           width: 1240px;
         }
@@ -245,11 +271,12 @@
             font-size: 20px;
             line-height: 21px;
             letter-spacing: 0.01em;
-            color: $reviews-accent;
+            color: $scrollbar-reviews;
+            text-shadow: 1px 1px 1px rgba(235, 250, 245, 0.75);
             @include onMobile {
               text-align: center;
               @include onMobile {
-                font-size: 16px;
+                font-size: 14px;
               }
             }
           }

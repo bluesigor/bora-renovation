@@ -16,20 +16,19 @@
     justify-content: center;
     margin-bottom: 60px;
     @include onMobile {
-      margin-bottom: 57px;
+      margin-bottom: 30px;
     }
     &__title {
-      font-family: "Medium Raleway";
+      font-family: "Medium Inter";
       font-style: normal;
-      font-weight: 500;
-      font-size: 40px;
+      font-size: 48px;
       line-height: 150.52%;
       text-align: center;
       letter-spacing: 0.105em;
       text-transform: uppercase;
       color: $scrollbar-reviews;
       @include onMobile {
-        font-family: "Semi Raleway";
+        font-family: "Semi Inter";
         font-size: 24px;
         max-width: 345px;
       }

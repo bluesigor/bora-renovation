@@ -11,7 +11,7 @@
       padding-right: 15px;
       padding-top: 40px;
       padding-bottom: 0px;
-      gap: 13px;
+      gap: 20px;
       align-items: center;
       box-shadow: none;
       flex-direction: column;
@@ -133,6 +133,9 @@
 }
 
 .navbar {
+  @include onMobile {
+    display: none;
+  }
   &-moblist {
     display: none;
     align-items: center;

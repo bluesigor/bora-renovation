@@ -1,11 +1,12 @@
 import { useForm } from "@formspree/react";
 import * as Yup from "yup";
 import { useFormik } from "formik";
-
-import { useAppContext } from "../../context/AppContext";
-import close from "../../assets/images/quote/close-icon.svg";
 import { toast } from "react-hot-toast";
 import classNames from "classnames";
+
+import { useAppContext } from "../../context/AppContext";
+
+import close from "../../assets/images/quote/close-icon.svg";
 
 const QuotePopup = () => {
   const [state, handleSubmit] = useForm("xyyarpqp");
@@ -17,9 +18,9 @@ const QuotePopup = () => {
     email: Yup.string()
       .required("This field is required")
       .email("Invalid email"),
-    phone: Yup.number()
+    phone: Yup.string()
       .required("This field is required")
-      .min(9, "Provide your phone number"),
+      .min(9, "Minimum 9 digits"),
   });
 
   const formikForm = useFormik<{
@@ -66,7 +67,7 @@ const QuotePopup = () => {
             onSubmit={formikForm.handleSubmit}
             className="quote-modal-content__modal-form modal-form">
             <div className="modal-form-inputs">
-              <label className="inp-wrap">
+              <label className="inp-wrapper">
                 <input
                   id="name"
                   type="text"
@@ -78,7 +79,7 @@ const QuotePopup = () => {
                   <p className="error-msg">{formikForm.errors.full_name}</p>
                 )}
               </label>
-              <label className="inp-wrap">
+              <label className="inp-wrapper">
                 <input
                   id="number"
                   type="number"
@@ -90,7 +91,7 @@ const QuotePopup = () => {
                   <p className="error-msg">{formikForm.errors.phone}</p>
                 )}
               </label>
-              <label className="inp-wrap">
+              <label className="inp-wrapper">
                 <input
                   id="email"
                   type="email"
@@ -112,6 +113,7 @@ const QuotePopup = () => {
             <div className="modal-form__submit-block">
               <button
                 onClick={() =>
+                  state.succeeded &&
                   toast("Thank you! We will get back to you shortly")
                 }
                 disabled={state.submitting}

@@ -20,18 +20,20 @@
     display: flex;
     justify-content: center;
     margin-bottom: 60px;
+    @include onMobile {
+      margin-bottom: 30px;
+    }
     &__title {
-      font-family: "Raleway";
+      font-family: "Medium Inter";
       font-style: normal;
-      font-weight: 500;
-      font-size: 40px;
+      font-size: 48px;
       line-height: 150.52%;
       letter-spacing: 0.105em;
       text-transform: uppercase;
       color: $scrollbar-reviews;
       @include onMobile {
         text-align: center;
-        font-weight: 600;
+        font-family: "Semi Inter";
         font-size: 24px;
       }
     }
@@ -263,14 +265,16 @@
         font-style: normal;
         font-size: 16px;
         line-height: 140.02%;
-        text-transform: uppercase;
-        background: linear-gradient(180deg, #065a97 0%, #012f50 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
         text-align: center;
-        letter-spacing: 0.04e;
+        text-transform: uppercase;
+        // background: linear-gradient(180deg, #065a97 0%, #012f50 100%);
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+        // background-clip: text;
+        // text-fill-color: transparent;
+        letter-spacing: 0.04;
+        color: $blue-accent;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
         &__active {
           background: linear-gradient(93.35deg, #ffda55 3.71%, #ffaa2c 98.84%);
           -webkit-background-clip: text;

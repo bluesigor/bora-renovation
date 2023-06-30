@@ -1,10 +1,41 @@
 import { useForm } from "@formspree/react";
+import * as Yup from "yup";
+import { useFormik } from "formik";
+import { toast } from "react-hot-toast";
 
 import online from "../../assets/images/questions/online.svg";
 import mob_online from "../../assets/images/questions/mob-online.svg";
 
 const QuestionsBanner = () => {
   const [state, handleSubmit] = useForm("xyyarpqp");
+
+  const valueFormValidationSchema = Yup.object().shape({
+    full_name: Yup.string().required("This field is required"),
+    email: Yup.string()
+      .required("This field is required")
+      .email("Invalid email"),
+    phone: Yup.string()
+      .required("This field is required")
+      .min(9, "Minimum 9 digits"),
+  });
+
+  const formikForm = useFormik<{
+    full_name: string;
+    email: string;
+    phone: string;
+    text: string;
+  }>({
+    initialValues: {
+      full_name: "",
+      email: "",
+      phone: "",
+      text: "",
+    },
+    validationSchema: valueFormValidationSchema,
+    onSubmit: async (values: any) => {
+      handleSubmit(values);
+    },
+  });
 
   return (
     <section className="quest">
@@ -45,18 +76,50 @@ const QuestionsBanner = () => {
           <div className="quest-banner-bottom-wrapper">
             <form
               action="https://formspree.io/f/xyyarpqp"
-              onSubmit={handleSubmit}
+              onSubmit={formikForm.handleSubmit}
               className="quest-banner-bottom-form">
               <div className="quest-banner-bottom-form-inputs">
-                <input type="text" placeholder="Name" id="name" name="Name" />
-                <input type="text" placeholder="Phone" id="name" name="Phone" />
-                <input
-                  type="text"
-                  placeholder="E-mail*"
-                  id="name"
-                  name="Email"
-                />
+                <label className="inp-wrapper">
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    id="name"
+                    {...formikForm.getFieldProps("full_name")}
+                  />
+                  {formikForm.errors.full_name &&
+                    formikForm.errors.full_name && (
+                      <p className="error-massage">
+                        {formikForm.errors.full_name}
+                      </p>
+                    )}
+                </label>
+                <label className="inp-wrapper">
+                  <input
+                    type="number"
+                    placeholder="Phone"
+                    id="name"
+                    {...formikForm.getFieldProps("phone")}
+                  />
+                  {formikForm.errors.phone && formikForm.errors.phone && (
+                    <p className="error-massage">{formikForm.errors.phone}</p>
+                  )}
+                </label>
+                <label className="inp-wrapper">
+                  <input
+                    type="text"
+                    placeholder="E-mail*"
+                    id="name"
+                    {...formikForm.getFieldProps("email")}
+                  />
+                  {formikForm.errors.email && formikForm.errors.email && (
+                    <p className="error-massage">{formikForm.errors.email}</p>
+                  )}
+                </label>
                 <button
+                  onClick={() =>
+                    state.succeeded &&
+                    toast("Thank you! We will get back to you shortly")
+                  }
                   disabled={state.submitting}
                   type="submit"
                   className="quest-banner-bottom-form-inputs__submit-mob">
@@ -70,11 +133,6 @@ const QuestionsBanner = () => {
                     alt="online"
                     className="quest-banner-bottom-form-control-logo"
                   />
-                  {/* <img
-                    src={mob_online}
-                    alt="mob_online"
-                    className="quest-banner-bottom-form-control-moblogo"
-                  /> */}
                   <button
                     className="quest-banner-bottom-form-control__submit"
                     type="submit">

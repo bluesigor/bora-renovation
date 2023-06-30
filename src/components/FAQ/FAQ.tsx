@@ -30,14 +30,7 @@ const FAQ = () => {
               "faq-questions-entity": true,
               "faq-questions-entity__show": show && index === indexNum,
             })}>
-            {/* <div className="faq-questions-entity-inner"> */}
             <p className="faq-questions-entity__title">{quest.title}</p>
-            {/* <img
-                src={arrow_down}
-                alt="arrow_up"
-                className="faq-questions-entity-inner__arrow"
-              /> */}
-            {/* </div> */}
             <p className="faq-questions-entity__desc">{quest.desc}</p>
           </div>
         ))}
@@ -55,7 +48,15 @@ const FAQ = () => {
                   "faq-questions-entity": true,
                   "faq-questions-entity__show": show && index + 4 === indexNum,
                 })}>
-                <p className="faq-questions-entity__title">{quest.title}</p>
+                {quest.id === 10 ? (
+                  <p className="faq-questions-entity__title">
+                    {quest.title.split(" ").slice(0, 7).join(" ")}
+                    <br />
+                    {quest.title.split(" ").slice(7).join(" ")}
+                  </p>
+                ) : (
+                  <p className="faq-questions-entity__title">{quest.title}</p>
+                )}
 
                 {quest.id === 12 ? (
                   <p className="faq-questions-entity__desc">

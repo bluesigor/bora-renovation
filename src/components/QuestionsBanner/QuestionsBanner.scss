@@ -125,7 +125,7 @@
           justify-content: space-between;
         }
         &__title {
-          font-family: "Bold Montserrat";
+          font-family: "Bold Inter";
           font-style: normal;
           font-size: 36px;
           line-height: 130.4%;
@@ -136,7 +136,7 @@
           color: $primary;
           @include onMobile {
             max-width: 190px;
-            font-family: "Medium Raleway";
+            font-family: "Semi Inter";
             font-size: 24px;
             line-height: 150.52%;
             letter-spacing: 0.105em;
@@ -183,29 +183,13 @@
             gap: 15px;
             align-items: center;
           }
-          & > input {
-            padding: 12px 31px;
-            border-radius: 20px;
-            border: none;
-            height: 60px;
-            @include onMobile {
-              font-family: "Montserrat";
-              font-style: normal;
-              font-weight: 400;
-              font-size: 16px;
-              line-height: 150.52%;
-              letter-spacing: 0.04em;
-              color: $scrollbar-reviews;
-              height: 50px;
-              width: 100%;
-            }
-            &::-webkit-input-placeholder {
-              font-family: "Light Montserrat";
-              font-style: normal;
-              font-size: 24px;
-              line-height: 150.52%;
-              letter-spacing: 0.04em;
-              color: #807f7f;
+          & > label {
+            & > input {
+              padding: 12px 31px;
+              border-radius: 20px;
+              border: none;
+              height: 60px;
+              outline: none;
               @include onMobile {
                 font-family: "Montserrat";
                 font-style: normal;
@@ -213,6 +197,25 @@
                 font-size: 16px;
                 line-height: 150.52%;
                 letter-spacing: 0.04em;
+                color: $scrollbar-reviews;
+                height: 50px;
+                width: 100%;
+              }
+              &::-webkit-input-placeholder {
+                font-family: "Light Montserrat";
+                font-style: normal;
+                font-size: 24px;
+                line-height: 150.52%;
+                letter-spacing: 0.04em;
+                color: #807f7f;
+                @include onMobile {
+                  font-family: "Montserrat";
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 16px;
+                  line-height: 150.52%;
+                  letter-spacing: 0.04em;
+                }
               }
             }
           }
@@ -314,4 +317,14 @@
       }
     }
   }
+}
+.inp-wrapper {
+  position: relative;
+}
+.error-massage {
+  position: absolute;
+  bottom: -10px;
+  color: red;
+  font-family: "Inter";
+  font-size: 10px;
 }

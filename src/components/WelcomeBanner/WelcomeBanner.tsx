@@ -16,12 +16,9 @@ const WelcomeBanner = () => {
         <div className="welcome-banner-title">
           {innerWidth > 1025 && (
             <h1 className="welcome-banner-title__txt">
-              Professional Kitchen Cabinet <br /> Refinishing and Refacing
+              Kitchen Cabinet Refinishing and Refacing
             </h1>
           )}
-          {/* <h4 className="welcome-banner-title__subtxt">
-            high quality cabinets refinishing and refacing for your cozy home
-          </h4> */}
         </div>
       )}
       <div className="welcome-banner-wrapper">

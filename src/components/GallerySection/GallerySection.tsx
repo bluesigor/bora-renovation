@@ -1,14 +1,13 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
 import ReactPixel from "react-facebook-pixel";
-import { ReactSVG } from "react-svg";
+// import { ReactSVG } from "react-svg";
 
 import useMeasures from "../../core/hooks/useMeasures";
 
-import kitchen_first from "../../assets/images/gallery/kitchen.svg";
-import kitchen_second from "../../assets/images/gallery/bg-kitchen.svg";
-import repair from "../../assets/images/gallery/repair.svg";
-// import gallery_mob from "../../assets/images/gallery/gallery-mob.svg";
+// import kitchen_first from "../../assets/images/gallery/kitchen.svg";
+// import kitchen_second from "../../assets/images/gallery/bg-kitchen.svg";
+// import repair from "../../assets/images/gallery/repair.svg";
 
 const img_gallery = require("../../assets/images/gallery/gallery-mob.JPG");
 
@@ -54,7 +53,7 @@ const GallerySection = () => {
             </Link>
           </div>
         </div>
-        <div className="gallery-content-logos">
+        {/* <div className="gallery-content-logos">
           <div className="gallery-content-logos-first">
             <ReactSVG
               src={kitchen_first}
@@ -71,6 +70,24 @@ const GallerySection = () => {
               className="gallery-content-logos-thirdlogo"
             />
           </div>
+        </div> */}
+        <div className="gallery-content-images">
+          <img
+            src={require("../../assets/images/main-gallery/image-first.JPG")}
+            alt=""
+          />
+          <img
+            src={require("../../assets/images/main-gallery/image-second.JPEG")}
+            alt=""
+          />
+          <img
+            src={require("../../assets/images/main-gallery/image-third.JPEG")}
+            alt=""
+          />
+          <img
+            src={require("../../assets/images/main-gallery/image-fourth.JPEG")}
+            alt=""
+          />
         </div>
       </div>
       <div className="gallery-mob">

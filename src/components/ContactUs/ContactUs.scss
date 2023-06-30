@@ -23,7 +23,7 @@
   }
   @include onMobile {
     padding-bottom: 10vh;
-    height: 85vh;
+    height: 75vh;
     align-items: flex-end;
   }
   &-wrapper {
@@ -193,6 +193,10 @@
           gap: 30px;
           @include onMobile {
             gap: 20px;
+          }
+          & > a {
+            max-width: 40px;
+            max-height: 40px;
           }
         }
       }

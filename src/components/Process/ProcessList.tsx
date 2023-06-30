@@ -141,7 +141,7 @@ const ProcessList = () => {
               delayTime={100}
               height={194}
               alt={protect}
-              src={protect}
+              src={require("../../assets/images/process/IMG_0103.JPG")}
             />
           </div>
           <div

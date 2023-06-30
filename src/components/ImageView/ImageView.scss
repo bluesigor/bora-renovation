@@ -17,9 +17,10 @@
       font-size: 24px;
       height: 40px;
       background-color: $primary;
+      color: $scrollbar-reviews;
       @include onMobile {
-        width: 35px;
-        height: 35px;
+        max-width: 35px;
+        max-height: 35px;
       }
     }
     @include onMobile {
@@ -49,6 +50,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: $scrollbar-reviews;
 }
 
 .control__next {
@@ -63,4 +65,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: $scrollbar-reviews;
 }

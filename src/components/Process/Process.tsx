@@ -3,7 +3,7 @@ import { ReactSVG } from "react-svg";
 
 import taking from "../../assets/images/process/taking.svg";
 import install from "../../assets/images/process/install.svg";
-import protect from "../../assets/images/process/protect.svg";
+import protect_img from "../../assets/images/process/img-0103.svg";
 import sand from "../../assets/images/process/sand.svg";
 import materials_pro from "../../assets/images/process/materials.svg";
 import cleaning from "../../assets/images/process/cleaning.svg";
@@ -96,7 +96,7 @@ function Process() {
               onMouseLeave={offHover}
               className="process-list-wrapper">
               <div className="process-list-logo">
-                <ReactSVG src={protect} />
+                <ReactSVG src={protect_img} />
               </div>
               <div className="process-list__outer">
                 <p className="process-list__title">Protecting and covering</p>

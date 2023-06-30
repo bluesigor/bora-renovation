@@ -21,12 +21,6 @@ export const benefits: General.Benefits[] = [
     desc: "Products created for cabinet manufacturing industries (no cheap store paint)",
     icon: materials,
   },
-  {
-    id: 5,
-    title: "Experienced technicians",
-    desc: "High level of knowledge and attention to details. Your satisfaction is top priority",
-    icon: technicans,
-  },
 
   {
     id: 1,
@@ -51,6 +45,12 @@ export const benefits: General.Benefits[] = [
     title: "Top notch quality",
     desc: "Factory-like smooth, durable, water, stains and heat resistant finish guaranteed",
     icon: quality,
+  },
+  {
+    id: 5,
+    title: "Experienced technicians",
+    desc: "High level of knowledge and attention to details. Your satisfaction is top priority",
+    icon: technicans,
   },
 ];
 
