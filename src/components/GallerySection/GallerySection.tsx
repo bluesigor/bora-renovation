@@ -26,8 +26,8 @@ const GallerySection = () => {
             house painting companies have. It’s more than just applying paint
             with a brush or painting walls with a roller.
             <br /> <br />
-            <span>Bora Renovation</span> uses only factory-grade products and
-            specialized equipment which allows us to finish the project fast and
+            Bora Renovation uses only factory-grade products and specialized
+            equipment which allows us to finish the project fast and
             effectively. You’ll be amazed at how simple it is to update your
             kitchen cabinets and give it that amazing luxurious feel without a
             complete remodeling.
@@ -47,9 +47,7 @@ const GallerySection = () => {
                 marginTop: "20px",
               }}
               className="aboutus-content-desc-more__btn">
-              <span className="aboutus-content-desc-more__btn-txt">
-                View full gallery
-              </span>
+              <span className="gallery-view-btn__txt">View full gallery</span>
             </Link>
           </div>
         </div>
@@ -117,7 +115,11 @@ const GallerySection = () => {
               });
             }}
             className="aboutus-content-desc-more__btn">
-            <span className="aboutus-content-desc-more__btn-txt">
+            <span
+              className="gallery-view-btn__txt"
+              style={{
+                color: "var(--scrollbar-reviews) !important",
+              }}>
               View full gallery
             </span>
           </Link>

@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import Carousel from "./Carousel";
 import useMeasures from "../../core/hooks/useMeasures";
 import MobGallery from "../MobGallery";
@@ -8,15 +10,15 @@ import facebook from "../../assets/images/contact/facebook.svg";
 const Gallery = () => {
   const { innerWidth } = useMeasures();
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
+  useEffect(() => {
+    window.scrollTo(0, 0);
 
-  //   const timer = setTimeout(() => {
-  //     return window.scrollTo(0, 200);
-  //   }, 400);
+    const timer = setTimeout(() => {
+      return window.scrollTo(0, 0);
+    }, 400);
 
-  //   return () => clearTimeout(timer);
-  // }, []);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <section className="page-gallery">

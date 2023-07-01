@@ -96,9 +96,10 @@ function Process() {
               onMouseLeave={offHover}
               className="process-list-wrapper">
               <div className="process-list-logo">
-                <ReactSVG src={protect_img} />
+                {/* <ReactSVG src={protect_img} /> */}
+                <img src={protect_img} alt={protect_img} id="protect" />
               </div>
-              <div className="process-list__outer">
+              <div className="process-list__outer" id="protect-outer">
                 <p className="process-list__title">Protecting and covering</p>
                 {isHovered && (
                   <span className="process-list__outer-desc4">

@@ -18,6 +18,9 @@
       height: 40px;
       background-color: $primary;
       color: $scrollbar-reviews;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       @include onMobile {
         max-width: 35px;
         max-height: 35px;

@@ -9,27 +9,27 @@
   padding-right: 69px;
   display: flex;
   flex-direction: column;
-  &:before {
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-image: url("../../assets/images/welcome/mob_welcome_second.JPG");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    filter: blur(3px);
-    -webkit-filter: blur(3px);
-    z-index: -1;
-    opacity: 0.65;
-  }
+  // &:before {
+  //   content: "";
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   position: absolute;
+  //   background-image: url("../../assets/images/welcome/mob_welcome_second.JPG");
+  //   background-position: center;
+  //   background-size: cover;
+  //   background-repeat: no-repeat;
+  //   filter: blur(3px);
+  //   -webkit-filter: blur(3px);
+  //   z-index: -1;
+  //   opacity: 0.65;
+  // }
   @include onMobile {
-    padding-top: 47px;
+    padding-top: 0px;
     padding-bottom: 51px;
-    background-position: center;
-    background-size: cover;
+    // background-position: center;
+    // background-size: cover;
     min-height: 0px;
     max-height: none;
     padding-left: 15px;

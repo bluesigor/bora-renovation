@@ -3,7 +3,7 @@
 .gallery {
   padding: 100px 83px 10px;
   @include onMobile {
-    padding: 50px 15px 30px;
+    padding: 0px 15px 30px;
   }
   &-title {
     width: 100%;
@@ -81,9 +81,6 @@
         line-height: 150.52%;
         letter-spacing: 0.04em;
         color: $scrollbar-reviews;
-        & > span {
-          font-family: "Semi Montserrat";
-        }
       }
     }
     &-logos {
@@ -175,26 +172,24 @@
     display: flex;
     justify-content: center;
     &-btn {
-      padding: 20px 32px;
-      max-width: 250px;
-      border-radius: 20px;
+      border: none;
       background: none;
-      text-decoration: underline;
-      text-decoration-color: $quote-accent;
-      @include onMobile {
-        max-width: 250px;
-      }
+      border-bottom: 1px solid $scrollbar-reviews;
       &__txt {
-        font-family: "Inter";
+        margin-left: -5px;
+        font-family: "Medium Montserrat";
         font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
+        font-weight: 300;
+        font-size: 24px;
         line-height: 150.52%;
-        text-align: center;
-        letter-spacing: 0.105em;
-        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.04em;
         color: $scrollbar-reviews;
-        white-space: nowrap;
+        @include onMobile {
+          font-weight: 300;
+          font-size: 15px;
+        }
       }
     }
   }

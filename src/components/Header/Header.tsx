@@ -76,7 +76,7 @@ const Header = () => {
                 : handleScroll(4900)
             }
             className="navbar-list__item">
-            FAQ’ <span style={{ textTransform: "lowercase" }}>s</span>
+            FAQ’S
           </li>
           <li
             onClick={() =>
