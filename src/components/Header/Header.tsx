@@ -7,6 +7,8 @@ import bora_logo from "../../assets/images/header/bora-logo.svg";
 import useMeasures from "../../core/hooks/useMeasures";
 import { useAppContext } from "../../context/AppContext";
 
+// const logo = require("../../assets/images/header/bora.svg");
+
 const Header = () => {
   const { innerWidth } = useMeasures();
   const navigate = useNavigate();

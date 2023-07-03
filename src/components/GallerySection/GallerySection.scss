@@ -1,7 +1,7 @@
 @import "../../styles/mixins.scss";
 
 .gallery {
-  padding: 100px 83px 10px;
+  padding: 50px 83px 10px;
   @include onMobile {
     padding: 0px 15px 30px;
   }

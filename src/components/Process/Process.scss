@@ -86,7 +86,7 @@
       margin-bottom: -4px;
       & > img {
         max-width: 380px;
-        border: 1px solid $scrollbar-reviews;
+        // border: 1px solid $scrollbar-reviews;
         border-bottom: none;
         @media (max-width: 1300px) {
           max-width: 330px;
@@ -99,7 +99,7 @@
         }
       }
       & > div svg {
-        border: 1px solid $scrollbar-reviews;
+        // border: 1px solid $scrollbar-reviews;
         border-bottom: none;
         width: 380px;
         height: 100%;
@@ -122,7 +122,7 @@
       border-radius: 0px 0px 50px 0px;
       width: 380px;
       margin: 0;
-      border: 1px solid $scrollbar-reviews;
+      // border: 1px solid $scrollbar-reviews;
       border-top: none;
       @media (max-width: 1300px) {
         width: 330px;
@@ -237,7 +237,7 @@
       -moz-box-shadow: 4px 6px 36px -11px rgba(184, 184, 184, 1);
       box-shadow: 4px 6px 36px -11px rgba(184, 184, 184, 1);
       border-radius: 0px 0px 20px 20px;
-      border: 1px solid $scrollbar-reviews;
+      // border: 1px solid $scrollbar-reviews;
       border-top: none;
       & > div {
         & > img {
@@ -295,7 +295,7 @@
 }
 
 .mob-img-process {
-  border: 1px solid $scrollbar-reviews;
+  // border: 1px solid $scrollbar-reviews;
   border-bottom: none;
   & > img {
   }
