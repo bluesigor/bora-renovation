@@ -1,18 +1,36 @@
-import { memo } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import ReactPixel from "react-facebook-pixel";
 // import { ReactSVG } from "react-svg";
 
 import useMeasures from "../../core/hooks/useMeasures";
+import { collection } from "../../core/constants/collection";
+
+import prev from "../../assets/images/collection/prev.svg";
+import next from "../../assets/images/collection/next.svg";
 
 // import kitchen_first from "../../assets/images/gallery/kitchen.svg";
 // import kitchen_second from "../../assets/images/gallery/bg-kitchen.svg";
 // import repair from "../../assets/images/gallery/repair.svg";
 
-const img_gallery = require("../../assets/images/gallery/gallery-mob.JPG");
+// const img_gallery = require("../../assets/images/gallery/gallery-mob.JPG");
 
 const GallerySection = () => {
+  const [currentImage, setCurrentImage] = useState(30);
+
   const { innerWidth } = useMeasures();
+
+  const handleNext = () => {
+    currentImage === 50
+      ? setCurrentImage(30)
+      : setCurrentImage(currentImage + 1);
+  };
+
+  const handlePrev = () => {
+    currentImage === 30
+      ? setCurrentImage(50)
+      : setCurrentImage(currentImage - 1);
+  };
 
   return (
     <section className="gallery">
@@ -98,8 +116,20 @@ const GallerySection = () => {
           </p>
         </div>
         <div className="gallery-mob-logo">
+          <button
+            type="button"
+            onClick={handlePrev}
+            className="gallery-mob-logo__prev">
+            <img src={prev} alt="prev" />
+          </button>
+          <button
+            type="button"
+            onClick={handleNext}
+            className="gallery-mob-logo__next">
+            <img src={next} alt="next" />
+          </button>
           <img
-            src={img_gallery}
+            src={collection[currentImage].src}
             alt="gallery_mob"
             className="gallery-mob-logo__image"
           />
@@ -129,4 +159,4 @@ const GallerySection = () => {
   );
 };
 
-export default memo(GallerySection);
+export default GallerySection;

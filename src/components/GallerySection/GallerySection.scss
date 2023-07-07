@@ -53,8 +53,23 @@
       }
     }
     &-logo {
+      position: relative;
       &__image {
         max-width: 300px;
+      }
+      &__next {
+        background: none;
+        border: none;
+        position: absolute;
+        top: 40%;
+        right: -50px;
+      }
+      &__prev {
+        background: none;
+        border: none;
+        position: absolute;
+        top: 40%;
+        left: -50px;
       }
     }
   }
