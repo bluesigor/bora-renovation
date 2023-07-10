@@ -57,6 +57,7 @@
         max-width: 327px;
         @include onMobile {
           max-width: 213px;
+          margin-bottom: 15px;
         }
         &__txt {
           font-family: "Inter";
@@ -195,8 +196,10 @@
             gap: 20px;
           }
           & > a {
-            max-width: 40px;
-            max-height: 40px;
+            & > img {
+              max-width: 35px;
+              max-height: 35px;
+            }
           }
         }
       }

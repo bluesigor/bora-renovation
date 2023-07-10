@@ -36,7 +36,11 @@
     padding-right: 15px;
   }
   &-inner {
-    border: 1px solid $scrollbar-reviews;
+    // border: 1px solid $scrollbar-reviews;
+    border-radius: 20px;
+    -webkit-box-shadow: 2px -2px 18px -2px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 2px -2px 18px -2px rgba(0, 0, 0, 0.35);
+    box-shadow: 2px -2px 18px -2px rgba(0, 0, 0, 0.35);
   }
   &-new {
     filter: none;

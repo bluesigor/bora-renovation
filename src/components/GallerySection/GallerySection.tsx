@@ -13,8 +13,6 @@ import next from "../../assets/images/collection/next.svg";
 // import kitchen_second from "../../assets/images/gallery/bg-kitchen.svg";
 // import repair from "../../assets/images/gallery/repair.svg";
 
-// const img_gallery = require("../../assets/images/gallery/gallery-mob.JPG");
-
 const GallerySection = () => {
   const [currentImage, setCurrentImage] = useState(30);
 
@@ -31,6 +29,8 @@ const GallerySection = () => {
       ? setCurrentImage(50)
       : setCurrentImage(currentImage - 1);
   };
+
+  console.log();
 
   return (
     <section className="gallery">
