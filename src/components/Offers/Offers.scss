@@ -36,11 +36,11 @@
     padding-right: 15px;
   }
   &-inner {
-    // border: 1px solid $scrollbar-reviews;
     border-radius: 20px;
-    -webkit-box-shadow: 2px -2px 18px -2px rgba(0, 0, 0, 0.35);
-    -moz-box-shadow: 2px -2px 18px -2px rgba(0, 0, 0, 0.35);
-    box-shadow: 2px -2px 18px -2px rgba(0, 0, 0, 0.35);
+    border: none;
+    -webkit-box-shadow: 4px 6px 36px -11px rgba(184, 184, 184, 1);
+    -moz-box-shadow: 4px 6px 36px -11px rgba(184, 184, 184, 1);
+    box-shadow: 4px 6px 36px -11px rgba(184, 184, 184, 1);
   }
   &-new {
     filter: none;
@@ -83,7 +83,9 @@
       text-transform: uppercase;
       color: $scrollbar-reviews;
       text-align: center;
+      margin-bottom: 50px;
       @include onMobile {
+        margin-bottom: 25px;
         text-align: center;
         font-family: "Semi Inter";
         font-style: normal;
@@ -142,12 +144,14 @@
         color: $scrollbar-reviews;
         border-bottom: 1px solid $scrollbar-reviews;
         padding-bottom: 5px;
+        color: $blue-accent;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
         // text-shadow: 1px 1px 1px rgba(235, 250, 245, 0.75);
-        background: linear-gradient(180deg, #065a97 0%, #012f50 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
+        // background: linear-gradient(180deg, #065a97 0%, #012f50 100%);
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+        // background-clip: text;
+        // text-fill-color: transparent;
         @include onMobile {
           font-size: 20px;
           padding-left: 0px;
@@ -252,17 +256,12 @@
         text-align: center;
         letter-spacing: 0.04em;
         text-transform: uppercase;
-        // color: $scrollbar-reviews;
+        color: $blue-accent;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
         padding-top: 5px;
         padding-bottom: 5px;
         border-bottom: 1px solid $scrollbar-reviews;
-        // max-width: 1240px;
-        // text-shadow: 1px 1px 1px rgba(235, 250, 245, 0.75);
-        background: linear-gradient(180deg, #065a97 0%, #012f50 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
+
         @media (min-width: 1390px) {
           // width: 1240px;
         }

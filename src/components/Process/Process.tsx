@@ -3,7 +3,7 @@ import { ReactSVG } from "react-svg";
 
 import taking from "../../assets/images/process/taking.svg";
 import install from "../../assets/images/process/install.svg";
-import protect_img from "../../assets/images/process/img-0103.svg";
+import protect_img from "../../assets/images/process/protect.svg";
 import sand from "../../assets/images/process/sand.svg";
 import materials_pro from "../../assets/images/process/materials.svg";
 import cleaning from "../../assets/images/process/cleaning.svg";

@@ -16,16 +16,12 @@ const Offers = () => {
           <div className="offers-new__logo" />
         </div>
       )} */}
-      <div
-        className="offers-inner"
-        style={{
-          border: "1px solid black",
-        }}>
-        <div className="offers-title">
-          <h6 className="offers-title__txt">
-            What's right for my kitchen cabinet?
-          </h6>
-        </div>
+      <div className="offers-title">
+        <h6 className="offers-title__txt">
+          What's right for my kitchen cabinet?
+        </h6>
+      </div>
+      <div className="offers-inner">
         <div className="offers-wrapper">
           <div className="offers-main">
             {/* <ul className="offers-main-list"> 

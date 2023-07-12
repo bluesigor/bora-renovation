@@ -13,7 +13,17 @@
     left: 0;
   }
 }
+@media screen and (orientation: portrait) {
+  body {
+    overflow: hidden;
+  }
+}
 
+@media screen and (orientation: landscape) {
+  body {
+    overflow: hidden;
+  }
+}
 html {
   scroll-behavior: smooth;
   --animate-duration: 1s;

@@ -50,6 +50,9 @@
         text-align: center;
         letter-spacing: 0.04em;
         color: $scrollbar-reviews;
+        @include onMobile {
+          font-size: 15px;
+        }
       }
     }
     &-logo {

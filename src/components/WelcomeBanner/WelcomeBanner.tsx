@@ -36,7 +36,19 @@ const WelcomeBanner = () => {
         <div className="welcome-banner-wrapper-outer">
           {innerWidth < 768 && (
             <h4 className="welcome-banner-wrapper-outer__inner">
-              PROFESSIONAL KITCHEN CABINET <br /> REFINISHING AND REFACING
+              <span
+                style={{
+                  whiteSpace: "nowrap",
+                }}>
+                PROFESSIONAL KITCHEN CABINET
+              </span>{" "}
+              <br />
+              <span
+                style={{
+                  whiteSpace: "nowrap",
+                }}>
+                REFINISHING AND REFACING
+              </span>
             </h4>
           )}
           {/* {innerWidth > 768 && (

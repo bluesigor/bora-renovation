@@ -109,6 +109,32 @@ const FAQ = () => {
                       {quest.desc.split(" ").slice(13).join(" ")}
                     </a>
                   </p>
+                ) : quest.id === 8 ? (
+                  <p className="faq-questions-entity__desc">
+                    {quest.desc.split(" ").slice(0, 1).join(" ")}{" "}
+                    <a
+                      rel="noreferrer"
+                      target="_blank"
+                      href="https://www.facebook.com/BoraRenovation?mibextid=LQQJ4d"
+                      style={{
+                        color: "#323232",
+                        textDecoration: "underline",
+                      }}>
+                      {quest.desc.split(" ").slice(1, 2).join(" ")}
+                    </a>{" "}
+                    {quest.desc.split(" ").slice(2, 3).join(" ")}{" "}
+                    <a
+                      rel="noreferrer"
+                      target="_blank"
+                      href="https://instagram.com/bora_renovation?igshid=MzRlODBiNWFlZA=="
+                      style={{
+                        color: "#323232",
+                        textDecoration: "underline",
+                      }}>
+                      {quest.desc.split(" ").slice(3, 4).join(" ")}
+                    </a>
+                    {quest.desc.split(" ").slice(5).join(" ")}
+                  </p>
                 ) : (
                   <p className="faq-questions-entity__desc">{quest.desc}</p>
                 )}
