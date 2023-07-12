@@ -108,7 +108,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border: 1px solid $scrollbar-reviews;
+    // border: 1px solid $scrollbar-reviews;
     // max-width: 1240px;
     border-left: none;
     border-right: none;
@@ -129,7 +129,7 @@
       padding-bottom: 5px;
 
       &:first-child {
-        border-right: 1px solid $scrollbar-reviews;
+        border-right: none;
       }
       &__title {
         padding-left: 20px;
@@ -142,7 +142,7 @@
         letter-spacing: 0.04em;
         text-transform: uppercase;
         color: $scrollbar-reviews;
-        border-bottom: 1px solid $scrollbar-reviews;
+        border-bottom: none;
         padding-bottom: 5px;
         color: $blue-accent;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
@@ -217,7 +217,7 @@
     }
   }
   &-more {
-    border: 1px solid $scrollbar-reviews;
+    border: none;
     border-top: none;
     display: flex;
     justify-content: center;
@@ -260,7 +260,7 @@
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
         padding-top: 5px;
         padding-bottom: 5px;
-        border-bottom: 1px solid $scrollbar-reviews;
+        border-bottom: none;
 
         @media (min-width: 1390px) {
           // width: 1240px;
