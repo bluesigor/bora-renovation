@@ -1,4 +1,8 @@
+import useMeasures from "../../core/hooks/useMeasures";
+
 const Offers = () => {
+  const { innerWidth } = useMeasures();
+
   // const [isMore, setIsMore] = useState(false);
 
   // const showMore = () => {
@@ -76,7 +80,14 @@ const Offers = () => {
               </ul>
               <p className="offers-main-block__sum">
                 The cabinetry will be disassembled, cleaned, sanded, and then a
-                new finish will be applied. The door style stays the same.
+                new finish will be applied. The door style stays{" "}
+                {innerWidth < 468 ? (
+                  <>
+                    <br /> the same.
+                  </>
+                ) : (
+                  <>the same.</>
+                )}
               </p>
             </div>
             <div className="offers-main-block">

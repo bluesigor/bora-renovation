@@ -77,7 +77,8 @@ function Process() {
               onMouseLeave={offHover}
               className="process-list-wrapper">
               <div className="process-list-logo">
-                <img src={sand} alt={sand} />
+                {/* <img src={sand} alt={sand} /> */}
+                <ReactSVG src={sand} />
               </div>
               <div className="process-list__outer">
                 <p className="process-list__title">
@@ -96,8 +97,8 @@ function Process() {
               onMouseLeave={offHover}
               className="process-list-wrapper">
               <div className="process-list-logo">
-                {/* <ReactSVG src={protect_img} /> */}
-                <img src={protect_img} alt={protect_img} id="protect" />
+                <ReactSVG src={protect_img} />
+                {/* <img src={protect_img} alt={protect_img} id="protect" /> */}
               </div>
               <div className="process-list__outer" id="protect-outer">
                 <p className="process-list__title">Protecting and covering</p>

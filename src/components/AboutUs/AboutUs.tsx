@@ -39,6 +39,7 @@ const AboutUs = () => {
             guaranteed finish.
             {isMore && (
               <>
+                {" "}
                 We don't use rollers and brushes. The entire kitchen (the base,
                 doors) we spray with a professional HVLP sprayer which produces
                 a surface that cannot be achieved by any other tool. We call our

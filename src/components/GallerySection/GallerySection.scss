@@ -4,6 +4,7 @@
   padding: 50px 83px 10px;
   @include onMobile {
     padding: 0px 15px 30px;
+    margin-bottom: 20px;
   }
   &-title {
     width: 100%;
@@ -95,7 +96,7 @@
         font-family: "Montserrat";
         font-style: normal;
         font-weight: 400;
-        font-size: 24px;
+        font-size: 20px;
         line-height: 150.52%;
         letter-spacing: 0.04em;
         color: $scrollbar-reviews;

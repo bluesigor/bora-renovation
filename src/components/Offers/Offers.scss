@@ -41,6 +41,7 @@
     -webkit-box-shadow: 4px 6px 36px -11px rgba(184, 184, 184, 1);
     -moz-box-shadow: 4px 6px 36px -11px rgba(184, 184, 184, 1);
     box-shadow: 4px 6px 36px -11px rgba(184, 184, 184, 1);
+    background: linear-gradient(180deg, #e2e1e1 0%, $primary 100%);
   }
   &-new {
     filter: none;
@@ -186,7 +187,7 @@
             text-align: center;
             font-family: "Inter";
             font-style: normal;
-            font-size: 18px;
+            font-size: 20px;
             line-height: 21px;
             letter-spacing: 0.01em;
             color: $scrollbar-reviews;
@@ -198,10 +199,11 @@
         }
       }
       &__sum {
+        max-width: 500px;
         padding-left: 20px;
         font-family: "Medium Inter";
         font-style: normal;
-        font-size: 18px;
+        font-size: 20px;
         line-height: 21px;
         letter-spacing: 0.01em;
         color: $scrollbar-reviews;
@@ -229,6 +231,7 @@
     border-right: none;
     border-bottom: none;
     // max-width: 1240px;
+    margin-top: 25px;
     @media (min-width: 1390px) {
       // width: 1240px;
     }
