@@ -53,7 +53,7 @@ const GallerySection = () => {
             Take a look at our gallery of pictures to get inspired for your
             future project.
           </p>
-          <div className="gallery-view">
+          {/* <div className="gallery-view">
             <Link
               to="gallery"
               onClick={() => {
@@ -67,7 +67,7 @@ const GallerySection = () => {
               className="aboutus-content-desc-more__btn">
               <span className="gallery-view-btn__txt">View full gallery</span>
             </Link>
-          </div>
+          </div> */}
         </div>
         {/* <div className="gallery-content-logos">
           <div className="gallery-content-logos-first">
@@ -87,23 +87,41 @@ const GallerySection = () => {
             />
           </div>
         </div> */}
-        <div className="gallery-content-images">
-          <img
-            src={require("../../assets/images/main-gallery/image-first.JPG")}
-            alt=""
-          />
-          <img
-            src={require("../../assets/images/main-gallery/image-second.JPEG")}
-            alt=""
-          />
-          <img
+        <div
+          // className="gallery-content-images"
+          className="gallery-content-wrapp">
+          <div className="gallery-content-wrapp-pics">
+            <img
+              src={require("../../assets/images/main-gallery/image-first.JPG")}
+              alt=""
+            />
+            <img
+              src={require("../../assets/images/main-gallery/image-second.JPEG")}
+              alt=""
+            />
+          </div>
+
+          {/* <img
             src={require("../../assets/images/main-gallery/image-third.JPEG")}
             alt=""
           />
           <img
             src={require("../../assets/images/main-gallery/image-fourth.JPEG")}
             alt=""
-          />
+          /> */}
+          <Link
+            to="gallery"
+            onClick={() => {
+              ReactPixel.track("ClickButton", {
+                buttonName: "Step to gallery",
+              });
+            }}
+            style={{
+              marginTop: "20px",
+            }}
+            className="aboutus-content-desc-more__btn">
+            <span className="gallery-view-btn__txt">View full gallery</span>
+          </Link>
         </div>
       </div>
       <div className="gallery-mob">

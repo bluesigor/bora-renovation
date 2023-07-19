@@ -41,7 +41,7 @@
     -webkit-box-shadow: 4px 6px 36px -11px rgba(184, 184, 184, 1);
     -moz-box-shadow: 4px 6px 36px -11px rgba(184, 184, 184, 1);
     box-shadow: 4px 6px 36px -11px rgba(184, 184, 184, 1);
-    background: linear-gradient(180deg, #e2e1e1 0%, $primary 100%);
+    // background: linear-gradient(180deg, #e2e1e1 0%, $primary 100%);
   }
   &-new {
     filter: none;
@@ -76,9 +76,9 @@
     }
     &__txt {
       width: max-content;
-      font-family: "Semi Inter";
+      font-family: "Medium Inter";
       font-style: normal;
-      font-size: 52px;
+      font-size: 48px;
       line-height: 150.52%;
       letter-spacing: 0.04em;
       text-transform: uppercase;
@@ -113,12 +113,11 @@
     // max-width: 1240px;
     border-left: none;
     border-right: none;
-    @media (min-width: 1390px) {
-      // width: 1240px;
-    }
+    gap: 50px;
     @include onMobile {
       justify-content: space-between;
       margin-top: 10px;
+      gap: 0px;
     }
     &-block {
       display: flex;
@@ -241,7 +240,7 @@
       gap: 16px;
       justify-content: center;
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 47px;
       // width: max-content;
       width: 100%;
       @include onMobile {
@@ -320,5 +319,13 @@
         }
       }
     }
+  }
+}
+.versus {
+  font-family: "Semi Montserrat";
+  font-size: 28px;
+  @include onMobile {
+    margin-top: 5px;
+    font-size: 22px;
   }
 }

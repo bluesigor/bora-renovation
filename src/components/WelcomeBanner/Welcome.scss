@@ -21,7 +21,7 @@
     &__txt {
       font-family: "Medium Inter";
       font-style: normal;
-      font-size: 52px;
+      font-size: 36px;
       line-height: 150.52%;
       text-align: center;
       letter-spacing: 0.06em;
@@ -106,7 +106,7 @@
         text-shadow: 1px 1px 1px rgba(245, 245, 245, 245.25);
         @include onMobile {
           font-weight: 600;
-          font-size: 20px;
+          font-size: 22px;
           letter-spacing: 0.04em;
           color: $scrollbar-reviews;
           font-family: "Medium Montserrat";

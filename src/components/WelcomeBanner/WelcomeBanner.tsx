@@ -13,13 +13,14 @@ const WelcomeBanner = () => {
   return (
     <section className="bora__welcome-banner welcome-banner">
       {isOpen ? null : (
-        <div className="welcome-banner-title">
-          {innerWidth > 1025 && (
-            <h1 className="welcome-banner-title__txt">
-              Kitchen Cabinet Refinishing and Refacing
-            </h1>
-          )}
-        </div>
+        // <div className="welcome-banner-title">
+        //   {innerWidth > 1025 && (
+        //     <h1 className="welcome-banner-title__txt">
+        //       Kitchen Cabinet Refinishing and Refacing
+        //     </h1>
+        //   )}
+        // </div>
+        <></>
       )}
       <div className="welcome-banner-wrapper">
         {innerWidth > 768 && (
@@ -40,7 +41,7 @@ const WelcomeBanner = () => {
                 style={{
                   whiteSpace: "nowrap",
                 }}>
-                PROFESSIONAL KITCHEN CABINET
+                KITCHEN CABINET
               </span>{" "}
               <br />
               <span

@@ -53,6 +53,7 @@
         color: $scrollbar-reviews;
         @include onMobile {
           font-size: 15px;
+          padding: 0px 20px;
         }
       }
     }
@@ -91,7 +92,8 @@
       display: none;
     }
     &-desc {
-      max-width: 590px;
+      width: 650px;
+
       &__txt {
         font-family: "Montserrat";
         font-style: normal;
@@ -183,6 +185,22 @@
       column-gap: 20px;
       & > img {
         max-width: 300px;
+      }
+    }
+    &-wrapp {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      &-pics {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+        & > img {
+          max-width: 300px;
+          max-height: 300px;
+        }
       }
     }
   }

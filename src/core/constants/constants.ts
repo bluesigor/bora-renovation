@@ -16,10 +16,10 @@ import cleaning from "../../assets/images/process/cleaning.svg";
 
 export const benefits: General.Benefits[] = [
   {
-    id: 4,
-    title: "The proper materials",
-    desc: "Products created for cabinet manufacturing industries (no cheap store paint)",
-    icon: materials,
+    id: 3,
+    title: "Excellent reputation",
+    desc: "Only 5 star reviews. More than 300+ highly satisfied customers",
+    icon: reputation,
   },
 
   {
@@ -35,10 +35,10 @@ export const benefits: General.Benefits[] = [
     icon: fast,
   },
   {
-    id: 3,
-    title: "Excellent reputation",
-    desc: "Only 5 star reviews. More than 300+ highly satisfied customers",
-    icon: reputation,
+    id: 4,
+    title: "The proper materials",
+    desc: "Products created for cabinet manufacturing industries (no cheap store paint)",
+    icon: materials,
   },
   {
     id: 6,

@@ -34,101 +34,110 @@ const Header = () => {
       <Link to="/">
         <img src={bora_logo} alt="bora-logo" className="bora-header__logo" />
       </Link>
-      <nav className="bora-header__navbar navbar">
-        <ul className="navbar-list">
-          <Link to="/">
-            <li className="navbar-list__item">Home</li>
-          </Link>
-          <li
-            onClick={() =>
-              window.location.pathname.includes("/gallery") ||
-              window.location.pathname.includes("/privacy-policy")
-                ? navigate("/")
-                : handleScroll(1500)
-            }
-            className="navbar-list__item">
-            About us
-          </li>
-          <li
-            onClick={() =>
-              window.location.pathname.includes("/gallery") ||
-              window.location.pathname.includes("/privacy-policy")
-                ? navigate("/")
-                : handleScroll(2400)
-            }
-            className="navbar-list__item">
-            our process
-          </li>
-          <li
-            onClick={() => {
-              window.location.pathname.includes("/gallery") ||
-              window.location.pathname.includes("/privacy-policy")
-                ? navigate("/")
-                : handleScroll(4300);
-              navigate("/gallery");
-            }}
-            className="navbar-list__item">
-            gallery
-          </li>
-          <li
-            onClick={() =>
-              window.location.pathname.includes("/gallery") ||
-              window.location.pathname.includes("/privacy-policy")
-                ? navigate("/")
-                : handleScroll(4900)
-            }
-            className="navbar-list__item">
-            FAQ’S
-          </li>
-          <li
-            onClick={() =>
-              window.location.pathname.includes("/gallery") ||
-              window.location.pathname.includes("/privacy-policy")
-                ? navigate("/")
-                : handleScroll(7600)
-            }
-            className="navbar-list__item">
-            Contact us
-          </li>
-        </ul>
-      </nav>
-      {innerWidth < 1025 ? (
-        <div className="bora-header-end-wrapper">
-          <button
-            type="button"
-            onClick={() => {
-              setIsModalOpen(true);
-              setModalType("quote");
-            }}
-            className="bora-header__contact-btn">
-            {/* <img
+      <div className="bora-header-main">
+        <div className="welcome-banner-title">
+          {innerWidth > 1025 && (
+            <h1 className="welcome-banner-title__txt">
+              Kitchen Cabinet Refinishing and Refacing
+            </h1>
+          )}
+        </div>
+        <div className="bora-header-nav-controls">
+          <nav className="bora-header__navbar navbar">
+            <ul className="navbar-list">
+              <Link to="/">
+                <li className="navbar-list__item">Home</li>
+              </Link>
+              <li
+                onClick={() =>
+                  window.location.pathname.includes("/gallery") ||
+                  window.location.pathname.includes("/privacy-policy")
+                    ? navigate("/")
+                    : handleScroll(1500)
+                }
+                className="navbar-list__item">
+                About us
+              </li>
+              <li
+                onClick={() =>
+                  window.location.pathname.includes("/gallery") ||
+                  window.location.pathname.includes("/privacy-policy")
+                    ? navigate("/")
+                    : handleScroll(2400)
+                }
+                className="navbar-list__item">
+                our process
+              </li>
+              <li
+                onClick={() => {
+                  window.location.pathname.includes("/gallery") ||
+                  window.location.pathname.includes("/privacy-policy")
+                    ? navigate("/")
+                    : handleScroll(4300);
+                  navigate("/gallery");
+                }}
+                className="navbar-list__item">
+                gallery
+              </li>
+              <li
+                onClick={() =>
+                  window.location.pathname.includes("/gallery") ||
+                  window.location.pathname.includes("/privacy-policy")
+                    ? navigate("/")
+                    : handleScroll(4900)
+                }
+                className="navbar-list__item">
+                FAQ’S
+              </li>
+              <li
+                onClick={() =>
+                  window.location.pathname.includes("/gallery") ||
+                  window.location.pathname.includes("/privacy-policy")
+                    ? navigate("/")
+                    : handleScroll(7600)
+                }
+                className="navbar-list__item">
+                Contact us
+              </li>
+            </ul>
+          </nav>
+          {innerWidth < 1025 ? (
+            <div className="bora-header-end-wrapper">
+              <button
+                type="button"
+                onClick={() => {
+                  setIsModalOpen(true);
+                  setModalType("quote");
+                }}
+                className="bora-header__contact-btn">
+                {/* <img
               src={phone_icon}
               alt="phone-icon"
               className="bora-header__contact-btn__icon"
             /> */}
-            <span
-              className="bora-header__contact-btn__txt"
-              // href="tel:+13022441338"
-            >
-              Get a free quote
-            </span>
-          </button>
-          <div className="bora-header-burger">
-            <div className="bora-header-burger-wrapper ">
-              <Hamburger
-                size={28}
-                duration={0.5}
-                easing="ease-in"
-                label="Show menu"
-                toggled={isOpen}
-                toggle={isOpen ? closeHamb : openHamb}
-              />
+                <span
+                  className="bora-header__contact-btn__txt"
+                  // href="tel:+13022441338"
+                >
+                  Get a free quote
+                </span>
+              </button>
+              <div className="bora-header-burger">
+                <div className="bora-header-burger-wrapper ">
+                  <Hamburger
+                    size={28}
+                    duration={0.5}
+                    easing="ease-in"
+                    label="Show menu"
+                    toggled={isOpen}
+                    toggle={isOpen ? closeHamb : openHamb}
+                  />
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      ) : (
-        <>
-          {/* <button type="button" className="bora-header__contact-btn">
+          ) : (
+            <>
+              {/* <button type="button" className="bora-header__contact-btn">
             <img
               src={phone_icon}
               alt="phone-icon"
@@ -141,31 +150,35 @@ const Header = () => {
             </a>
           </button> */}
 
-          <div className="policy-comunicate">
-            <button
-              onClick={() => {
-                setModalType("quote");
-                setIsModalOpen(true);
-              }}
-              className="policy-comunicate__btn">
-              <span className="policy-comunicate__btn-txt">Get a quote</span>
-            </button>
-          </div>
-          <div className="bora-header-burger">
-            <div className="bora-header-burger-wrapper ">
-              <Hamburger
-                size={28}
-                duration={0.5}
-                easing="ease-in"
-                label="Show menu"
-                toggled={isOpen}
-                toggle={isOpen ? closeHamb : openHamb}
-              />
-            </div>
-          </div>
-        </>
-      )}
+              <div className="policy-comunicate">
+                <button
+                  onClick={() => {
+                    setModalType("quote");
+                    setIsModalOpen(true);
+                  }}
+                  className="policy-comunicate__btn">
+                  <span className="policy-comunicate__btn-txt">
+                    Get a quote
+                  </span>
+                </button>
+              </div>
 
+              <div className="bora-header-burger">
+                <div className="bora-header-burger-wrapper ">
+                  <Hamburger
+                    size={28}
+                    duration={0.5}
+                    easing="ease-in"
+                    label="Show menu"
+                    toggled={isOpen}
+                    toggle={isOpen ? closeHamb : openHamb}
+                  />
+                </div>
+              </div>
+            </>
+          )}
+        </div>
+      </div>
       {isOpen && (
         <ul className="navbar-moblist">
           <li>

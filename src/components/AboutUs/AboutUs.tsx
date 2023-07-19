@@ -36,16 +36,14 @@ const AboutUs = () => {
             Wilmington, DE. Kitchen cabinet refinishing is the only service we
             offer. We invest the necessary time in thorough prep, use
             high-quality factory-grade products, and deliver a factory-like,
-            guaranteed finish.
+            guaranteed finish. We don't use rollers and brushes. The entire
+            kitchen (the base, doors) we spray with a professional HVLP sprayer
+            which produces a surface that cannot be achieved by any other tool.
             {isMore && (
               <>
-                {" "}
-                We don't use rollers and brushes. The entire kitchen (the base,
-                doors) we spray with a professional HVLP sprayer which produces
-                a surface that cannot be achieved by any other tool. We call our
-                company “The best kitchen cabinet refinishing” based on the
-                number of five-star reviews left by our previous customers on
-                &nbsp;
+                We call our company “The best kitchen cabinet refinishing” based
+                on the number of five-star reviews left by our previous
+                customers on &nbsp;
                 <a
                   rel="noreferrer"
                   target={"_blank"}

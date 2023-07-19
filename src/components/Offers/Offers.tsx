@@ -90,6 +90,7 @@ const Offers = () => {
                 )}
               </p>
             </div>
+            <h6 className="versus">VS</h6>
             <div className="offers-main-block">
               <h6 className="offers-main-block__title">Refacing</h6>
               <ul className="offers-main-block-list">
