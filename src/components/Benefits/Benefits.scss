@@ -46,13 +46,16 @@
     }
     &__item {
       padding: 15px 25px;
-      border: 2px solid $scrollbar-reviews;
+      // border: 2px solid $scrollbar-reviews;
       border-radius: 50px;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       max-width: 467px;
+      -webkit-box-shadow: 4px 6px 36px -11px rgba(184, 184, 184, 1);
+      -moz-box-shadow: 4px 6px 36px -11px rgba(184, 184, 184, 1);
+      box-shadow: 4px 6px 36px -11px rgba(184, 184, 184, 1);
       @include onMobile {
         border: none;
         padding-bottom: 6px;

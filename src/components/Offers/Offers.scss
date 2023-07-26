@@ -1,5 +1,7 @@
 @import "../../styles/mixins.scss";
 @import "../../styles/vars.scss";
+@import url("https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap");
+
 .offers {
   position: relative;
   min-height: 629px;
@@ -322,10 +324,13 @@
   }
 }
 .versus {
-  font-family: "Semi Montserrat";
+  position: absolute;
+  left: 48%;
+  font-family: "Lugrasimo", cursive;
+  font-weight: 300;
   font-size: 28px;
   @include onMobile {
-    margin-top: 5px;
-    font-size: 22px;
+    margin-top: 9px;
+    font-size: 18px;
   }
 }
