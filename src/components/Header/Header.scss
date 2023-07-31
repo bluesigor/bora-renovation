@@ -37,6 +37,7 @@
       justify-content: space-between;
       @include onMobile {
         padding: 0px 40px;
+        gap: 20px;
       }
     }
     & > a {
