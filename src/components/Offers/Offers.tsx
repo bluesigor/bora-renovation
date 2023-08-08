@@ -64,8 +64,8 @@ const Offers = () => {
               <ul className="offers-main-block-list">
                 <li id="first-list">
                   <span>
-                    I like the style of the existing doors and drawer fronts. I
-                    just want to change the color of my cabinets.
+                    I like the style of the existing doors and drawer fronts.{" "}
+                    <br /> I just want to change the color of my cabinets.
                   </span>
                 </li>
                 <li>
@@ -90,7 +90,7 @@ const Offers = () => {
                 )}
               </p>
             </div>
-            <h6 className="versus">VS</h6>
+            {innerWidth < 768 && <h6 className="versus">VS</h6>}
             <div className="offers-main-block">
               <h6 className="offers-main-block__title">Refacing</h6>
               <ul className="offers-main-block-list">

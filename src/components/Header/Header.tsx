@@ -63,7 +63,7 @@ const Header = () => {
                   window.location.pathname.includes("/gallery") ||
                   window.location.pathname.includes("/privacy-policy")
                     ? navigate("/")
-                    : handleScroll(2400)
+                    : handleScroll(2140)
                 }
                 className="navbar-list__item">
                 our process
@@ -84,7 +84,7 @@ const Header = () => {
                   window.location.pathname.includes("/gallery") ||
                   window.location.pathname.includes("/privacy-policy")
                     ? navigate("/")
-                    : handleScroll(4900)
+                    : handleScroll(4670)
                 }
                 className="navbar-list__item">
                 FAQ’S
@@ -94,7 +94,7 @@ const Header = () => {
                   window.location.pathname.includes("/gallery") ||
                   window.location.pathname.includes("/privacy-policy")
                     ? navigate("/")
-                    : handleScroll(7600)
+                    : handleScroll(7400)
                 }
                 className="navbar-list__item">
                 Contact us

@@ -1,6 +1,6 @@
 @import "../../styles/mixins.scss";
 @import "../../styles/vars.scss";
-@import url("https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
 .offers {
   position: relative;
@@ -84,7 +84,7 @@
       line-height: 150.52%;
       letter-spacing: 0.04em;
       text-transform: uppercase;
-      color: $scrollbar-reviews;
+      color: $darken;
       text-align: center;
       margin-bottom: 50px;
       @include onMobile {
@@ -233,6 +233,9 @@
     border-bottom: none;
     // max-width: 1240px;
     margin-top: 25px;
+    @include onMobile {
+      margin-top: 0px;
+    }
     @media (min-width: 1390px) {
       // width: 1240px;
     }
@@ -326,11 +329,12 @@
 .versus {
   position: absolute;
   left: 48%;
-  font-family: "Lugrasimo", cursive;
-  font-weight: 300;
+  font-family: "Lobster", cursive;
+
   font-size: 28px;
   @include onMobile {
     margin-top: 9px;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 500;
   }
 }

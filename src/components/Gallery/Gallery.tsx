@@ -25,7 +25,7 @@ const Gallery = () => {
       <div className="page-gallery-header">
         <div className="page-gallery-header-content">
           <h5 className="page-gallery-header-content__sub">
-            WHAT WE DO, <br /> WE CAN BE PROUD OF!
+            WHAT WE DO, WE CAN BE PROUD OF!
           </h5>
         </div>
       </div>
