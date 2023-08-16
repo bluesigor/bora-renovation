@@ -66,6 +66,7 @@
         letter-spacing: 0.04em;
         text-transform: uppercase;
         white-space: nowrap;
+        cursor: pointer;
         & > a {
           color: $scrollbar-reviews;
         }
@@ -126,8 +127,13 @@
         }
       }
       &__btn-up {
+        position: sticky;
+        bottom: 20px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        left: 90%;
         border: none;
-        background: none;
         @include onMobile {
           display: none;
         }
@@ -190,6 +196,13 @@
           border-radius: 20px;
           border: none;
           padding: 21px 25.5px 20px 25.5px;
+          color: $scrollbar-reviews;
+
+          &:hover {
+            background: $blue-accent;
+            color: $primary;
+            transition: 0.4s;
+          }
           @include onMobile {
             padding: 11px 9.5px;
             border-radius: 10px;
@@ -202,7 +215,6 @@
             text-align: center;
             letter-spacing: 0.04em;
             text-transform: uppercase;
-            color: $scrollbar-reviews;
             white-space: nowrap;
             @include onMobile {
               font-size: 15px;

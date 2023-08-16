@@ -328,9 +328,8 @@
 }
 .versus {
   position: absolute;
-  left: 48%;
+  left: 50%;
   font-family: "Lobster", cursive;
-
   font-size: 28px;
   @include onMobile {
     margin-top: 9px;

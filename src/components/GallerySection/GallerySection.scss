@@ -223,6 +223,11 @@
         align-items: center;
         letter-spacing: 0.04em;
         color: $scrollbar-reviews;
+        &:hover {
+          transition: 0.4s;
+          font-size: 25px;
+          font-weight: 600;
+        }
         @include onMobile {
           font-weight: 300;
           font-size: 15px;

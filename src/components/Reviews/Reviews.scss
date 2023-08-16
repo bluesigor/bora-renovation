@@ -221,6 +221,12 @@
       box-shadow: 6px 7px 10px rgba(0, 0, 0, 0.25);
       border-radius: 20px;
       border: none;
+      color: $primary;
+      &:hover {
+        transition: 0.4s;
+        background: linear-gradient(93.35deg, #ffdd66 3.71%, #ffb74a 98.84%);
+        color: $scrollbar-reviews;
+      }
       &__txt {
         font-family: "Semi Inter";
         font-style: normal;
@@ -228,7 +234,7 @@
         line-height: 135.68%;
         letter-spacing: 0.08em;
         text-transform: uppercase;
-        color: $primary;
+
         white-space: nowrap;
         @include onMobile {
           white-space: nowrap;

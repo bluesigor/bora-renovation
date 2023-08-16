@@ -74,6 +74,12 @@
       border-radius: 20px;
       max-width: 247px;
       border: none;
+      color: $scrollbar-reviews;
+      &:hover {
+        background: $blue-accent;
+        color: $primary;
+        transition: 0.4s;
+      }
       &-txt {
         font-family: "Medium Inter";
         font-weight: 500;
@@ -81,7 +87,6 @@
         line-height: 135.68%;
         text-align: center;
         letter-spacing: 0.07em;
-        color: $scrollbar-reviews;
         text-transform: uppercase;
       }
     }

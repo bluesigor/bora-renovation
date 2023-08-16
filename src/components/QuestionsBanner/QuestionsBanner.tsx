@@ -23,7 +23,7 @@ const QuestionsBanner = () => {
     full_name: string;
     email: string;
     phone: string;
-    text: string;
+    text?: string;
   }>({
     initialValues: {
       full_name: "",

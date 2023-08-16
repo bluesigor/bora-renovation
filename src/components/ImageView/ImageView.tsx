@@ -1,9 +1,9 @@
-import { AiOutlineArrowLeft } from "react-icons/ai";
-import { AiOutlineArrowRight } from "react-icons/ai";
-
 import { useAppContext } from "../../context/AppContext";
 
 import { collection } from "../../core/constants/collection";
+
+import right from "../../assets/images/arr-right.svg";
+import left from "../../assets/images/arr-left.svg";
 
 const ImageView = () => {
   const { isModalOpen, modalType, imageData, closeModal, setImageData } =
@@ -58,20 +58,22 @@ const ImageView = () => {
               alt="imageData"
             />
             <button className="control__prev" onClick={handlePrev}>
-              <AiOutlineArrowLeft
+              <img src={left} alt="arr-left" />
+              {/* <AiOutlineArrowLeft
                 size={26}
                 style={{
                   color: "black",
                 }}
-              />
+              /> */}
             </button>
             <button className="control__next" onClick={handleNext}>
-              <AiOutlineArrowRight
+              <img src={right} alt="arr-right" />
+              {/* <AiOutlineArrowRight
                 size={26}
                 style={{
                   color: "black",
                 }}
-              />
+              /> */}
             </button>
           </div>
         </div>

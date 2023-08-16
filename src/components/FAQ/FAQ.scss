@@ -77,6 +77,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      &:hover {
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.25);
+      }
       @include onMobile {
         padding: 20px 22px;
         height: 70px;
@@ -185,6 +190,12 @@
       align-items: center;
       letter-spacing: 0.04em;
       color: $faq-accent;
+      &:hover {
+        font-family: "Montserrat";
+        transition: 0.4s;
+        font-size: 25px;
+        font-weight: 600;
+      }
       @include onMobile {
         font-size: 16px;
         letter-spacing: 0.01em;
