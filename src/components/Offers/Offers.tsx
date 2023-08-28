@@ -3,23 +3,8 @@ import useMeasures from "../../core/hooks/useMeasures";
 const Offers = () => {
   const { innerWidth } = useMeasures();
 
-  // const [isMore, setIsMore] = useState(false);
-
-  // const showMore = () => {
-  //   if (isMore) {
-  //     setIsMore(false);
-  //   } else {
-  //     setIsMore(true);
-  //   }
-  // };
-
   return (
     <section className="offers">
-      {/* {innerWidth > 768 && (
-        <div className="offers-new">
-          <div className="offers-new__logo" />
-        </div>
-      )} */}
       <div className="offers-title">
         <h6 className="offers-title__txt">
           What's right for my kitchen cabinet?
@@ -28,37 +13,6 @@ const Offers = () => {
       <div className="offers-inner">
         <div className="offers-wrapper">
           <div className="offers-main">
-            {/* <ul className="offers-main-list"> 
-          <li className="offers-main-list__item">
-            cabinet doors, drawer fronts, hardware replacement
-          </li>
-          <li className="offers-main-list__item">
-            crown molding, accent pieces and trims installation
-          </li>
-          <li className="offers-main-list__item">cabinets intallation</li>
-        </ul>
-        <div className="offers-main-contact">
-          <button
-            onClick={() => {
-              setIsModalOpen(true);
-              setModalType("quote");
-            }}
-            className="offers-main-contact-prime">
-            <span className="offers-main-contact-prime__txt">
-              Contact us today to get more information
-            </span>
-          </button>
-          <button
-            onClick={() => {
-              setIsModalOpen(true);
-              setModalType("quote");
-            }}
-            className="offers-main-contact-quote">
-            <span className="offers-main-contact-quote__txt">
-              GET a FREE quote
-            </span>
-          </button>
-        </div>*/}
             <div className="offers-main-block">
               <h6 className="offers-main-block__title">Refinishing</h6>
               <ul className="offers-main-block-list">
@@ -117,19 +71,9 @@ const Offers = () => {
             </div>
           </div>
           <div className="offers-more">
-            {/* {isMore && ( */}
             <div className="offers-more-block">
               <h6 className="offers-more-block__title">
                 Available with refinishing and refacing
-                {/* {innerWidth < 768 ? (
-              <>
-                {" "}
-                <br />
-                refinishing and refacing
-              </>
-            ) : (
-              <>refinishing and refacing</>
-            )} */}
               </h6>
               <ul className="offers-more-block-list">
                 <li>
@@ -145,19 +89,7 @@ const Offers = () => {
                   <span>Choose any color you like.</span>
                 </li>
               </ul>
-              {/* <p className="offers-main-block__sum">
-              All cabinet doors and drawer fronts replaced with new ones. The
-              new doors and cabinet bases refinished in the same color.{" "}
-            </p> */}
             </div>
-            {/* )} */}
-            {/* <button onClick={showMore} className="offers-more__btn">
-          {isMore ? (
-            <span className="offers-more__btn-txt">Show less</span>
-          ) : (
-            <span className="offers-more__btn-txt">Read more</span>
-          )}
-        </button> */}
           </div>
         </div>
       </div>

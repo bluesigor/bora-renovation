@@ -42,12 +42,11 @@
 }
 
 .control__prev {
-  min-width: 30px;
-  min-height: 30px;
+  width: 29px;
   position: absolute;
   left: -10px;
-  top: 47%;
-  border-radius: 20px;
+  top: 45.5%;
+  border-radius: 50%;
   background-color: $primary;
   border: none;
   display: flex;
@@ -57,12 +56,11 @@
 }
 
 .control__next {
-  min-width: 30px;
-  min-height: 30px;
+  width: 29px;
   position: absolute;
   right: -10px;
-  top: 47%;
-  border-radius: 20px;
+  top: 45.5%;
+  border-radius: 50%;
   background-color: $primary;
   border: none;
   display: flex;

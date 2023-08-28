@@ -1,17 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import ReactPixel from "react-facebook-pixel";
-// import { ReactSVG } from "react-svg";
 
 import useMeasures from "../../core/hooks/useMeasures";
 import { collection } from "../../core/constants/collection";
 
 import prev from "../../assets/images/collection/prev.svg";
 import next from "../../assets/images/collection/next.svg";
-
-// import kitchen_first from "../../assets/images/gallery/kitchen.svg";
-// import kitchen_second from "../../assets/images/gallery/bg-kitchen.svg";
-// import repair from "../../assets/images/gallery/repair.svg";
 
 const GallerySection = () => {
   const [currentImage, setCurrentImage] = useState(30);
@@ -53,43 +48,9 @@ const GallerySection = () => {
             Take a look at our gallery of pictures to get inspired for your
             future project.
           </p>
-          {/* <div className="gallery-view">
-            <Link
-              to="gallery"
-              onClick={() => {
-                ReactPixel.track("ClickButton", {
-                  buttonName: "Step to gallery",
-                });
-              }}
-              style={{
-                marginTop: "20px",
-              }}
-              className="aboutus-content-desc-more__btn">
-              <span className="gallery-view-btn__txt">View full gallery</span>
-            </Link>
-          </div> */}
         </div>
-        {/* <div className="gallery-content-logos">
-          <div className="gallery-content-logos-first">
-            <ReactSVG
-              src={kitchen_first}
-              className="gallery-content-logos-firstlogo"
-            />
-            <ReactSVG
-              src={kitchen_second}
-              className="gallery-content-logos-secondlogo"
-            />
-          </div>
-          <div className="gallery-content-logos-second">
-            <ReactSVG
-              src={repair}
-              className="gallery-content-logos-thirdlogo"
-            />
-          </div>
-        </div> */}
-        <div
-          // className="gallery-content-images"
-          className="gallery-content-wrapp">
+
+        <div className="gallery-content-wrapp">
           <div className="gallery-content-wrapp-pics">
             <img
               src={require("../../assets/images/main-gallery/image-first.JPG")}
@@ -100,15 +61,6 @@ const GallerySection = () => {
               alt=""
             />
           </div>
-
-          {/* <img
-            src={require("../../assets/images/main-gallery/image-third.JPEG")}
-            alt=""
-          />
-          <img
-            src={require("../../assets/images/main-gallery/image-fourth.JPEG")}
-            alt=""
-          /> */}
           <Link
             to="gallery"
             onClick={() => {

@@ -46,11 +46,6 @@ const Policy = () => {
   return (
     <section className="policy">
       <div className="policy-head">
-        {/* <div className="policy-head-wrapper">
-          <h1 className="policy-head-wrapper__title">
-            Kitchen Cabinet <br /> Refinishing and Refacing
-          </h1>
-        </div> */}
         <h5 className="policy-head__title">
           Privacy Policy
           <br />
@@ -82,18 +77,6 @@ const Policy = () => {
           </span>
         </p>
       </div>
-      {/* <div className="policy-comunicate">
-        <button
-          onClick={() => {
-            setModalType("quote");
-            setIsModalOpen(true);
-          }}
-          className="policy-comunicate__btn">
-          <span className="policy-comunicate__btn-txt">
-            Get more information
-          </span>
-        </button>
-      </div> */}
       <main className="policy-main">
         <p className="policy-main__first">
           Please read this privacy notice carefully, as it will help you

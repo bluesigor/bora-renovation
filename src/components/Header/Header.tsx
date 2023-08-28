@@ -7,8 +7,6 @@ import bora_logo from "../../assets/images/header/bora-logo.svg";
 import useMeasures from "../../core/hooks/useMeasures";
 import { useAppContext } from "../../context/AppContext";
 
-// const logo = require("../../assets/images/header/bora.svg");
-
 const Header = () => {
   const { innerWidth } = useMeasures();
   const navigate = useNavigate();
@@ -110,15 +108,7 @@ const Header = () => {
                   setModalType("quote");
                 }}
                 className="bora-header__contact-btn">
-                {/* <img
-              src={phone_icon}
-              alt="phone-icon"
-              className="bora-header__contact-btn__icon"
-            /> */}
-                <span
-                  className="bora-header__contact-btn__txt"
-                  // href="tel:+13022441338"
-                >
+                <span className="bora-header__contact-btn__txt">
                   Get a free quote
                 </span>
               </button>
@@ -137,19 +127,6 @@ const Header = () => {
             </div>
           ) : (
             <>
-              {/* <button type="button" className="bora-header__contact-btn">
-            <img
-              src={phone_icon}
-              alt="phone-icon"
-              className="bora-header__contact-btn__icon"
-            />
-            <a
-              className="bora-header__contact-btn__txt"
-              href="tel:+13022441338">
-              302-244-1338
-            </a>
-          </button> */}
-
               <div className="policy-comunicate">
                 <button
                   onClick={() => {

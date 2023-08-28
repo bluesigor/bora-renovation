@@ -12,16 +12,7 @@ const WelcomeBanner = () => {
 
   return (
     <section className="bora__welcome-banner welcome-banner">
-      {isOpen ? null : (
-        // <div className="welcome-banner-title">
-        //   {innerWidth > 1025 && (
-        //     <h1 className="welcome-banner-title__txt">
-        //       Kitchen Cabinet Refinishing and Refacing
-        //     </h1>
-        //   )}
-        // </div>
-        <></>
-      )}
+      {isOpen ? null : <></>}
       <div className="welcome-banner-wrapper">
         {innerWidth > 768 && (
           <video
@@ -52,18 +43,6 @@ const WelcomeBanner = () => {
               </span>
             </h4>
           )}
-          {/* {innerWidth > 768 && (
-            <button
-              onClick={() => {
-                setIsModalOpen(true);
-                setModalType("quote");
-              }}
-              className="welcome-banner-wrapper-outer__free-btn">
-              <span className="welcome-banner-wrapper-outer__free-btn-txt">
-                GET a FREE quote
-              </span>
-            </button>
-          )} */}
         </div>
       </div>
     </section>

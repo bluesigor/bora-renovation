@@ -58,22 +58,22 @@ const ImageView = () => {
               alt="imageData"
             />
             <button className="control__prev" onClick={handlePrev}>
-              <img src={left} alt="arr-left" />
-              {/* <AiOutlineArrowLeft
-                size={26}
+              <img
                 style={{
-                  color: "black",
+                  width: "25px",
                 }}
-              /> */}
+                src={left}
+                alt="arr-left"
+              />
             </button>
             <button className="control__next" onClick={handleNext}>
-              <img src={right} alt="arr-right" />
-              {/* <AiOutlineArrowRight
-                size={26}
+              <img
                 style={{
-                  color: "black",
+                  width: "25px",
                 }}
-              /> */}
+                src={right}
+                alt="arr-right"
+              />
             </button>
           </div>
         </div>
