@@ -224,13 +224,16 @@
         letter-spacing: 0.04em;
         color: $scrollbar-reviews;
         &:hover {
-          transition: 0.4s;
+          transition: 0.3s;
           font-size: 25px;
           font-weight: 600;
         }
         @include onMobile {
           font-weight: 300;
           font-size: 15px;
+          &:hover {
+            font-size: 17px;
+          }
         }
       }
     }

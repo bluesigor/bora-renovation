@@ -208,6 +208,12 @@
     &-btn {
       background: none;
       border: none;
+      &__icon {
+        &:hover {
+          transition: 0.4s;
+          width: 19px;
+        }
+      }
     }
   }
   &-feedback-block {

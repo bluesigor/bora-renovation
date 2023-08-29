@@ -3,8 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Anek+Latin:wght@300;400;700;800&family=Open+Sans:wght@600&display=swap");
 
 .foot {
-  min-height: 417px;
-  padding: 71px 73px 94px 72px;
+  min-height: 317px;
+  padding: 71px 73px 34px 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,7 +21,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 168px;
+    gap: 120px;
     @media (max-width: 1300px) {
       gap: 140px;
     }
@@ -36,6 +36,7 @@
       display: flex;
       flex-direction: row;
       gap: 58px;
+      flex: 1;
       @media (max-width: 1300px) {
         gap: 30px;
       }
@@ -88,7 +89,9 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      gap: 125px;
+      justify-content: space-between;
+      // gap: 125px;
+      flex: 2;
       @media (max-width: 1400px) {
         gap: 85px;
       }
