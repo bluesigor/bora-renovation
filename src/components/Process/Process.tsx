@@ -1,4 +1,4 @@
-import { useState, memo } from "react";
+import { memo } from "react";
 
 import useMeasures from "../../core/hooks/useMeasures";
 import ProcessList from "./ProcessList";
