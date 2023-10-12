@@ -6,7 +6,7 @@ import install from "../../assets/images/process/install.svg";
 import sand from "../../assets/images/process/sand.svg";
 import materials_pro from "../../assets/images/process/materials.svg";
 import cleaning from "../../assets/images/process/cleaning.svg";
-import { useState } from "react";
+import { memo, useState } from "react";
 
 const ProcessDesk = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -150,4 +150,4 @@ const ProcessDesk = () => {
   );
 };
 
-export default ProcessDesk;
+export default memo(ProcessDesk);
