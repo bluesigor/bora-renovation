@@ -2,8 +2,7 @@ import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Hamburger from "hamburger-react";
 
-import bora_logo from "../../assets/images/header/bora-logo.svg";
-
+import logo from "../../assets/images/bora-04-01.svg";
 import useMeasures from "../../core/hooks/useMeasures";
 import { useAppContext } from "../../context/AppContext";
 
@@ -30,7 +29,7 @@ const Header = () => {
       }}
       className="bora-header">
       <Link to="/">
-        <img src={bora_logo} alt="bora-logo" className="bora-header__logo" />
+        <img src={logo} alt="bora-logo" className="bora-header__logo" />
       </Link>
       <div className="bora-header-main">
         <div className="welcome-banner-title">

@@ -5,11 +5,6 @@ const Offers = () => {
 
   return (
     <section className="offers">
-      {/* <div className="offers-title">
-        <h6 className="offers-title__txt">
-          What's right for my kitchen cabinet?
-        </h6>
-      </div> */}
       <div className="offers-inner">
         <div className="offers-wrapper">
           <div

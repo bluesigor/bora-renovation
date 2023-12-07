@@ -21,7 +21,7 @@ const LeaveReview = () => {
             </div>
             <div className="leave-review-content-header">
               <p className="leave-review-content-header__main">
-                Bora Renovation
+                Bora Renovations
               </p>
               <p className="leave-review-content-header__sub">
                 has more than 60+ reviews <br /> left by highly satisfied <br />

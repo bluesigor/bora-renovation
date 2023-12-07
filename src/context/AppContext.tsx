@@ -2,7 +2,6 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 const defaultState = {
   isModalOpen: false,
-
   isVisisble: false,
   isOpen: false,
   imageData: {

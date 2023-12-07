@@ -39,7 +39,7 @@ const GallerySection = () => {
             house painting companies have. It’s more than just applying paint
             with a brush or painting walls with a roller.
             <br /> <br />
-            Bora Renovation uses only factory-grade products and specialized
+            Bora Renovations uses only factory-grade products and specialized
             equipment which allows us to finish the project fast and
             effectively. You’ll be amazed at how simple it is to update your
             kitchen cabinets and give it that amazing luxurious feel without a
@@ -81,7 +81,7 @@ const GallerySection = () => {
           <p className="gallery-mob-desc__txt">
             Cabinet refinishing requires a higher level of skill than what most
             house painting companies have. It’s more than just applying paint
-            with a brush or painting walls with a roller. Bora Renovation uses
+            with a brush or painting walls with a roller. Bora Renovations uses
             only factory-grade products and specialized equipment.
           </p>
         </div>

@@ -52,10 +52,10 @@
       }
     }
     &__logo {
-      mix-blend-mode: darken;
-      max-width: 235px;
+      // mix-blend-mode: darken;
+      width: 235px;
       @media (max-width: 1200px) {
-        max-width: 120px;
+        width: 120px;
       }
       @include onMobile {
         max-width: 100%;

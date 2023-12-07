@@ -103,7 +103,13 @@ const ProcessList = () => {
           delay={0.8}
           className="mob-process-list__item">
           <div className="mob-img-process">
-            <LazyLoadImage delayTime={100} height={194} alt={sand} src={sand} />
+            <LazyLoadImage
+              rel="preload"
+              delayTime={100}
+              height={194}
+              alt={sand}
+              src={sand}
+            />
           </div>
           <div
             className={

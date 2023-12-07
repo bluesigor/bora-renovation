@@ -103,7 +103,7 @@ const Footer = () => {
           <div className="foot-inner-controls-logo">
             <img src={logo_foot} alt="logo" />
             <span className="foot-inner-controls-logo__txt">
-              © Bora Renovation, LLC |{" "}
+              © Bora Renovations, LLC |{" "}
               <Link to="/privacy-policy">Privacy Policy</Link>
             </span>
           </div>
@@ -144,7 +144,8 @@ const Footer = () => {
         </div>
       </div>
       <span className="foot__copyrights">
-        © Bora Renovation, LLC | <Link to="privacy-policy">Privacy Policy</Link>
+        © Bora Renovations, LLC |{" "}
+        <Link to="privacy-policy">Privacy Policy</Link>
       </span>
     </footer>
     /* <button

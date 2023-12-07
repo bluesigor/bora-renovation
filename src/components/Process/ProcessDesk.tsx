@@ -92,6 +92,7 @@ const ProcessDesk = () => {
               }}
               src={require("../../assets/images/process/IMG_5250.JPG")}
               alt=""
+              loading="lazy"
             />
           </div>
           <div className="process-list__outer" id="protect-outer">
@@ -130,7 +131,7 @@ const ProcessDesk = () => {
           onMouseLeave={offHover}
           className="process-list-wrapper">
           <div className="process-list-logo">
-            <img src={install} alt={install} />
+            <img src={install} alt={install} loading="lazy" />
           </div>
           <div className="process-list__outer">
             <p className="process-list__title">

@@ -49,10 +49,10 @@ const Policy = () => {
         <h5 className="policy-head__title">
           Privacy Policy
           <br />
-          for Bora Renovation, LLC
+          for Bora Renovations, LLC
         </h5>
         <p className="policy-head__subtitle">
-          Last updated January 01, 2022 At Bora Renovation, LLC accessible from{" "}
+          Last updated January 01, 2022 At Bora Renovations, LLC accessible from{" "}
           <a
             target="_blank"
             href="https://bora-renovation.netlify.app/"
@@ -109,7 +109,7 @@ const Policy = () => {
             We may also collect device information like your browser type and
             language, hardware model, and operating system. But we will treat
             this information as personal information. <br /> Like any other
-            website, Bora Renovation, LLC uses ‘cookies’. Cookies allow us to
+            website, Bora Renovations, LLC uses ‘cookies’. Cookies allow us to
             recognize your device while you are on our website and help
             customize our web page content based on visitors’ browser type
             and/or other information, make your experience better, such as
@@ -129,7 +129,7 @@ const Policy = () => {
           </h6>
           <br />
           <p className="policy-main__second-txt">
-            Bora Renovation, LLC use personal information collected via our
+            Bora Renovations, LLC use personal information collected via our
             website for a variety of business purposes described below:
           </p>
           <ul className="policy-main__second-list">
@@ -174,8 +174,8 @@ const Policy = () => {
           <p className="policy-main__second-txt">
             Our website is directed toward and designed for use by persons aged
             18 or older. We encourage parents and guardians to observe,
-            participate in and guide their online activity. Bora Renovation, LLC
-            does not knowingly collect any Personal Identifiable Information
+            participate in and guide their online activity. Bora Renovations,
+            LLC does not knowingly collect any Personal Identifiable Information
             from children under the age of 16. If you think that your child
             provided this kind of information on our website you may request
             that the child's information be corrected or deleted from our files
@@ -188,7 +188,7 @@ const Policy = () => {
           <p className="policy-main__second-txt">
             This Privacy Policy applies only to our online activities and is
             valid for visitors to our website with regards to the information
-            that they shared in Bora Renovation. This policy is not applicable
+            that they shared in Bora Renovations. This policy is not applicable
             to any information collected offline or via channels other than this
             website. By using our website, you consent to our Privacy Policy.{" "}
             <br />

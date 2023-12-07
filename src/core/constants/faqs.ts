@@ -7,7 +7,7 @@ export const faqs: any[] = [
   },
   {
     id: 2,
-    title: "What products does Bora Renovation use?",
+    title: "What products does Bora Renovations use?",
     desc: "We don't use the same paint which other companies use. We use high quality materials that are moisture-, chemical-, and heat-resistant that meet the specification of the Kitchen Cabinet Manufacturing Association (KCMA).",
   },
   {

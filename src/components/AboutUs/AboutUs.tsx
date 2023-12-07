@@ -31,7 +31,7 @@ const AboutUs = () => {
             isMore ? "aboutus-content-moredesc" : "aboutus-content-desc"
           }>
           <p className="aboutus-content-desc__txt">
-            Bora Renovation is a professional licensed and insured family-owned
+            Bora Renovations is a professional licensed and insured family-owned
             and operated kitchen cabinet refinishing company located in
             Wilmington, DE. Kitchen cabinet refinishing is the only service we
             offer. We invest the necessary time in thorough prep, use
