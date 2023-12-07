@@ -5,18 +5,18 @@ const Offers = () => {
 
   return (
     <section className="offers">
+      <div
+        className="offers-title"
+        style={{
+          marginBottom: "-20px",
+          marginTop: "10px",
+        }}>
+        <h6 className="offers-title__txt">
+          What's right for my kitchen cabinet?
+        </h6>
+      </div>
       <div className="offers-inner">
         <div className="offers-wrapper">
-          <div
-            className="offers-title"
-            style={{
-              marginBottom: "-20px",
-              marginTop: "10px",
-            }}>
-            <h6 className="offers-title__txt">
-              What's right for my kitchen cabinet?
-            </h6>
-          </div>
           <div className="offers-main">
             <div className="offers-main-block">
               <h6 className="offers-main-block__title">Refinishing</h6>

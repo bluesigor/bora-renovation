@@ -55,10 +55,10 @@ const Policy = () => {
           Last updated January 01, 2022 At Bora Renovations, LLC accessible from{" "}
           <a
             target="_blank"
-            href="https://bora-renovation.netlify.app/"
+            href="https://borarenovations.com/"
             rel="noreferrer"
             className="policy-head__subtitle-link">
-            https://bora-renovation.netlify.app/
+            https://borarenovations.com/
           </a>{" "}
           , one of our main priorities is the privacy of our visitors. We are
           committed to protecting your personal information and your right to
@@ -70,8 +70,8 @@ const Policy = () => {
             }}>
             <a
               className="policy-head__subtitle-link"
-              href="mailto:info@borarenovation.com">
-              info@borarenovation.com
+              href="mailto:borarernovations@gmail.com">
+              borarernovations@gmail.com
             </a>{" "}
             .
           </span>
@@ -201,106 +201,108 @@ const Policy = () => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://bora-renovation.netlify.app/">
-                https://bora-renovation.netlify.app/
+                href="https://borarenovations.com/">
+                https://borarenovations.com/
               </a>
             </li>
             <li className="policy-main__second-list__item">
               Via Email:{" "}
-              <a href="mailto:info@borarenovation.com">
-                info@borarenovation.com
+              <a href="mailto:borarernovations@gmail.com">
+                borarernovations@gmail.com
               </a>
             </li>
           </ul>
         </div>
         <div className="policy-main-form">
-          <div className="quest-banner-bottom-header">
-            <img
-              src={online}
-              alt="mob_online"
-              className="quest-banner-bottom-form-control-moblogo"
-            />
-            <h4 className="policy-main-form__title">
-              Do you have any questions?
-            </h4>
-            <p className="policy-main-form__sub">
-              We will contact you as soon as possible and provide you with a
-              free quote.
-            </p>
-          </div>
-          <div className="quest-banner-bottom-wrapper">
-            <form
-              action="https://formspree.io/f/xyyarpqp"
-              onSubmit={formikForm.handleSubmit}
-              className="quest-banner-bottom-form">
-              <div className="quest-banner-bottom-form-inputs">
-                <label className="inp-wrapper">
-                  <input
-                    type="text"
-                    placeholder="Name"
-                    id="name"
-                    {...formikForm.getFieldProps("full_name")}
-                  />
-                  {formikForm.errors.full_name &&
-                    formikForm.errors.full_name && (
-                      <p className="error-massage">
-                        {formikForm.errors.full_name}
-                      </p>
+          <div className="policy-main-form-wrapper">
+            <div className="quest-banner-bottom-header">
+              <img
+                src={online}
+                alt="mob_online"
+                className="quest-banner-bottom-form-control-moblogo"
+              />
+              <h4 className="policy-main-form__title">
+                Do you have any questions?
+              </h4>
+              <p className="policy-main-form__sub">
+                We will contact you as soon as possible and provide you with a
+                free quote.
+              </p>
+            </div>
+            <div className="quest-banner-bottom-wrapper">
+              <form
+                action="https://formspree.io/f/xyyarpqp"
+                onSubmit={formikForm.handleSubmit}
+                className="quest-banner-bottom-form">
+                <div className="quest-banner-bottom-form-inputs">
+                  <label className="inp-wrapper">
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      id="name"
+                      {...formikForm.getFieldProps("full_name")}
+                    />
+                    {formikForm.errors.full_name &&
+                      formikForm.errors.full_name && (
+                        <p className="error-massage">
+                          {formikForm.errors.full_name}
+                        </p>
+                      )}
+                  </label>
+                  <label className="inp-wrapper">
+                    <input
+                      type="number"
+                      placeholder="Phone"
+                      id="name"
+                      {...formikForm.getFieldProps("phone")}
+                    />
+                    {formikForm.errors.phone && formikForm.errors.phone && (
+                      <p className="error-massage">{formikForm.errors.phone}</p>
                     )}
-                </label>
-                <label className="inp-wrapper">
-                  <input
-                    type="number"
-                    placeholder="Phone"
-                    id="name"
-                    {...formikForm.getFieldProps("phone")}
-                  />
-                  {formikForm.errors.phone && formikForm.errors.phone && (
-                    <p className="error-massage">{formikForm.errors.phone}</p>
-                  )}
-                </label>
-                <label className="inp-wrapper">
-                  <input
-                    type="text"
-                    placeholder="E-mail*"
-                    id="name"
-                    {...formikForm.getFieldProps("email")}
-                  />
-                  {formikForm.errors.email && formikForm.errors.email && (
-                    <p className="error-massage">{formikForm.errors.email}</p>
-                  )}
-                </label>
-                <button
-                  onClick={() =>
-                    state.succeeded &&
-                    toast("Thank you! We will get back to you shortly")
-                  }
-                  disabled={state.submitting}
-                  type="submit"
-                  className="quest-banner-bottom-form-inputs__submit-mob">
-                  <span>Submit</span>
-                </button>
-              </div>
-              <div className="quest-banner-bottom-form-wrapper">
-                <div className="quest-banner-bottom-form-control">
-                  <img
-                    src={online}
-                    alt="online"
-                    className="quest-banner-bottom-form-control-logo"
-                  />
-
+                  </label>
+                  <label className="inp-wrapper">
+                    <input
+                      type="text"
+                      placeholder="E-mail*"
+                      id="name"
+                      {...formikForm.getFieldProps("email")}
+                    />
+                    {formikForm.errors.email && formikForm.errors.email && (
+                      <p className="error-massage">{formikForm.errors.email}</p>
+                    )}
+                  </label>
                   <button
-                    className="quest-banner-bottom-form-control__submit"
-                    type="submit">
+                    onClick={() =>
+                      state.succeeded &&
+                      toast("Thank you! We will get back to you shortly")
+                    }
+                    disabled={state.submitting}
+                    type="submit"
+                    className="quest-banner-bottom-form-inputs__submit-mob">
                     <span>Submit</span>
                   </button>
                 </div>
-                <span className="policy-main-form-mob__sub">
-                  We will contact you as soon as possible and provide you with a
-                  free quote.
-                </span>
-              </div>
-            </form>
+                <div className="quest-banner-bottom-form-wrapper">
+                  <div className="quest-banner-bottom-form-control">
+                    <img
+                      src={online}
+                      alt="online"
+                      className="quest-banner-bottom-form-control-logo"
+                    />
+
+                    <button
+                      className="quest-banner-bottom-form-control__submit"
+                      type="submit">
+                      <span>Submit</span>
+                    </button>
+                  </div>
+                  <span className="policy-main-form-mob__sub">
+                    We will contact you as soon as possible and provide you with
+                    a free quote.
+                  </span>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </main>

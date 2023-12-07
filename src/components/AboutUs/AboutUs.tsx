@@ -54,7 +54,7 @@ const AboutUs = () => {
                 <a
                   rel="noreferrer"
                   target="_blank"
-                  href="https://www.facebook.com/BoraRenovation?mibextid=LQQJ4d">
+                  href="https://www.facebook.com/BoraRenovations">
                   Facebook
                 </a>
                 . We feel confident in our ability to meet all of your

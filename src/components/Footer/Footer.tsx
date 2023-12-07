@@ -122,19 +122,19 @@ const Footer = () => {
               <span>Get a free quote</span>
             </button>
             <a
-              href="mailto:info@borarenovation.com"
+              href="mailto:borarernovations@gmail.com"
               className="foot-inner-controls-end__mail">
-              info@borarenovation.com
+              borarernovations@gmail.com
             </a>
             <div className="foot-inner-controls-end-socials">
               <a
-                href="https://instagram.com/bora_renovation?igshid=MzRlODBiNWFlZA=="
+                href="https://instagram.com/bora_renovations"
                 rel="noreferrer"
                 target="_blank">
                 <img src={instagram} alt="instagram" />
               </a>
               <a
-                href="https://www.facebook.com/BoraRenovation?mibextid=LQQJ4d"
+                href="https://www.facebook.com/BoraRenovations"
                 rel="noreferrer"
                 target="_blank">
                 <img src={facebook} alt="facebook" />

@@ -64,7 +64,7 @@ const FAQ = () => {
                     <a
                       rel="noreferrer"
                       target="_blank"
-                      href="https://www.facebook.com/BoraRenovation?mibextid=LQQJ4d"
+                      href="https://www.facebook.com/BoraRenovations"
                       style={{
                         color: "#323232",
                         textDecoration: "underline",
@@ -75,7 +75,7 @@ const FAQ = () => {
                     <a
                       rel="noreferrer"
                       target="_blank"
-                      href="https://instagram.com/bora_renovation?igshid=MzRlODBiNWFlZA=="
+                      href="https://instagram.com/bora_renovations"
                       style={{
                         color: "#323232",
                         textDecoration: "underline",
@@ -101,7 +101,7 @@ const FAQ = () => {
                     <a
                       rel="noreferrer"
                       target="_blank"
-                      href="https://www.facebook.com/BoraRenovation?mibextid=LQQJ4d"
+                      href="https://www.facebook.com/BoraRenovations"
                       style={{
                         color: "#323232",
                         textDecoration: "underline",
@@ -115,7 +115,7 @@ const FAQ = () => {
                     <a
                       rel="noreferrer"
                       target="_blank"
-                      href="https://www.facebook.com/BoraRenovation?mibextid=LQQJ4d"
+                      href="https://www.facebook.com/BoraRenovations"
                       style={{
                         color: "#323232",
                         textDecoration: "underline",
@@ -126,7 +126,7 @@ const FAQ = () => {
                     <a
                       rel="noreferrer"
                       target="_blank"
-                      href="https://instagram.com/bora_renovation?igshid=MzRlODBiNWFlZA=="
+                      href="https://instagram.com/bora_renovations"
                       style={{
                         color: "#323232",
                         textDecoration: "underline",

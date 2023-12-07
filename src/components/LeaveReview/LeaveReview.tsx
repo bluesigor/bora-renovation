@@ -39,7 +39,7 @@ const LeaveReview = () => {
               <a href="https://www.google.com/search?q=bora+renovation&oq=bora+&aqs=chrome.1.69i59l2j35i19i39j69i60j69i61j69i60l3.3632j0j4&sourceid=chrome&ie=UTF-8#lrd=0x89c6e39f182ef821:0xa085e036b2fe82ef,1,,,">
                 <img src={google} alt="google" />
               </a>
-              <a href="https://www.facebook.com/BoraRenovation?mibextid=LQQJ4d">
+              <a href="https://www.facebook.com/BoraRenovations">
                 <img src={facebook} alt="facebook" />
               </a>
             </div>

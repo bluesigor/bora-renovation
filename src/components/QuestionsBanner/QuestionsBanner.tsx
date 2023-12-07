@@ -59,7 +59,11 @@ const QuestionsBanner = () => {
           </div>
         </div>
         <div className="quest-banner-bottom">
-          <div className="quest-banner-bottom-header">
+          <div
+            className="quest-banner-bottom-header"
+            style={{
+              border: "none",
+            }}>
             <img
               src={mob_online}
               alt="mob_online"

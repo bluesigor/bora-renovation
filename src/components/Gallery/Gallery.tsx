@@ -38,13 +38,13 @@ const Gallery = () => {
         </p>
         <div className="foot-inner-controls-end-socials">
           <a
-            href="https://instagram.com/bora_renovation?igshid=MzRlODBiNWFlZA=="
+            href="https://instagram.com/bora_renovations"
             rel="noreferrer"
             target="_blank">
             <img src={instagram} alt="instagram" />
           </a>
           <a
-            href="https://www.facebook.com/BoraRenovation?mibextid=LQQJ4d"
+            href="https://www.facebook.com/BoraRenovations"
             rel="noreferrer"
             target="_blank">
             <img src={facebook} alt="facebook" />

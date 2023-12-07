@@ -26,8 +26,8 @@ const ContactUs = () => {
             </div>
             <div className="contact-wrapper-form-main__item">
               <img src={mail} alt="mail" />
-              <a href="mailto:info@borarenovation.com">
-                info@borarenovation.com
+              <a href="mailto:borarernovations@gmail.com">
+                borarernovations@gmail.com
               </a>
             </div>
             <div className="contact-wrapper-form-main__item">
@@ -39,7 +39,7 @@ const ContactUs = () => {
             <h6 className="contact-wrapper-form__footer-title">Follow us:</h6>
             <div className="contact-wrapper-form__footer-social">
               <a
-                href="https://instagram.com/bora_renovation?igshid=MzRlODBiNWFlZA=="
+                href="https://instagram.com/bora_renovations"
                 rel="noreferrer"
                 target="_blank">
                 <img src={instagram} alt="instagram" />

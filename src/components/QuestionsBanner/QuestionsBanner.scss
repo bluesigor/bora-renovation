@@ -120,10 +120,12 @@
         @include onMobile {
           margin-bottom: -20px;
           flex-direction: row;
-          gap: 10px;
+          gap: 70px;
           align-items: center;
-          min-width: 283px;
           justify-content: space-between;
+          border: 1px solid black;
+          border-bottom: none;
+          border-radius: 20px 20px 0px 0px;
         }
         &__title {
           font-family: "Bold Inter";
@@ -160,6 +162,10 @@
       &-wrapper {
         max-width: 670px;
         @include onMobile {
+          border-left: 1px solid black;
+          border-right: 1px solid black;
+          border-bottom: 1px solid black;
+          border-radius: 0px 0px 20px 20px;
           padding-left: 16px;
           padding-right: 14px;
         }
