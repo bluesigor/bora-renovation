@@ -1,5 +1,6 @@
 @import "../../styles/mixins.scss";
 @import "../../styles/vars.scss";
+
 .benefits {
   padding: 100px 71px 96px 68px;
   @media (min-width: 1440px) {
@@ -46,7 +47,6 @@
     }
     &__item {
       padding: 15px 25px;
-      // border: 2px solid $scrollbar-reviews;
       border-radius: 50px;
       display: flex;
       justify-content: center;

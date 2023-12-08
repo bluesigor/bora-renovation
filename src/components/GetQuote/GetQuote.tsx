@@ -1,5 +1,6 @@
-import { useAppContext } from "../../context/AppContext";
 import { useEffect } from "react";
+
+import { useAppContext } from "../../context/AppContext";
 
 const GetQuote = () => {
   const {

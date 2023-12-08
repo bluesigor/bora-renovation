@@ -1,4 +1,4 @@
-export type BenefitItemProps = {
+type BenefitItemProps = {
   id: number;
   icon: string;
   title: string;

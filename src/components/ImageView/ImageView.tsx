@@ -1,49 +1,14 @@
 import { useAppContext } from "../../context/AppContext";
 
-import { collection } from "../../core/constants/collection";
+import useImageNavigation from "../../core/hooks/useImageNavigation";
 
 import right from "../../assets/images/arr-right.svg";
 import left from "../../assets/images/arr-left.svg";
+import { memo } from "react";
 
 const ImageView = () => {
-  const { isModalOpen, modalType, imageData, closeModal, setImageData } =
-    useAppContext();
-
-  const handleNext = (e: any) => {
-    e.stopPropagation();
-
-    if (imageData.src) {
-      if (imageData.index === 107) {
-        setImageData({
-          ...collection[0],
-          index: 0,
-        });
-      } else {
-        setImageData({
-          ...collection[imageData?.index + 1],
-          index: imageData?.index + 1,
-        });
-      }
-    }
-  };
-
-  const handlePrev = (e: any) => {
-    e.stopPropagation();
-
-    if (imageData.src) {
-      if (imageData.index === 0) {
-        setImageData({
-          ...collection[collection.length - 1],
-          index: collection.length - 1,
-        });
-      } else {
-        setImageData({
-          ...collection[imageData?.index - 1],
-          index: imageData?.index - 1,
-        });
-      }
-    }
-  };
+  const { isModalOpen, modalType, imageData, closeModal } = useAppContext();
+  const { handleNext, handlePrev } = useImageNavigation();
 
   return (
     <>
@@ -64,6 +29,7 @@ const ImageView = () => {
                 }}
                 src={left}
                 alt="arr-left"
+                loading="lazy"
               />
             </button>
             <button className="control__next" onClick={handleNext}>
@@ -73,6 +39,7 @@ const ImageView = () => {
                 }}
                 src={right}
                 alt="arr-right"
+                loading="lazy"
               />
             </button>
           </div>
@@ -82,4 +49,4 @@ const ImageView = () => {
   );
 };
 
-export default ImageView;
+export default memo(ImageView);

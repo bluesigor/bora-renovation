@@ -2,13 +2,13 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { useAppContext } from "../../context/AppContext";
 
+import useMeasures from "../../core/hooks/useMeasures";
+
 import bora_mob from "../../assets/images/bora-04-01.svg";
 import facebook from "../../assets/images/contact/facebook.svg";
 import logo_foot from "../../assets/images/footer/logo-foot.svg";
 import phone from "../../assets/images/header/phone-icon.svg";
 import instagram from "../../assets/images/contact/inst.svg";
-
-import useMeasures from "../../core/hooks/useMeasures";
 
 const Footer = () => {
   const navigate = useNavigate();

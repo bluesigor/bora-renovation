@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
+import classNames from "classnames";
 
 import about from "../../assets/videos/about-us.mp4";
-import classNames from "classnames";
 
 const AboutUs = () => {
   const [isMore, setIsMore] = useState(false);

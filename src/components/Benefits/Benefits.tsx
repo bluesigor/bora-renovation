@@ -1,7 +1,8 @@
-import { benefits } from "../../core/constants/constants";
+import BenefitItem from "./BenefitItem";
+
 import { General } from "../../models";
 
-import BenefitItem from "./BenefitItem";
+import { benefits } from "../../core/constants/constants";
 import useMeasures from "../../core/hooks/useMeasures";
 
 const Benefits = () => {

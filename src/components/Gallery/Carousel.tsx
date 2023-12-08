@@ -1,51 +1,17 @@
-import { useEffect, useState } from "react";
+import useCarousel from "../../core/hooks/useCarousel";
+import { collection } from "../../core/constants/collection";
+
+import { useAppContext } from "../../context/AppContext";
+
+import { General } from "../../models";
 
 import prev from "../../assets/images/collection/prev.svg";
 import next from "../../assets/images/collection/next.svg";
 
-import { collection } from "../../core/constants/collection";
-import { General } from "../../models";
-import { useAppContext } from "../../context/AppContext";
-
 const Carousel = () => {
-  const [loansInfo, setLoansInfo] = useState<General.Image[]>([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
   const { setImageData, setIsModalOpen, setModalType } = useAppContext();
 
-  useEffect(() => {
-    setLoansInfo(collection.slice(currentIndex, currentIndex + 3));
-  }, [currentIndex]);
-
-  const onNext = () => {
-    switch (currentIndex) {
-      case currentIndex:
-        if (currentIndex > 105) {
-          setCurrentIndex(0);
-        } else {
-          setCurrentIndex(currentIndex + 1);
-        }
-        setLoansInfo(collection.slice(currentIndex + 1, currentIndex + 3));
-        break;
-      default:
-        return;
-    }
-  };
-
-  const onPrev = () => {
-    switch (currentIndex) {
-      case currentIndex:
-        if (currentIndex >= 1) {
-          setCurrentIndex(currentIndex - 1);
-        } else {
-          setCurrentIndex(106);
-        }
-        setLoansInfo(collection.slice(currentIndex, currentIndex + 3));
-        break;
-      default:
-        return;
-    }
-  };
+  const { currentIndex, loansInfo, onNext, onPrev } = useCarousel();
 
   return (
     <div className="carousel">

@@ -2,9 +2,11 @@ import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Hamburger from "hamburger-react";
 
-import logo from "../../assets/images/bora-04-01.svg";
 import useMeasures from "../../core/hooks/useMeasures";
 import { useAppContext } from "../../context/AppContext";
+
+import logo from "../../assets/images/bora-04-01.svg";
+import HamburgerMenu from "./HamburgerMenu";
 
 const Header = () => {
   const { innerWidth } = useMeasures();
@@ -155,116 +157,7 @@ const Header = () => {
           )}
         </div>
       </div>
-      {isOpen && (
-        <ul className="navbar-moblist">
-          <li>
-            <Link onClick={closeHamb} to="/" className="navbar-moblist__item">
-              Home
-            </Link>
-          </li>
-          <li>
-            {window.location.pathname.includes("gallery") ||
-            window.location.pathname.includes("privacy-policy") ? (
-              <Link
-                to="/"
-                onClick={() => {
-                  closeHamb();
-                  handleScroll(1900);
-                }}
-                className="navbar-moblist__item">
-                About us
-              </Link>
-            ) : (
-              <button
-                onClick={() => {
-                  closeHamb();
-                  handleScroll(1500);
-                }}
-                className="navbar-moblist__item">
-                About us
-              </button>
-            )}
-          </li>
-          <li>
-            {window.location.pathname.includes("gallery") ||
-            window.location.pathname.includes("privacy-policy") ? (
-              <Link
-                to="/"
-                onClick={() => {
-                  closeHamb();
-                  handleScroll(2700);
-                }}
-                className="navbar-moblist__item">
-                our process
-              </Link>
-            ) : (
-              <button
-                onClick={() => {
-                  closeHamb();
-                  handleScroll(2100);
-                }}
-                className="navbar-moblist__item">
-                our process
-              </button>
-            )}
-          </li>
-          <li>
-            <Link
-              to="/gallery"
-              onClick={() => {
-                closeHamb();
-              }}
-              className="navbar-moblist__item">
-              gallery
-            </Link>
-          </li>
-          <li>
-            {window.location.pathname.includes("gallery") ||
-            window.location.pathname.includes("privacy-policy") ? (
-              <Link
-                to="/"
-                onClick={() => {
-                  closeHamb();
-                  handleScroll(4900);
-                }}
-                className="navbar-moblist__item">
-                FAQ’s
-              </Link>
-            ) : (
-              <button
-                onClick={() => {
-                  closeHamb();
-                  handleScroll(4200);
-                }}
-                className="navbar-moblist__item">
-                FAQ’s
-              </button>
-            )}
-          </li>
-          <li>
-            {window.location.pathname.includes("gallery") ? (
-              <Link
-                to="/"
-                onClick={() => {
-                  closeHamb();
-                  handleScroll(7700);
-                }}
-                className="navbar-moblist__item">
-                Contact us
-              </Link>
-            ) : (
-              <button
-                onClick={() => {
-                  closeHamb();
-                  handleScroll(6400);
-                }}
-                className="navbar-moblist__item">
-                Contact us
-              </button>
-            )}
-          </li>
-        </ul>
-      )}
+      {isOpen && <HamburgerMenu onClose={closeHamb} onScroll={handleScroll} />}
     </header>
   );
 };
