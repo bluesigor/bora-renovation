@@ -8,7 +8,7 @@ import { General } from "../../models";
 import { useAppContext } from "../../context/AppContext";
 
 const Carousel = () => {
-  const [loansInfo, setLoansInfo] = useState<any>([]);
+  const [loansInfo, setLoansInfo] = useState<General.Image[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const { setImageData, setIsModalOpen, setModalType } = useAppContext();

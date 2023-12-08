@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 
 import Carousel from "./Carousel";
-import useMeasures from "../../core/hooks/useMeasures";
 import MobGallery from "../MobGallery";
+
+import useMeasures from "../../core/hooks/useMeasures";
 
 import instagram from "../../assets/images/contact/inst.svg";
 import facebook from "../../assets/images/contact/facebook.svg";
@@ -41,13 +42,27 @@ const Gallery = () => {
             href="https://instagram.com/bora_renovations"
             rel="noreferrer"
             target="_blank">
-            <img src={instagram} alt="instagram" />
+            <img
+              src={instagram}
+              alt="instagram"
+              loading="lazy"
+              style={{
+                width: "30px",
+              }}
+            />
           </a>
           <a
             href="https://www.facebook.com/BoraRenovations"
             rel="noreferrer"
             target="_blank">
-            <img src={facebook} alt="facebook" />
+            <img
+              src={facebook}
+              alt="facebook"
+              loading="lazy"
+              style={{
+                width: "30px",
+              }}
+            />
           </a>
         </div>
       </div>

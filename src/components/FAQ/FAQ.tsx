@@ -146,7 +146,13 @@ const FAQ = () => {
       {!showMore && (
         <div onClick={() => setShowMore(true)} className="faq-wrapper">
           <button className="faq-btn-more">
-            <span className="faq-btn-more__txt">See more</span>
+            <span
+              className="faq-btn-more__txt"
+              style={{
+                fontWeight: "bolder",
+              }}>
+              See more
+            </span>
           </button>
         </div>
       )}

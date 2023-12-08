@@ -1,4 +1,5 @@
 import { General } from "../../models";
+
 export const collection: General.Image[] = [
   { id: 1, src: require("../../assets/images/collection/1.jpg") },
   { id: 2, src: require("../../assets/images/collection/9.jpg") },

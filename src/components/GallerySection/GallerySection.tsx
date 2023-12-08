@@ -25,8 +25,6 @@ const GallerySection = () => {
       : setCurrentImage(currentImage - 1);
   };
 
-  console.log();
-
   return (
     <section className="gallery">
       <div className="gallery-title">
@@ -120,7 +118,7 @@ const GallerySection = () => {
               style={{
                 color: "var(--scrollbar-reviews) !important",
               }}>
-              View full gallery
+              Full gallery
             </span>
           </Link>
         </div>

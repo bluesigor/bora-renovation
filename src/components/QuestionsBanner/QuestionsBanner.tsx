@@ -4,7 +4,7 @@ import { useFormik } from "formik";
 import { toast } from "react-hot-toast";
 
 import online from "../../assets/images/questions/online.svg";
-import mob_online from "../../assets/images/questions/mob-online.svg";
+import { General } from "../../models";
 
 const QuestionsBanner = () => {
   const [state, handleSubmit] = useForm("xyyarpqp");
@@ -19,12 +19,7 @@ const QuestionsBanner = () => {
       .min(9, "Minimum 9 digits"),
   });
 
-  const formikForm = useFormik<{
-    full_name: string;
-    email: string;
-    phone: string;
-    text?: string;
-  }>({
+  const formikForm = useFormik<General.Quote>({
     initialValues: {
       full_name: "",
       email: "",
@@ -64,14 +59,18 @@ const QuestionsBanner = () => {
             style={{
               border: "none",
             }}>
-            <img
+            <h4
+              className="quest-banner-bottom-header__title"
+              style={{
+                marginBottom: "30px",
+              }}>
+              Do you have any questions?
+            </h4>
+            {/* <img
               src={mob_online}
               alt="mob_online"
               className="quest-banner-bottom-form-control-moblogo"
-            />
-            <h4 className="quest-banner-bottom-header__title">
-              Do you have any questions?
-            </h4>
+            /> */}
             <p className="quest-banner-bottom-header__desc">
               We will contact you as soon as possible and provide you with a
               free quote.

@@ -123,9 +123,6 @@
           gap: 70px;
           align-items: center;
           justify-content: space-between;
-          border: 1px solid black;
-          border-bottom: none;
-          border-radius: 20px 20px 0px 0px;
         }
         &__title {
           font-family: "Bold Inter";
@@ -162,10 +159,6 @@
       &-wrapper {
         max-width: 670px;
         @include onMobile {
-          border-left: 1px solid black;
-          border-right: 1px solid black;
-          border-bottom: 1px solid black;
-          border-radius: 0px 0px 20px 20px;
           padding-left: 16px;
           padding-right: 14px;
         }
@@ -186,7 +179,8 @@
           color: $scrollbar-reviews;
           min-width: 463px;
           @include onMobile {
-            min-width: 300px;
+            width: 85%;
+            min-width: 350px;
             gap: 15px;
             align-items: center;
           }
@@ -318,6 +312,7 @@
             color: $primary;
             text-align: center;
             @include onMobile {
+              letter-spacing: 0.01em;
               display: block;
             }
           }
@@ -328,6 +323,9 @@
 }
 .inp-wrapper {
   position: relative;
+  @include onMobile {
+    width: 100%;
+  }
 }
 .error-massage {
   position: absolute;

@@ -229,8 +229,9 @@
           font-weight: 600;
         }
         @include onMobile {
-          font-weight: 300;
+          font-weight: 500;
           font-size: 15px;
+          color: $faq-accent;
           &:hover {
             font-size: 17px;
           }

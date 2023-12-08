@@ -7,10 +7,10 @@ export declare namespace General {
   }
 
   interface Quote {
-    name: string;
-    number: string;
+    full_name: string;
+    phone: string;
     email: string;
-    textarea: string;
+    text: string;
   }
 
   interface Window {
@@ -22,6 +22,7 @@ export declare namespace General {
     text: string;
     name: string;
   }
+
   interface Image {
     id: number;
     src: string;

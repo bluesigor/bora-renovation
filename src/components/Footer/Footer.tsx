@@ -2,40 +2,28 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { useAppContext } from "../../context/AppContext";
 
-// import { goToTop } from "../../core/helpers/goToTop";
-
-import bora_mob from "../../assets/images/footer/bora-mob.svg";
+import bora_mob from "../../assets/images/bora-04-01.svg";
 import facebook from "../../assets/images/contact/facebook.svg";
 import logo_foot from "../../assets/images/footer/logo-foot.svg";
-// import to_top_arrow from "../../assets/images/footer/to-top-arrow.svg";
 import phone from "../../assets/images/header/phone-icon.svg";
 import instagram from "../../assets/images/contact/inst.svg";
+
 import useMeasures from "../../core/hooks/useMeasures";
 
 const Footer = () => {
-  // const [showButton, setShowButton] = useState(false);
   const navigate = useNavigate();
 
   const { setIsModalOpen, setModalType } = useAppContext();
   const { innerWidth } = useMeasures();
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
-
-  // const handleScroll = () => {
-  //   const currentPosition = window.pageYOffset;
-  //   if (currentPosition > 300) {
-  //     setShowButton(true);
-  //   } else {
-  //     setShowButton(false);
-  //   }
-  // };
-
   return (
     <footer className="foot">
-      <img className="foot__bora-mob" src={bora_mob} alt="bora_mob" />
+      <img
+        className="foot__bora-mob"
+        src={bora_mob}
+        width="185px"
+        alt="bora_mob"
+      />
       <div className="foot-inner">
         <div className="foot-inner-links">
           <ul className="foot-inner-links-first">
@@ -148,15 +136,6 @@ const Footer = () => {
         <Link to="privacy-policy">Privacy Policy</Link>
       </span>
     </footer>
-    /* <button
-        onClick={goToTop}
-        className={
-          showButton
-            ? "foot-inner-controls__btn-up"
-            : "foot-inner-controls__btn-up"
-        }>
-        <img src={to_top_arrow} alt="goup" />
-      </button> */
   );
 };
 
