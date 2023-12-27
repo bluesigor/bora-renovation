@@ -4,41 +4,22 @@ import { collection } from "../constants/collection";
 const useImageNavigation = () => {
   const { imageData, setImageData } = useAppContext();
 
-  const handleNext = (e: any) => {
+  const handleNavigation = (direction: number) => (e: React.MouseEvent) => {
     e.stopPropagation();
 
     if (imageData.src) {
-      if (imageData.index === 107) {
-        setImageData({
-          ...collection[0],
-          index: 0,
-        });
-      } else {
-        setImageData({
-          ...collection[imageData?.index + 1],
-          index: imageData?.index + 1,
-        });
-      }
+      const newIndex =
+        (imageData.index + direction + collection.length) % collection.length;
+
+      setImageData({
+        ...collection[newIndex],
+        index: newIndex,
+      });
     }
   };
 
-  const handlePrev = (e: any) => {
-    e.stopPropagation();
-
-    if (imageData.src) {
-      if (imageData.index === 0) {
-        setImageData({
-          ...collection[collection.length - 1],
-          index: collection.length - 1,
-        });
-      } else {
-        setImageData({
-          ...collection[imageData?.index - 1],
-          index: imageData?.index - 1,
-        });
-      }
-    }
-  };
+  const handleNext = handleNavigation(1);
+  const handlePrev = handleNavigation(-1);
 
   return { handleNext, handlePrev };
 };

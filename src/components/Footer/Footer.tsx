@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { useAppContext } from "../../context/AppContext";
@@ -23,6 +24,7 @@ const Footer = () => {
         src={bora_mob}
         width="185px"
         alt="bora_mob"
+        loading="lazy"
       />
       <div className="foot-inner">
         <div className="foot-inner-links">
@@ -89,7 +91,7 @@ const Footer = () => {
         </div>
         <div className="foot-inner-controls">
           <div className="foot-inner-controls-logo">
-            <img src={logo_foot} alt="logo" />
+            <img src={logo_foot} alt="logo" loading="lazy" />
             <span className="foot-inner-controls-logo__txt">
               © Bora Renovations, LLC |{" "}
               <Link to="/privacy-policy">Privacy Policy</Link>
@@ -98,7 +100,7 @@ const Footer = () => {
 
           <div className="foot-inner-controls-end">
             <button className="foot-inner-controls-end-phone">
-              <img src={phone} alt="phone" />
+              <img src={phone} alt="phone" loading="lazy" />
               <a href="tel:+13022441338">302-244-1338</a>
             </button>
             <button
@@ -119,13 +121,13 @@ const Footer = () => {
                 href="https://instagram.com/bora_renovations"
                 rel="noreferrer"
                 target="_blank">
-                <img src={instagram} alt="instagram" />
+                <img src={instagram} alt="instagram" loading="lazy" />
               </a>
               <a
                 href="https://www.facebook.com/BoraRenovations"
                 rel="noreferrer"
                 target="_blank">
-                <img src={facebook} alt="facebook" />
+                <img src={facebook} alt="facebook" loading="lazy" />
               </a>
             </div>
           </div>
@@ -139,4 +141,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default memo(Footer);

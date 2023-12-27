@@ -1,12 +1,12 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { Link } from "react-router-dom";
+import handleScroll from "../../core/helpers/scrollTo";
 
 type HamburgerMenuProps = {
   onClose: () => void;
-  onScroll: (height: number) => void;
 };
 
-const HamburgerMenu: FC<HamburgerMenuProps> = ({ onClose, onScroll }) => {
+const HamburgerMenu: FC<HamburgerMenuProps> = ({ onClose }) => {
   return (
     <ul className="navbar-moblist">
       <li>
@@ -21,7 +21,7 @@ const HamburgerMenu: FC<HamburgerMenuProps> = ({ onClose, onScroll }) => {
             to="/"
             onClick={() => {
               onClose();
-              onScroll(1900);
+              handleScroll(1900);
             }}
             className="navbar-moblist__item">
             About us
@@ -30,7 +30,7 @@ const HamburgerMenu: FC<HamburgerMenuProps> = ({ onClose, onScroll }) => {
           <button
             onClick={() => {
               onClose();
-              onScroll(1500);
+              handleScroll(1500);
             }}
             className="navbar-moblist__item">
             About us
@@ -44,7 +44,7 @@ const HamburgerMenu: FC<HamburgerMenuProps> = ({ onClose, onScroll }) => {
             to="/"
             onClick={() => {
               onClose();
-              onScroll(2700);
+              handleScroll(2700);
             }}
             className="navbar-moblist__item">
             our process
@@ -53,7 +53,7 @@ const HamburgerMenu: FC<HamburgerMenuProps> = ({ onClose, onScroll }) => {
           <button
             onClick={() => {
               onClose();
-              onScroll(2100);
+              handleScroll(2100);
             }}
             className="navbar-moblist__item">
             our process
@@ -77,7 +77,7 @@ const HamburgerMenu: FC<HamburgerMenuProps> = ({ onClose, onScroll }) => {
             to="/"
             onClick={() => {
               onClose();
-              onScroll(4900);
+              handleScroll(4900);
             }}
             className="navbar-moblist__item">
             FAQ’s
@@ -86,7 +86,7 @@ const HamburgerMenu: FC<HamburgerMenuProps> = ({ onClose, onScroll }) => {
           <button
             onClick={() => {
               onClose();
-              onScroll(4200);
+              handleScroll(4200);
             }}
             className="navbar-moblist__item">
             FAQ’s
@@ -99,7 +99,7 @@ const HamburgerMenu: FC<HamburgerMenuProps> = ({ onClose, onScroll }) => {
             to="/"
             onClick={() => {
               onClose();
-              onScroll(7700);
+              handleScroll(7700);
             }}
             className="navbar-moblist__item">
             Contact us
@@ -108,7 +108,7 @@ const HamburgerMenu: FC<HamburgerMenuProps> = ({ onClose, onScroll }) => {
           <button
             onClick={() => {
               onClose();
-              onScroll(6400);
+              handleScroll(6400);
             }}
             className="navbar-moblist__item">
             Contact us
